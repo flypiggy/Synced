@@ -30,6 +30,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# Front-End
+gem 'browser', '~> 2.3'
+gem 'meta-tags', '~> 2.4'
+gem 'sass-rails', '~> 5.0'
+gem 'slim', '~> 3.0'
+
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
