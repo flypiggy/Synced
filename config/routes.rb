@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  constraints subdomain: 'gmis' do
+    root 'gmis#index', as: :gmis
+    get ':year', to: 'gmis#show', constraints: { year: /2017/}
+  end
 end

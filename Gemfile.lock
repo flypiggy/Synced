@@ -41,6 +41,7 @@ GEM
     arel (7.1.4)
     awesome_print (1.7.0)
     bcrypt (3.1.11)
+    browser (2.3.0)
     builder (3.2.3)
     byebug (9.0.6)
     callsite (0.0.11)
@@ -64,6 +65,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    meta-tags (2.4.0)
+      actionpack (>= 3.2.0, <= 5.1.0)
     meta_request (0.4.0)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -165,8 +168,10 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt (~> 3.1.7)
+  browser (~> 2.3)
   jquery-rails
   listen (~> 3.0.5)
+  meta-tags (~> 2.4)
   meta_request
   pg (~> 0.18)
   pry-byebug
