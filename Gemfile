@@ -37,6 +37,14 @@ gem 'sass-rails', '~> 5.0'
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
+
+  # Test
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+
+  # Guard
+  gem 'guard-rspec', require: false
+  gem 'terminal-notifier-guard' # This need terminal-notifier, brew install it
 end
 
 group :development do
