@@ -4,6 +4,12 @@
 
 @import 'normalize-rails';
 
+// base
 @import '../gmis2017/base';
 @import '../gmis2017/textfont';
+
+// shared
+@import '../gmis2017/shared/module_title';
+
 @import '../gmis2017/banner';
+@import '../gmis2017/agenda';

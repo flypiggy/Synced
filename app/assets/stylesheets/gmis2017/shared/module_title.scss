@@ -1,0 +1,14 @@
+.module-title {
+  display: inline-block;
+  color: #fff;
+
+  .en {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+
+  .zh {
+    font-size: 2.6rem;
+    color: $red;
+  }
+}
