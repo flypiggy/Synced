@@ -2,3 +2,18 @@ section.agenda
   .container
     .agenda-title
       =render 'gmis/2017/shared/module_title', en: 'AGENDA', zh: '大会日程'
+
+    .agenda-content
+      .agenda-days.js-agenda-days
+        .swiper-button-prev.agenda-button.agenda-button-prev
+        .day-header.one-day.active
+          | 5/27
+        .day-header.two-day
+          | 5/28
+        .swiper-button-next.agenda-button.agenda-button-next
+      #agenda-container.agenda-container.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            | 主论坛
+          .swiper-slide
+            | 分论坛

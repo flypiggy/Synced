@@ -2,4 +2,39 @@ section.agenda {
   .agenda-title {
     display: block;
   }
+
+  .agenda-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+
+  .agenda-days {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .day-header {
+    display: none;
+    font-size: 3rem;
+    color: $red;
+
+    &.active {
+      display: inline-block;
+    }
+  }
+
+  .agenda-button {
+    position: static;
+    display: inline-block;
+  }
+
+
+  .agenda-button-prev {
+    margin-right: 20px;
+  }
+
+  .agenda-button-next {
+    margin-left: 20px;
+  }
 }
