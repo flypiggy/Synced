@@ -1,3 +1,9 @@
 // Place all the styles related to the gmis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'normalize-rails';
+
+@import '../gmis2017/base';
+@import '../gmis2017/textfont';
+@import '../gmis2017/banner';
