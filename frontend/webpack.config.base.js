@@ -6,9 +6,9 @@ const config = {
     gmis2017: './gmis/gmis2017.js'
   },
   output: {
-    path: path.resolve(__dirname, './public/assets/js'),
+    path: path.resolve(__dirname, 'static/'),
     filename: '[name].js',
-    publicPath: '/assets/',
+    publicPath: '/static/',
     libraryTarget: 'umd'
   },
   module: {
