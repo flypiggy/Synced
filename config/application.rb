@@ -27,5 +27,9 @@ module Synced
         request_specs: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
+
+    config.webpack = {
+      asset_manifest: {}
+    }
   end
 end

@@ -1,0 +1,27 @@
+html,
+body {
+  background-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans S Chinese', 'PingFang SC', 'Hack', 'Lantinghei SC', 'Microsoft Yahei', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 200px;
+}
+
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+$red: #b92d47;

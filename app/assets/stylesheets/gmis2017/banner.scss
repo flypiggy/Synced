@@ -1,0 +1,32 @@
+section.banner {
+  display: block;
+  background-color: #000;
+  background-image: image_url('gmis2017/banner-bg.png');
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: repeat;
+  padding: 10% 0;
+
+
+  img {
+    width: 100%;
+  }
+
+  .gmis-logo {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .slogan {
+    color: $red;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .formula {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
