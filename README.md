@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SyncedPSI/Synced.svg?branch=master)](https://travis-ci.org/SyncedPSI/Synced)
+
 这个人很懒, 暂时没有写 readme
 
 GNU General Public License
