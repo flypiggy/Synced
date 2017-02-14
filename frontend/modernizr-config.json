@@ -1,0 +1,17 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "svg",
+    "css/flexbox",
+    "css/flexboxlegacy",
+    "css/flexboxtweener",
+    "css/flexwrap",
+    "img/webp",
+    "img/webp-alpha",
+    "img/webp-animation",
+    "img/webp-lossless"
+  ]
+}
