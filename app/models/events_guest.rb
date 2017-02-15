@@ -1,6 +1,6 @@
 class EventsGuest < ApplicationRecord
-  belongs_to :events
-  belongs_to :guests
+  belongs_to :event
+  belongs_to :guest
 end
 
 # == Schema Information

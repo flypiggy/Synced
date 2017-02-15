@@ -2,7 +2,7 @@ class Guest < ApplicationRecord
   validates :name, presence: true
 
   has_many :events_guests, dependent: :destroy
-  has_many :events, through: :events_guests
+  has_many :events, through: :events_guests, source: :event
 end
 
 # == Schema Information
