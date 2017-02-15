@@ -68,6 +68,9 @@ group :development do
 
   # For rails pannel
   gem 'meta_request'
+
+  # DB structure
+  gem 'annotate'
 end
 
 group :production do
