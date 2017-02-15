@@ -1,3 +1,73 @@
 header.header {
+  width: 100%;
+  height: $header_h;
+  position: fixed;
+  background-image: image_url('gmis2017/header-bg.png');
+  background-size: auto 100%;
+  box-shadow: 2px 2px 20px #000;
+  z-index: 99;
 
+  .synced-logo {
+    background-image: image_url('gmis2017/synced-logo.png');
+    height: 30px;
+    width: 30px * 1440 / 276;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .video-slim-btn {
+    height: 40px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  nav.gmis-nav {
+    display: flex;
+    align-items: center;
+    height: $header_h;
+    font-size: 1.8rem;
+
+    a {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+      padding: 0 20px;
+      transition: all 0.2s;
+
+      &:hover,
+      &.active {
+        color: $red;
+      }
+
+      &.active .spinner-line {
+        transition: all 0.3s;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .spinner-line {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s;
+    }
+  }
 }
