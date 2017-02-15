@@ -1,3 +1,49 @@
 section.cooperative {
+  background-color: #fff;
+  padding: 20px 0;
+  padding-bottom: 200px;
 
+  .module-title {
+    color: #000;
+
+    .en {
+      font-size: 2.5rem;
+    }
+  }
+
+  .sponsor-list {
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
+
+  .sponsor-title {
+    width: 250px;
+    font-size: 2.2rem;
+    text-align: right;
+    padding-right: 60px;
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  .item-logo {
+    display: inline-block;
+    margin: 10px 15px;
+    height: $sponsor-logo-h;
+    width: $sponsor-logo-h * 120px / 45px;
+    position: relative;
+    transition: transform .3s;
+    background-color: #c6c6c5;
+    padding: 0px 10px;
+
+    &:hover {
+      transform: translateY(-10%);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
