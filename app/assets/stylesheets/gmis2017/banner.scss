@@ -5,8 +5,11 @@ section.banner {
   /* background-size: cover; */
   background-position: center;
   background-repeat: repeat;
-  padding: 10% 0;
+  padding-top: $header_h;
 
+  .banner-content {
+    padding: 10% 0;
+  }
 
   img {
     width: 100%;

@@ -2,3 +2,95 @@ section.agenda
   .container
     .agenda-title
       =render 'gmis/2017/shared/module_title', en: 'AGENDA', zh: '大会日程'
+
+    .agenda-content
+      .agenda-days.js-agenda-days
+        .swiper-button-prev.agenda-button.agenda-button-prev <
+        .day-header.textfont-geo231l.one-day.active
+          span.month 5
+          span.slash
+            | /
+          span.sun 27
+        .day-header.textfont-geo231l.two-day
+          span.month 5
+          span.slash
+            | /
+          span.sun 28
+        .swiper-button-next.agenda-button.agenda-button-next >
+      #agenda-container.agenda-container.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            .forum 主论坛
+            .intro
+              p 机器智能的发展已经形成两条主线，越来越多的成熟技术正转化为应用在改变行业；
+              p 技术本身也在朝通用人工智能的终极目标迅速发展。
+              p 因此，在一个机器正在学习智能的时代，我们究竟应该如何学习？
+            .themes
+              .theme-item
+                | 9:00-11:30  机器智能时代
+              .theme-item
+                | 11:30-12:00  人机大战
+            .angle
+            .forum 分论坛
+            .themes
+              .theme-item
+                | 13:30-15:30
+            .sub-forum-list
+              .item
+                .name 前沿研究论坛
+                .desc 机器智能时代的前沿研究
+              .item
+                .name 交叉学科论坛
+                .desc 机器智能交叉学科研究
+              .item
+                .name 智能交互论坛
+                .desc 机器智能时代下的人机交互
+              .item
+                .name 硬件论坛
+                .desc 如何打造机器智能时代的硬件和芯片？
+            .angle
+            .forum 晚宴
+            .themes
+              .theme-item
+                | 18:00-20:00  欢迎晚宴
+            .angle
+            .themes
+              .theme-item
+                span 9:00-18:00 IME2017主题展
+                img.ime src=image_path('gmis2017/ime-icon.png')
+          .swiper-slide
+            .forum 主论坛
+            .intro
+              p 机器智能的发展已经形成两条主线，越来越多的成熟技术正转化为应用在改变行业；
+              p 技术本身也在朝通用人工智能的终极目标迅速发展。
+              p 因此，在一个机器正在学习智能的时代，我们究竟应该如何学习？
+            .themes
+              .theme-item
+                | 9:00-11:30  机器智能时代
+              .theme-item
+                | 11:30-12:00  人机大战
+            .angle
+            .forum 分论坛
+            .themes
+              .theme-item
+                | 13:30-15:30
+            .sub-forum-list
+              .item
+                .name 机器人论坛
+                .desc 机器智能时代，我们究竟需要怎样的机器人？
+              .item
+                .name 女性论坛
+                .desc 机器智能时代的女性力量
+              .item
+                .name 先锋青年论坛
+                .desc 机器智能时代，先锋青年们的人工智能观
+            .angle
+            .forum 晚宴
+            .themes
+              .theme-item
+                | 18:00-20:00  欢迎晚宴
+            .angle
+            .themes
+              .theme-item
+                span 9:00-18:00 IME2017主题展
+                img.ime src=image_path('gmis2017/ime-icon.png')

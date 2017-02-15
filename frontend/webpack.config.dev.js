@@ -17,7 +17,7 @@ const config = merge(baseConfig, {
       '*': 'http://127.0.0.1:3000'
     },
     devtool: false,
-    port: 9000,
+    port: 8080,
     host: '0.0.0.0',
     compress: true,
     hot: true,
