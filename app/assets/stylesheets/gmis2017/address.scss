@@ -1,0 +1,49 @@
+section.address {
+  position: relative;
+  width: 100%;
+  height: 450px;
+
+  .gmis-map {
+    width: 100%;
+    height: 100%;
+
+    .BMap_mask {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .address-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .address-container {
+    position: relative;
+  }
+
+  .address-info {
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    color: #fff;
+    width: 350px;
+  }
+
+  .detail,
+  .route-line {
+    padding: 13px 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    p {
+      margin-top: 3px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .detail {
+    margin-bottom: 5px;
+  }
+}
