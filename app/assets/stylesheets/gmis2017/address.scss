@@ -32,8 +32,24 @@ section.address {
     width: 350px;
   }
 
+  .icon-location {
+    font-size: 2rem;
+    color: $red;
+    line-height: 25px;
+    margin-right: 10px;
+  }
+
+  .icon-car {
+    font-size: 2rem;
+    color: $red;
+    align-self: baseline;
+    margin-right: 10px;
+    line-height: 28px;
+  }
+
   .detail,
   .route-line {
+    display: flex;
     padding: 13px 20px;
     background-color: rgba(0, 0, 0, 0.85);
 

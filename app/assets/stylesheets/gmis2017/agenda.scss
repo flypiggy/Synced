@@ -5,6 +5,11 @@ section.agenda {
     display: block;
   }
 
+  .icon-time {
+    font-size: 2rem;
+    margin-right: 6px;
+  }
+
   .agenda-content {
     position: relative;
     color: #fff;
@@ -12,7 +17,7 @@ section.agenda {
     background-image: image_url('gmis2017/agenda-content-bg.png');
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 134px;
+    background-size: 120px;
     padding-bottom: 35px;
   }
 
@@ -57,7 +62,9 @@ section.agenda {
     background-image: image_url('gmis2017/agenda-intro-bg-left.png'), image_url('gmis2017/agenda-intro-bg-right.png');
     background-repeat: no-repeat;
     background-position: top left, bottom right;
-    background-size: 197px, 186px;
+    background-size: 170px, 186px;
+    width: 85%;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 
