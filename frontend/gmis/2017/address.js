@@ -3,7 +3,7 @@ const address = () => {
     enableMapClick: false
   });
 
-  map.centerAndZoom(new BMap.Point(116.529436,39.959994), 15);
+  map.centerAndZoom(new BMap.Point(116.529436, 39.959994), 15);
   map.setCurrentCity('北京');
 
   const marker = new BMap.Marker(new BMap.Point(116.511131, 39.961078));
@@ -18,6 +18,6 @@ const address = () => {
     boxShadow: '1px 0 5px rgba(0, 0, 0, 0.2)'
   });
   marker.setLabel(label);
-}
+};
 
 export default address;

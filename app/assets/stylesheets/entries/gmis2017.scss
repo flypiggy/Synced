@@ -2,18 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// normalize
 @import 'normalize-rails';
 
 // base
 @import '../gmis2017/base';
 @import '../gmis2017/textfont';
+@import '../gmis2017/iconfont';
 
 // shared
 @import '../gmis2017/shared/module_title';
 @import '../gmis2017/shared/spinner_line';
 
+// page
 @import '../gmis2017/header';
 @import '../gmis2017/banner';
+@import '../gmis2017/guests';
 @import '../gmis2017/agenda';
 @import '../gmis2017/tickets';
 @import '../gmis2017/address';

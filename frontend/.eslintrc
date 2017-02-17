@@ -36,7 +36,8 @@
   "globals": {
     "db": true,
     "window": true,
-    "BMap": true
+    "BMap": true,
+    "document": true
   },
     "settings": {
     "import/resolver": {

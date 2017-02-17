@@ -1,3 +1,225 @@
-section.guests {
+@mixin avatar($t, $l, $w, $h) {
+  margin-top: $t;
+  left: $l;
+  width: $w;
+  padding-bottom: $h;
 
+  .avatar {
+    padding-bottom: 100% * $h / $w;
+  }
+}
+
+section.guests {
+  background-image: image_url('gmis2017/guests-bg.jpg');
+  background-size: 100%;
+
+  .module-title {
+    position: absolute;
+    top: 2%;
+  }
+
+  .avatar {
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: filter 1.2s;
+  }
+
+  .guests-wall {
+    position: relative;
+    padding-bottom: 105%;
+  }
+
+  .guest-item {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+
+    &:nth-child(2) {
+      @include avatar(0, 49%, 26%, 18%);
+    }
+
+    &:nth-child(3) {
+      @include avatar(3%, 75%, 25%, 17%);
+    }
+
+    &:nth-child(4) {
+      @include avatar(20%, 0, 23%, 16%);
+    }
+
+    &:nth-child(5) {
+      @include avatar(15%, 23%, 26%, 18%);
+    }
+
+    &:nth-child(6) {
+      @include avatar(18%, 49%, 29%, 19%);
+    }
+
+    &:nth-child(7) {
+      @include avatar(20%, 78%, 19%, 22%);
+    }
+
+    &:nth-child(8) {
+      @include avatar(36%, 0, 24%, 18%);
+    }
+
+    &:nth-child(9) {
+      @include avatar(33%, 23%, 26%, 17%);
+    }
+
+    &:nth-child(10) {
+      @include avatar(37%, 49%, 24%, 18%);
+    }
+
+    &:nth-child(11) {
+      @include avatar(42%, 69%, 28%, 20%);
+    }
+
+    &:nth-child(12) {
+      @include avatar(50%, 24%, 25%, 16%);
+    }
+
+    &:nth-child(13) {
+      @include avatar(66%, 21%, 25%, 21%);
+    }
+
+    &:nth-child(14) {
+      @include avatar(55%, 44%, 25%, 16%);
+    }
+
+    &:nth-child(15) {
+      @include avatar(71%, 46%, 23%, 16%);
+    }
+
+    &:nth-child(16) {
+      @include avatar(62%, 69%, 26%, 17%);
+    }
+
+    &:nth-child(17) {
+      @include avatar(54%, 3%, 21%, 30%);
+    }
+
+    &:nth-child(18) {
+      @include avatar(79%, 65%, 18%, 18%);
+    }
+
+    &:nth-child(19) {
+      @include avatar(79%, 83%, 17%, 20%);
+    }
+
+    &:nth-child(20) {
+      @include avatar(84%, 0, 21%, 15%);
+    }
+
+    &:nth-child(21) {
+      @include avatar(87%, 21%, 21%, 18%);
+    }
+
+    &:nth-child(22) {
+      @include avatar(87%, 42%, 24%, 14%);
+    }
+  }
+
+  .guest-item {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.3s;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      padding: 15px 5%;
+      color: $red;
+      font-size: 1.5rem;
+      transform: translateY(30%);
+      opacity: 0;
+      transition: all 0.4s;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+      line-height: 1.3;
+    }
+
+    .border {
+      position: absolute;
+      background-color: $red;
+      opacity: 0;
+      transition: all 0.3s;
+
+      &.border-top {
+        top: 3px;
+        width: 0%;
+        left: 50%;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+
+      &.border-bottom {
+        bottom: 3px;
+        width: 0%;
+        left: 50%;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+
+      &.border-left {
+        top: 50%;
+        height: 0%;
+        left: 3px;
+        width: 1px;
+        transform: translateY(-50%);
+      }
+
+      &.border-right {
+        top: 50%;
+        height: 0%;
+        right: 3px;
+        width: 1px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      z-index: 50;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+
+      .mask {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .avatar {
+        filter: grayscale(50%);
+      }
+
+      .info {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .border-top,
+      .border-bottom {
+        opacity: 1;
+        width: 90%;
+        transform: translateX(-50%);
+      }
+
+      .border-left,
+      .border-right {
+        opacity: 1;
+        height: 90%;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
