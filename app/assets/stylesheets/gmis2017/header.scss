@@ -54,7 +54,7 @@ header.header {
       }
 
       &.active .spinner-line {
-        transition: all 0.3s;
+        transition: all 0.8s;
         visibility: visible;
         opacity: 1;
       }
@@ -67,7 +67,7 @@ header.header {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      transition: all 0.3s;
+      transition: all 0.8s;
     }
   }
 }

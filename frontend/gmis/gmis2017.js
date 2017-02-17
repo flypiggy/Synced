@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'navsync/dist/navsync.min';
 
 // shared
 import wavyLine from './shared/wavyLine';
@@ -9,4 +10,8 @@ $(() => {
   wavyLine();
   agenda();
   address();
+  $('#gmis-nav').navSync({
+    offset: 60,
+    highlightClass: 'active'
+  });
 });

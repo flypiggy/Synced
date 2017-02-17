@@ -2666,6 +2666,10 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
+navsync:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/navsync/download/navsync-0.1.0.tgz#b0ebdc96f44d24783ff08c14c51f0278daf0df08"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/negotiator/download/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
