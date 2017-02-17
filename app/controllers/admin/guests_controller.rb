@@ -15,7 +15,7 @@ class Admin::GuestsController < Admin::BaseController
     load_guest
   end
 
-  def create
+  def update
     load_guest
     build_guest
   end
@@ -26,15 +26,11 @@ class Admin::GuestsController < Admin::BaseController
 
   private
 
-  def load_guests
-  end
+  def load_guests; end
 
-  def load_guest
-  end
+  def load_guest; end
 
-  def build_guest
-  end
+  def build_guest; end
 
-  def guest_params
-  end
+  def guest_params; end
 end

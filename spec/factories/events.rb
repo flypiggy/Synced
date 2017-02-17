@@ -2,8 +2,8 @@ FactoryGirl.define do
   factory :event do
     name 'GMIS2017'
 
-    start_date {10.days.since}
-    end_date {12.days.since}
+    start_date { 10.days.since }
+    end_date { 12.days.since }
 
     factory :event_with_guests do
       transient do
@@ -15,5 +15,4 @@ FactoryGirl.define do
       end
     end
   end
-
 end

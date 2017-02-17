@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -28,23 +27,22 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 # Front-End
+gem 'autoprefixer-rails'
 gem 'browser', '~> 2.3'
+gem 'materialize-sass'
 gem 'meta-tags', '~> 2.4'
+gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 gem 'sass-rails', '~> 5.0'
 gem 'slim', '~> 3.0', '>= 3.0.7'
-gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
-gem 'autoprefixer-rails'
-gem 'materialize-sass'
 
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
 
   # Test
-  gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.5'
 
   # Guard
   gem 'guard-rspec', require: false
@@ -53,8 +51,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
+  gem 'web-console', '>= 3.3.0'
 
   # LiveReload
   gem 'guard-livereload', '~> 2.5', require: false
@@ -64,14 +62,18 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Use pry for debug and replace the default rails console
-  gem 'pry-rails'
   gem 'awesome_print'
+  gem 'pry-rails'
 
   # For rails pannel
   gem 'meta_request'
 
   # DB structure
   gem 'annotate'
+
+  # Code analyzer
+  gem 'overcommit', require: false
+  gem 'rubocop', require: false
 end
 
 group :production do

@@ -1,0 +1,51 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - !ruby/regexp /(vendor|bundle|bin|db)\/.*/
+    - frontend/**/*
+    - Guardfile
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.4
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 100
+  Exclude:
+    - spec/**/*.rb
+
+Metrics/CyclomaticComplexity:
+  Max: 6
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Style/AlignHash:
+  Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

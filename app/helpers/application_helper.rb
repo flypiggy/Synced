@@ -5,7 +5,7 @@ module ApplicationHelper
       return unless asset_name.present?
     end
     src = cdn_assets_url(name, asset_name)
-    "<script src=\"#{src}\"></script>".html_safe
+    javascript_include_tag src
   end
 
   def page_id
@@ -13,7 +13,7 @@ module ApplicationHelper
     [controller_names, action_name].compact.flatten.join('-')
   end
 
-  def active_when name, value= controller_name
+  def active_when(name, value = controller_name)
     'active' if name == value
   end
 
