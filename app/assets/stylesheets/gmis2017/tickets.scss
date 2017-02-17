@@ -42,7 +42,7 @@ section.tickets {
     }
 
     .unit {
-      font-size: 3.5rem; 
+      font-size: 3.5rem;
     }
 
     .reserve-btn {
@@ -102,10 +102,17 @@ section.tickets {
       top: -70px;
       right: 0;
       width: 180px;
-      height: 180px * 574 / 296;
+      height: 180px * 296 / 574;
       background-image: image_url('gmis2017/tickets-elem-right.png');
       background-size: 100%;
       transform: translateX(20%);
     }
+  }
+
+  .ticket-line-anima {
+    position: absolute;
+    top: -48px;
+    right: 20px;
+    transform: scale(1.4);
   }
 }
