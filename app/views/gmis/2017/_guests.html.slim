@@ -91,7 +91,7 @@ section.guests
 
       - guests.each_with_index do |guest, index|
         a.guest-item href="javascript:;" data-index="#{index + 2}"
-          .responsive-img style="background-image:url('#{guest['avatar']}')"
+          .avatar style="background-image:url('#{guest['avatar']}')"
           .mask
           .info
             .company=guest['company']

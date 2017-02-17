@@ -4,7 +4,7 @@
   width: $w;
   padding-bottom: $h;
 
-  .responsive-img {
+  .avatar {
     padding-bottom: 100% * $h / $w;
   }
 }
@@ -18,7 +18,7 @@ section.guests {
     top: 2%;
   }
 
-  .responsive-img {
+  .avatar {
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
@@ -198,7 +198,7 @@ section.guests {
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .responsive-img {
+      .avatar {
         filter: grayscale(50%);
       }
 
