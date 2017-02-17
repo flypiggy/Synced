@@ -3,23 +3,24 @@ section.agenda
     .agenda-title
       =render 'gmis/2017/shared/module_title', en: 'AGENDA', zh: '大会日程'
 
-    .agenda-content
-      .agenda-days.js-agenda-days
-        .swiper-button-prev.agenda-button.agenda-button-prev <
-        .day-header.textfont-geo231l.one-day.active
-          span.month 5
-          span.slash
-            | /
-          span.sun 27
-        .day-header.textfont-geo231l.two-day
-          span.month 5
-          span.slash
-            | /
-          span.sun 28
-        .swiper-button-next.agenda-button.agenda-button-next >
-      #agenda-container.agenda-container.swiper-container
-        .swiper-wrapper
-          .swiper-slide
+  .agenda-content
+    .agenda-days.js-agenda-days
+      .swiper-button-prev.agenda-button.agenda-button-prev <
+      .day-header.textfont-geo231l.one-day.active
+        span.month 5
+        span.slash
+          | /
+        span.sun 27
+      .day-header.textfont-geo231l.two-day
+        span.month 5
+        span.slash
+          | /
+        span.sun 28
+      .swiper-button-next.agenda-button.agenda-button-next >
+    #agenda-container.agenda-container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .container
             .forum 主论坛
             .intro
               p 机器智能的发展已经形成两条主线，越来越多的成熟技术正转化为应用在改变行业；
@@ -63,7 +64,8 @@ section.agenda
                 i.iconfont.icon-time
                 span 9:00-18:00 IME2017主题展
                 img.ime src=image_path('gmis2017/ime-icon.png')
-          .swiper-slide
+        .swiper-slide
+          .container
             .forum 主论坛
             .intro
               p 机器智能的发展已经形成两条主线，越来越多的成熟技术正转化为应用在改变行业；
@@ -104,3 +106,4 @@ section.agenda
                 i.iconfont.icon-time
                 span 9:00-18:00 IME2017主题展
                 img.ime src=image_path('gmis2017/ime-icon.png')
+  canvas.js-canvas-wavy.canvas-wavy
