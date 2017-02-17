@@ -1,5 +1,6 @@
 ---
 zh-CN:
+  synced: 机器之心
   activerecord:
     errors:
       messages:

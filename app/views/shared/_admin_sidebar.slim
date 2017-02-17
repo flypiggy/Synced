@@ -1,0 +1,8 @@
+.side-nav.fixed#left-sidebar
+  ul.collapsible.collapsible-accordion
+    li.bold
+      a class="collapsible-header waves-effect waves-teal bold#{' active' if controller_name == 'guests'}" =t('.metadata')
+      .collapsible-body
+        ul
+          li class= active_when('guests')
+            = link_to t('.guests_management'), admin_guests_path

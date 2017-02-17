@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :guest, except: :show
+    resources :guests, except: :show
   end
 end

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-html lang="en"
+doctype html
+html lang= 'en'
   head
-    meta charset="UTF-8"
-    meta content="initial-scale=1.0,maximum-scale=1.0,width=device-width" name="viewport"
-    meta name="renderer" content="webkit"
+    meta charset= 'UTF-8'
+    meta content= 'initial-scale=1.0,maximum-scale=1.0,width=device-width' name= 'viewport'
+    meta name='renderer' content='webkit'
     title gmis
     = csrf_meta_tags
-    = stylesheet_link_tag "entries/gmis2017", :media => "all"
-    = javascript_include_tag "entries/gmis2017"
+    = stylesheet_link_tag 'entries/gmis2017', media: 'all'
+    = javascript_include_tag 'entries/gmis2017'
 
   body class="#{controller_name + ' ' + controller_name + '-' + action_name}"
     = render 'gmis/2017/header'
@@ -19,4 +19,4 @@ html lang="en"
     = render 'gmis/2017/address'
     = render 'gmis/2017/cooperative'
     = render 'gmis/2017/extension'
-    = webpack_include_tag "gmis2017"
+    = webpack_include_tag 'gmis2017'
