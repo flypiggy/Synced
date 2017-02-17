@@ -40,10 +40,6 @@ group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
 
-  # Test
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.5'
-
   # Guard
   gem 'guard-rspec', require: false
   gem 'terminal-notifier-guard' # This need terminal-notifier, brew install it
@@ -74,6 +70,12 @@ group :development do
   # Code analyzer
   gem 'overcommit', require: false
   gem 'rubocop', require: false
+end
+
+group :test do
+  gem 'codeclimate-test-reporter', require: false
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :production do
