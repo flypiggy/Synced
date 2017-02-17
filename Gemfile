@@ -73,9 +73,10 @@ group :development do
 end
 
 group :test do
-  gem 'codeclimate-test-reporter', require: false
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
+  gem 'simplecov'
 end
 
 group :production do
