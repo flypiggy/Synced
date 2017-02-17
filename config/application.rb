@@ -31,7 +31,6 @@ module Synced
     end
 
     config.webpack = {
-      asset_manifest: {}
     }
   end
 end
