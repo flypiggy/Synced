@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/SyncedPSI/Synced.svg?branch=master)](https://travis-ci.org/SyncedPSI/Synced)
+[![Code Climate](https://codeclimate.com/github/SyncedPSI/Synced/badges/gpa.svg)](https://codeclimate.com/github/SyncedPSI/Synced)
+[![Test Coverage](https://codeclimate.com/github/SyncedPSI/Synced/badges/coverage.svg)](https://codeclimate.com/github/SyncedPSI/Synced/coverage)
 
 这个人很懒, 暂时没有写 readme
 
