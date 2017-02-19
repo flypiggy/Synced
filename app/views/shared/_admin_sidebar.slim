@@ -1,8 +1,27 @@
-.side-nav.fixed#left-sidebar
-  ul.collapsible.collapsible-accordion
-    li.bold
-      a class="collapsible-header waves-effect waves-teal bold#{' active' if controller_name == 'guests'}" =t('.metadata')
-      .collapsible-body
-        ul
-          li class= active_when('guests')
-            = link_to t('.guests_management'), admin_guests_path
+ul.side-nav#slide-out
+  li.bold
+    ul.collapsible data-collapsible="expandable"
+      li
+        .collapsible-header
+          i.material-icons av_timer
+          span First
+        .collapsible-body
+          = link_to t('.guests_management'), admin_guests_path
+
+      li
+        .collapsible-header.active
+          i.material-icons filter_drama
+          span =t('.metadata')
+        .collapsible-body
+          ul
+            li class="#{'active' if controller_name == 'guests'}"
+              = link_to t('.guests_management'), admin_guests_path
+            li
+              = link_to 'Item2', '#'
+
+      li
+        .collapsible-header
+          i.material-icons settings
+          span End
+        .collapsible-body
+          = link_to t('.guests_management'), admin_guests_path
