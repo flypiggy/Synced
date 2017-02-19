@@ -110,6 +110,8 @@ GEM
     lumberjack (1.0.11)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    material_icons (2.2.0)
+      railties (>= 3.2)
     materialize-sass (0.98.0)
       sass (~> 3.3)
     meta-tags (2.4.0)
@@ -277,6 +279,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   listen (~> 3.0.5)
+  material_icons
   materialize-sass
   meta-tags (~> 2.4)
   meta_request
