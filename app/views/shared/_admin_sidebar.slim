@@ -1,15 +1,35 @@
-ul.side-nav#slide-out
-  li.bold
+ul.sidebar.side-nav.fixed#slide-out
+  li.user-details.cyan.darken-2
+    .row
+      .col.s4
+        img.circle.responsive-img.valign.profile-image src="http://demo.geekslabs.com/materialize-v1.0/images/avatar.jpg"
+      .col.s8
+        a.dropdown-button.waves-effect.waves-light.profile-btn data-activates="profile-dropdown"
+          span.left John Doe
+          i.material-icons arrow_drop_down
+        ul.dropdown-content#profile-dropdown
+          li
+            a href="javascript:;"
+              i.material-icons wifi_tethering
+              span Profile
+          li
+            a href="javascript:;"
+              i.material-icons wifi_tethering
+              span Profile
+        .user-roal Administrator
+  li.bold.sidebar-list
     ul.collapsible data-collapsible="expandable"
       li
-        .collapsible-header
+        a.collapsible-header.waves-effect.waves-cyan
           i.material-icons av_timer
           span First
         .collapsible-body
-          = link_to t('.guests_management'), admin_guests_path
+          ul
+            li
+              = link_to t('.guests_management'), admin_guests_path
 
       li
-        .collapsible-header.active
+        a.collapsible-header.active.waves-effect.waves-cyan
           i.material-icons filter_drama
           span =t('.metadata')
         .collapsible-body
@@ -20,8 +40,15 @@ ul.side-nav#slide-out
               = link_to 'Item2', '#'
 
       li
-        .collapsible-header
+        a.collapsible-header.waves-effect.waves-cyan
           i.material-icons settings
           span End
         .collapsible-body
-          = link_to t('.guests_management'), admin_guests_path
+          ul
+            li
+              = link_to t('.guests_management'), admin_guests_path
+
+
+a.sidebar-collapse href="javaScript:;" data-activates="slide-out"
+  i.material-icons menu
+  span 菜单

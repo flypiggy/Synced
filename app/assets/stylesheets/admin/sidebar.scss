@@ -1,0 +1,69 @@
+.sidebar {
+  top: 64px;
+  overflow: hidden;
+
+  .user-details {
+    background: image_url('admin/user-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 15px 10px;
+
+    .row {
+      margin: 0;
+      line-height: 1;
+    }
+
+    .profile-btn {
+      position: relative;
+      padding: 0;
+      color: #fff;
+
+      i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .user-roal {
+      color: #fff;
+    }
+
+    .dropdown-content {
+      li {
+        min-height: 48px;
+      }
+
+      a {
+        padding: 0 10px;
+        line-height: 48px;
+      }
+
+      i.material-icons {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &.side-nav a {
+    font-size: 15px;
+  }
+
+  &.side-nav .collapsible-header i {
+    margin-right: 1rem;
+  }
+
+  &.side-nav .collapsible-body > ul:not(.collapsible) > li.active {
+    background-color: #00bcd4;
+  }
+
+  &.side-nav .collapsible-body a {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 4rem;
+  }
+}
+
+a.sidebar-collapse {
+  display: none;
+}
