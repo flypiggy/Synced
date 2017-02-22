@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', () => {
   $('.sidebar-collapse').sideNav({
-    menuWidth: 240,
+    menuWidth: 240
   });
 
   Waves.displayEffect();
