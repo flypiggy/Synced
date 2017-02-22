@@ -83,5 +83,6 @@ production:
   database: Synced_production
   encoding: utf8
   pool: 20
+  host: <%= ENV['DATABASE_HOST'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
