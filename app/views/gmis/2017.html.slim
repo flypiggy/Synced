@@ -1,7 +1,10 @@
 doctype html
 html lang= 'en'
   head
-    = display_meta_tags
+    meta charset= 'UTF-8'
+    meta content= 'initial-scale=1.0,maximum-scale=1.0,width=device-width' name= 'viewport'
+    meta name='renderer' content='webkit'
+    title gmis
     = csrf_meta_tags
     = stylesheet_link_tag 'entries/gmis2017', media: 'all'
     = javascript_include_tag 'entries/gmis2017'
