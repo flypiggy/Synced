@@ -30,12 +30,6 @@ PreCommit:
 
   YamlSyntax:
     enabled: true
-
-  EsLint:
-    enabled: true
-    required_executable: './frontend/node_modules/.bin/eslint'
-    command: ['./frontend/node_modules/.bin/eslint', './frontend/src/', '--ext', '.js,.jsx']
-
 CommitMsg:
   ALL:
     on_warn: fail # Treat all warnings as failures

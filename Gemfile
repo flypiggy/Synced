@@ -34,6 +34,7 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'meta-tags', '~> 2.4'
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
+gem 'perfect-scrollbar-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'slim', '~> 3.0', '>= 3.0.7'
 

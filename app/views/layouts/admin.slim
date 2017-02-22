@@ -10,9 +10,11 @@ html lang='en'
     = javascript_include_tag 'entries/admin', 'data-turbolinks-track': 'reload'
 
   body class= 'page' id= page_id
-    header
+    header.header
       = render 'shared/admin_header'
-    .main
+
+    section.main
       = render 'shared/admin_sidebar'
+
       .wrapper
         = yield
