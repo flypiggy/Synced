@@ -1,1 +1,98 @@
+html,
+body {
+  background-color: #f9f9f9;
+}
 
+header {
+  height: 56px;
+
+  .navbar-fixed,
+  .nav-wrapper {
+    height: 56px;
+  }
+
+  nav .brand-logo {
+    width: 160px;
+    font-size: 0;
+    line-height: 1;
+    padding-top: 14px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .row {
+    margin: 0;
+  }
+/*   .notification-badge {
+  position: relative;
+  right: 5px;
+  top: -20px;
+  color: #fff;
+  background-color: #ff4081;
+  margin: 0 -0.8em;
+  border-radius: 50%;
+  padding: 4px 5px;
+} */
+
+  nav i.material-icons {
+    font-size: 30px;
+  }
+}
+
+.main {
+  padding-left: 240px;
+
+  .breadcrumbs-container {
+    height: 93px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 0;
+  }
+
+  .breadcrumbs-title {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: bold;
+    margin-top: 18px;
+    margin: 0;
+  }
+
+  .breadcrumbs-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+
+    a {
+      color: #00bcd4;
+    }
+  }
+
+  .breadcrumbs-list > li {
+    display: inline-block;
+  }
+
+  .breadcrumbs-list > li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
+
+  .btns {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 20px;
+  }
+
+  .wrapper-content {
+    padding: 0 15px;
+  }
+
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

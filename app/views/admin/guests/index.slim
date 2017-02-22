@@ -1,5 +1,43 @@
-.col
-  .s12
-    a href="javaScript:;" data-activates="slide-out" class="button-collapse"
-      i.material-icons menu
-      span 菜单
+= render 'shared/admin_loader'
+
+
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title 嘉宾管理
+    ol.breadcrumbs-list
+      li
+        a href="#!" HOME
+      li
+        a href="#!" 元信息管理
+      li
+        span 嘉宾管理
+  .col.s6
+    .btns
+      a.waves-effect.waves-light.btn.teal.accent-4
+        | 添加嘉宾
+.wrapper-content
+  table.striped
+    thead
+      tr
+        th Name
+        th Item Name
+        th Name
+    tbody
+      - (0..5).each do |x|
+        tr
+          td Alvin
+          td Alvin
+          td Alvin
+ul.pagination
+  li.disabled
+    a href="#"
+      i.material-icons chevron_left
+  li.active
+    a href="#!" 1
+  - (2..8).each do |x|
+    li.waves-effect
+      a href="#!"
+        =x
+  li.waves-effect
+    a href="#!"
+      i.material-icons chevron_right
