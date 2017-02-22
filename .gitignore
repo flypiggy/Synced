@@ -17,8 +17,9 @@ coverage/
 
 # Ignore Byebug command history file.
 .byebug_history
-node_modules
+/frontend/node_modules/*
 public/static
 npm-debug.log
+/.env
 
 .DS_Store

@@ -81,5 +81,7 @@ test:
 production:
   <<: *default
   database: Synced_production
-  username: Synced
-  password: <%= ENV['SYNCED_DATABASE_PASSWORD'] %>
+  encoding: utf8
+  pool: 20
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
