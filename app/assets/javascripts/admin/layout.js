@@ -3,6 +3,8 @@ $(document).on('turbolinks:load', () => {
     menuWidth: 240,
   });
 
+  Waves.displayEffect();
+
   function fullScreen(){
     document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ?
       document.documentElement.requestFullScreen ?
