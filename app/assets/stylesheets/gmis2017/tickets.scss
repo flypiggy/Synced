@@ -19,14 +19,14 @@ section.tickets {
       z-index: 2;
       padding: 15px;
       width: 100% / 3 * 1;
-      text-align: center;
-    }
-
-    .ticket-info {
-      height: 100%;
       background-color: #fff;
-      padding: 30px 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      text-align: center;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
     .type {
@@ -114,5 +114,21 @@ section.tickets {
     top: -48px;
     right: 20px;
     transform: scale(1.4);
+  }
+}
+
+
+@media #{$medium-and-down} {
+  section.tickets {
+    .tickets-list {
+      padding: 0 10px;
+      flex-wrap: wrap;
+
+      .ticket-wrapper {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
   }
 }

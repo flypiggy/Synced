@@ -152,3 +152,9 @@ section.banner {
     }
   }
 }
+
+@media #{$medium-and-down} {
+  section.banner {
+    padding-top: 0;
+  }
+}
