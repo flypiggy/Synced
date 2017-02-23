@@ -12,3 +12,18 @@
     color: $red;
   }
 }
+
+
+@media #{$medium-and-down} {
+  .module-title {
+    .en {
+      font-size: 3.2rem;
+    }
+
+    .zh {
+      position: relative;
+      top: -5px;
+      font-size: 2.5rem;
+    }
+  }
+}

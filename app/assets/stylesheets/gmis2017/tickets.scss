@@ -120,8 +120,12 @@ section.tickets {
 
 @media #{$medium-and-down} {
   section.tickets {
+    .tickets-title {
+      padding: 0 $mobile-edge;
+    }
+
     .tickets-list {
-      padding: 0 10px;
+      padding: 0 $mobile-edge;
       flex-wrap: wrap;
 
       .ticket-wrapper {

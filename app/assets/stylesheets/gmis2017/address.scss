@@ -67,7 +67,7 @@ section.address {
 @media #{$medium-and-down} {
   section.address {
     .gmis-map {
-      height: 300px; 
+      height: 300px;
     }
 
     .address-content,
@@ -77,6 +77,12 @@ section.address {
 
     .address-info {
       width: 100%;
+    }
+
+    .detail,
+    .route-line {
+      padding-left: $mobile-edge;
+      padding-right: $mobile-edge;
     }
   }
 }
