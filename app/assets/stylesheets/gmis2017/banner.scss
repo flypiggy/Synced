@@ -156,5 +156,34 @@ section.banner {
 @media #{$medium-and-down} {
   section.banner {
     padding-top: 0;
+
+    .gmis-logo {
+      width: 85%;
+    }
+
+    .banner-content {
+      padding-top: 40%;
+      padding-bottom: 45%;
+    }
+
+    .banner-overflow-elems {
+      display: none;
+    }
+
+    .formula-wrapper {
+      flex-direction: column;
+    }
+
+    .formula {
+      width: 85%;
+      margin-bottom: 60px;
+    }
+
+    .banner-elems {
+      .elem-03,
+      .elem-06 {
+        display: none;
+      }
+    }
   }
 }
