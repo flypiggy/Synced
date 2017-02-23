@@ -4,7 +4,7 @@ addons:
   postgresql: '9.6'
 branches:
   only:
-    - master
+  - master
 cache: bundler
 bundler_args: "--jobs=3 --retry=3 --without development production"
 rvm:
@@ -20,3 +20,8 @@ before_script:
 - bundle exec rake db:create db:migrate
 script:
 - bundle exec rspec spec
+deploy:
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master
