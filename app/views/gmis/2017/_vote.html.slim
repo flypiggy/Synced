@@ -1,0 +1,31 @@
+- vote_options = [ \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 }, \
+  { 'name' => '英雄联盟', 'vote' => 430 } \
+]
+
+section.vote#vote
+  img.vote-parallax#vote-parallax src=image_path('gmis2017/vote/vote-bg.jpg')
+  .container
+    .vote-title
+      .vote-title--main VOTE
+      .vote-title--side 投票选出你想看的人机大战！
+    .moon-wrapper
+      .moon-elem
+      .vote-slogan--01
+      .vote-slogan--02
+
+    .vote-content
+      - vote_options.each do |opt|
+        .vote-option
+          a.vote-btn href="javascript:;"
+            =opt['name']
+          .vote-number =opt['vote']
+    .elem.elem-bg-01
+    .elem.elem-bg-02
+  .elem.elem-bg-03
+  .elem.elem-bg-04
