@@ -1,0 +1,19 @@
+- contact_people = [ \
+  { 'title' => '商务合作', 'name' => '刘敏', 'email' => 'liumin@jiqizhixin.com' }, \
+  { 'title' => '媒体合作', 'name' => '罗松', 'email' => 'luosong@jiqizhixin.com' }, \
+  { 'title' => '参会事宜', 'name' => '庄雨鑫', 'email' => 'zhuangyuxin@jiqizhixin.com' } \
+]
+
+section.contact
+  .container
+    = render 'gmis/2017/shared/module_title', en: 'CONTACT US', zh: '联系我们'
+
+    .contact-content
+      - contact_people.each do |person|
+        .contact-item
+          .title =person['title']
+          .name =person['name']
+          .email
+            a.mailto href="mailto:#{person['email']}"
+              i.iconfont.icon-email
+              =person['email']

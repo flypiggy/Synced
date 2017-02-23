@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 232308 */
-  src: url('//at.alicdn.com/t/font_bxkqie72cmzpvi.eot');
-  src: url('//at.alicdn.com/t/font_bxkqie72cmzpvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_bxkqie72cmzpvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_bxkqie72cmzpvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_bxkqie72cmzpvi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_ip7yuavukrzfr.eot');
+  src: url('//at.alicdn.com/t/font_ip7yuavukrzfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_ip7yuavukrzfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_ip7yuavukrzfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_ip7yuavukrzfr.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -32,5 +32,9 @@
 
   &.icon-menu:before {
     content: "\e600";
+  }
+
+  &.icon-email:before {
+    content: "\e65e";
   }
 }
