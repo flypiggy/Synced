@@ -5,7 +5,10 @@ addons:
 branches:
   only:
   - master
-cache: bundler
+cache:
+  bundler: true
+  directories:
+    - node_modules
 bundler_args: "--jobs=3 --retry=3 --without development production"
 rvm:
 - 2.4.0
