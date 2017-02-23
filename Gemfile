@@ -43,12 +43,6 @@ group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
 
-  # Guard
-  gem 'guard-rspec', require: false
-  gem 'terminal-notifier-guard' # This need terminal-notifier, brew install it
-end
-
-group :development do
   # For deployment
   gem 'capistrano',         require: false
   gem 'capistrano-bundler', require: false
@@ -56,6 +50,12 @@ group :development do
   gem 'capistrano-rbenv',   require: false
   gem 'capistrano3-puma',   require: false
 
+  # Guard
+  gem 'guard-rspec', require: false
+  gem 'terminal-notifier-guard' # This need terminal-notifier, brew install it
+end
+
+group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '~> 3.0.5'
   gem 'web-console', '>= 3.3.0'
