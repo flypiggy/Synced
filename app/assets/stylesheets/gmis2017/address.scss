@@ -84,5 +84,13 @@ section.address {
       padding-left: $mobile-edge;
       padding-right: $mobile-edge;
     }
+
+    .detail {
+      margin-bottom: 0; 
+    }
+
+    .route-line {
+      padding-top: 0;
+    }
   }
 }
