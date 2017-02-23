@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-rbenv',   require: false
   gem 'capistrano3-puma',   require: false
+  gem 'slackistrano'
 
   # Guard
   gem 'guard-rspec', require: false
