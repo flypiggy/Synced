@@ -5,7 +5,7 @@ const header = () => {
   const $hamburger = $('.js-hamburger');
 
   $hamburger.on('click', () => {
-    $(this).toggleClass('is-active');
+    $hamburger.toggleClass('is-active');
     $header.toggleClass('is-active');
   });
 
