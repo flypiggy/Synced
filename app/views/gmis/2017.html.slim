@@ -97,17 +97,18 @@ html lang= 'en'
     = stylesheet_link_tag 'entries/gmis2017', media: 'all'
     = javascript_include_tag 'entries/gmis2017'
 
-  body class="#{controller_name + ' ' + controller_name + '-' + action_name} #{'mobile' if browser.device.mobile?}"
+  body class="#{controller_name + ' ' + controller_name + '-' + action_name} #{'mobile' if device_mobile?}"
     = render 'gmis/2017/header'
     = render 'gmis/2017/banner'
     = render 'gmis/2017/video'
 
-    - if browser.device.mobile?
+    - if device_mobile?
       = render 'gmis/2017/mobile/guests', guests: guests
+      = render 'gmis/2017/mobile/agenda'
     - else
       = render 'gmis/2017/guests', guests: guests
+      = render 'gmis/2017/agenda'
 
-    = render 'gmis/2017/agenda'
     = render 'gmis/2017/tickets'
     = render 'gmis/2017/address'
     = render 'gmis/2017/cooperative'
