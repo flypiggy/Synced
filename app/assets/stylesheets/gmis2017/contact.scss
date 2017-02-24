@@ -40,3 +40,25 @@ section.contact {
     }
   }
 }
+
+@media #{$medium-and-down} {
+  section.contact {
+    padding: 30px $mobile-edge;
+
+    .contact-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 5px 0;
+
+      .contact-item {
+        width: 100%;
+        border-left: 0;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
