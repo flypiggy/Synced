@@ -11,8 +11,6 @@ $(() => {
   agenda();
   vote();
   address();
-  $('#gmis-nav').navSync({
-    offset: 60,
-    highlightClass: 'active'
-  });
+
+  $.scrollIt({ topOffset: -75 });
 });

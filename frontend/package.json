@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "mdetect": "^1.2.2",
-    "navsync": "^0.1.0",
     "scroll-parallax": "^1.1.0",
     "swiper": "^3.4.1"
   },
