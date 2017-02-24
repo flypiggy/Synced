@@ -14,8 +14,8 @@ install:
   - nvm install 7.6.0
   - (cd frontend && yarn)
 cache:
-  bundler: true
-  yarn: true
+  - bundler
+  - $HOME/.yarn-cache
 bundler_args: "--jobs=3 --retry=3 --without development production"
 rvm:
 - 2.4.0

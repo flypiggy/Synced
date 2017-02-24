@@ -38,7 +38,7 @@ module Slackistrano
     # See https://api.slack.com/docs/message-formatting
     def payload_for_failed
       payload = super
-      payload[:text] = "#{deployer}: 唔，忘记了时钟块了一小时了，怎么不是 Saber。"
+      payload[:text] = "#{deployer}: 唔，忘记了时钟快了一小时了，怎么不是 Saber。"
       payload
     end
 
