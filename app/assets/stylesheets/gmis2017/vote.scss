@@ -1,0 +1,176 @@
+section.vote {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  padding: 40px 0;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  .vote-parallax {
+    position: absolute;
+  }
+
+  .moon-wrapper {
+    position: relative;
+  }
+
+  .vote-title--main {
+    display: inline-block;
+    color: $red;
+    font-size: 3.8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 8px;
+  }
+
+  .vote-title--side {
+    display: inline-block;
+  }
+
+  .moon-elem {
+    width: 517px;
+    height: 517px * 517 / 512;
+    background-image: image_url('gmis2017/vote/moon.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  .vote-title {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .vote-slogan--01 {
+    width: 800px;
+    height: 800px * 113 / 1440;
+    position: absolute;
+    top: 205px;
+    background-image: image_url('gmis2017/vote/vote-slogan.png');
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vote-slogan--02 {
+    width: 350px;
+    height: 350px * 65 / 593;
+    position: absolute;
+    top: 310px;
+    background-image: image_url('gmis2017/vote/vote-slogan-02.png');
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vote-content {
+    position: relative;
+    height: 0;
+    padding-bottom: 20%;
+
+    .vote-option {
+      position: absolute;
+
+      .vote-btn {
+        display: inline-block;
+        font-size: 1.8rem;
+        color: #000;
+        background-color: #fff;
+        padding: 2px 15px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+
+      .vote-number {
+        padding-left: 100px;
+        background-color: rgba(39, 39, 39, 0.8);
+        margin-top: 10px;
+      }
+
+      &:nth-child(1) {
+        margin-top: -10%;
+      }
+
+      &:nth-child(2) {
+        left: 20%;
+      }
+
+      &:nth-child(3) {
+        left: 65%;
+      }
+
+      &:nth-child(4) {
+        right: 4%;
+        margin-top: -15%;
+      }
+
+      &:nth-child(5) {
+        left: 10%;
+        margin-top: 12%;
+      }
+
+      &:nth-child(6) {
+        left: 50%;
+        margin-top: 12%;
+      }
+
+      &:nth-child(7) {
+        right: 0;
+        margin-top: 12%;
+      }
+    }
+  }
+
+  .elem {
+    position: absolute;
+
+    &.elem-bg-01 {
+      top: 0;
+      left: -85px;
+      width: 150px;
+      height: 150px * 288 / 528;
+      background-image: image_url('gmis2017/elem/elem-07.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.elem-bg-02 {
+      top: 40px;
+      right: 10px;
+      width: 150px;
+      height: 150px * 189 / 232;
+      background-image: image_url('gmis2017/elem/elem-13.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.elem-bg-03 {
+      bottom: 180px;
+      right: 0;
+      width: 60px;
+      height: 60px * 61 / 80;
+      background-image: image_url('gmis2017/elem/elem-14.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.elem-bg-04 {
+      bottom: 40px;
+      left: 0;
+      width: 160px;
+      height: 160px * 82 / 258;
+      background-image: image_url('gmis2017/elem/elem-15.png');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

@@ -3453,6 +3453,10 @@ rimraf@^2.2.8, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2:
   dependencies:
     glob "^7.0.5"
 
+riot-observable@^2.4.2:
+  version "2.5.0"
+  resolved "http://registry.npm.taobao.org/riot-observable/download/riot-observable-2.5.0.tgz#5fb9682685b6ebd52d54ad0f4c4e72af9eb904c4"
+
 ripemd160@0.2.0:
   version "0.2.0"
   resolved "http://registry.npm.taobao.org/ripemd160/download/ripemd160-0.2.0.tgz#2bf198bde167cacfa51c0a928e84b68bbe171fce"
@@ -3470,6 +3474,12 @@ rx-lite@^3.1.2:
 sax@~1.2.1:
   version "1.2.2"
   resolved "http://registry.npm.taobao.org/sax/download/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
+
+scroll-parallax:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/scroll-parallax/download/scroll-parallax-1.1.0.tgz#374191d2f73b8a836cd28c5b999a21a99ed10fbb"
+  dependencies:
+    riot-observable "^2.4.2"
 
 semver@~5.3.0:
   version "5.3.0"

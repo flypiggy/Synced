@@ -15,7 +15,7 @@ section.agenda {
     position: relative;
     color: #fff;
     text-align: center;
-    background-image: image_url('gmis2017/agenda-content-bg.png');
+    background-image: image_url('gmis2017/elem/elem-12.png');
     background-position: 98% bottom;
     background-repeat: no-repeat;
     background-size: 120px;
@@ -60,7 +60,7 @@ section.agenda {
     line-height: 2;
     font-size: 1.8rem;
     padding: 30px 0 50px;
-    background-image: image_url('gmis2017/agenda-intro-bg-left.png'), image_url('gmis2017/agenda-intro-bg-right.png');
+    background-image: image_url('gmis2017/elem/elem-10.png'), image_url('gmis2017/elem/elem-11.png');
     background-repeat: no-repeat;
     background-position: top left, bottom right;
     background-size: 170px, 186px;
@@ -106,6 +106,7 @@ section.agenda {
     background-position: 0 80px;
 
     .item {
+      width: 130px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -113,7 +114,7 @@ section.agenda {
       text-align: center;
 
       .name {
-        width: 130px;
+        width: 100%;
         height: 130px;
         font-size: 2.2rem;
         line-height: 1.2;
@@ -128,7 +129,7 @@ section.agenda {
       }
 
       .desc {
-        width: 130px;
+        width: 100%;
         font-size: 1.7rem;
         line-height: 1.2;
       }

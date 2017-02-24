@@ -17,6 +17,10 @@ module ApplicationHelper
     'active' if name == value
   end
 
+  def device_mobile?
+    browser.device.ipad? || browser.device.mobile?
+  end
+
   private
 
   def cdn_assets_url(name, asset_name)

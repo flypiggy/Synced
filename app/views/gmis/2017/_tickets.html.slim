@@ -1,47 +1,44 @@
 section.tickets#tickets
   .container
     .tickets-title
-      =render 'gmis/2017/shared/module_title', en: 'PURCHASE TICKETS', zh: '在线购票'
+      = render 'gmis/2017/shared/module_title', en: 'PURCHASE TICKETS', zh: '在线购票'
 
     .tickets-list
       .ticket-wrapper
-        .ticket-info
-          .name
-            span.type 单日票
-            span.note
-              | (盲订价)
-          .price
-            span.unit ¥
-            span 688
-          a.reserve-btn href="javascript:;" target="_blank" 预定
-          .rights GMIS 1日论坛 / IME2017 展会
-          .reserve-four 4月预订 ¥888
-          .reserve-five 5月预订 ¥1288
+        .name
+          span.type 单日票
+          span.note
+            | (盲订价)
+        .price
+          span.unit ¥
+          span 688
+        a.reserve-btn href="javascript:;" target="_blank" 预定
+        .rights GMIS 1日论坛 / IME2017 展会
+        .reserve-four 4月预订 ¥888
+        .reserve-five 5月预订 ¥1288
       .ticket-wrapper
-        .ticket-info
-          .name
-            span.type 双日票
-            span.note
-              | (盲订价)
-          .price
-            span.unit ¥
-            span 1018
-          a.reserve-btn href="javascript:;" target="_blank" 预定
-          .rights GMIS 1日论坛 / IME2017 展会
-          .reserve-four 4月预订 ¥1418
-          .reserve-five 5月预订 ¥2018
+        .name
+          span.type 双日票
+          span.note
+            | (盲订价)
+        .price
+          span.unit ¥
+          span 1018
+        a.reserve-btn href="javascript:;" target="_blank" 预定
+        .rights GMIS 1日论坛 / IME2017 展会
+        .reserve-four 4月预订 ¥1418
+        .reserve-five 5月预订 ¥2018
       .ticket-wrapper
-        .ticket-info
-          .name
-            span.type VIP
-            span.note
-              | (盲订价)
-          .price
-            span.unit ¥
-            span 1988
-          a.reserve-btn href="javascript:;" target="_blank" 预定
-          .rights GMIS全部论坛／颁奖晚宴／大会订制礼品／机器之心年度会员资格/ IME2017 展会
-          .reserve-four 4月预订 ¥2688
-          .reserve-five 5月预订 ¥3888
+        .name
+          span.type VIP
+          span.note
+            | (盲订价)
+        .price
+          span.unit ¥
+          span 1988
+        a.reserve-btn href="javascript:;" target="_blank" 预定
+        .rights GMIS全部论坛／颁奖晚宴／大会订制礼品／机器之心年度会员资格/ IME2017 展会
+        .reserve-four 4月预订 ¥2688
+        .reserve-five 5月预订 ¥3888
       .ticket-line-anima
         = render 'gmis/2017/shared/spinner_line'

@@ -1,5 +1,5 @@
 header.header {
-  width: 100%;
+  width: 100vw;
   height: $header_h;
   position: fixed;
   background-image: image_url('gmis2017/header-bg.png');
@@ -69,5 +69,87 @@ header.header {
       transform: translateX(-50%);
       transition: all 0.8s;
     }
+  }
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 70px;
+  height: 70px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transform: scale(0.8);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .hamburger-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media #{$medium-and-down} {
+  header.header {
+    height: 100vh;
+    left: 0;
+    background-image: image_url('gmis2017/banner-bg.png');
+    background-position: center;
+    transform: scale(0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+    .synced-logo {
+      display: none;
+    }
+
+    .header-content {
+      position: absolute;
+      top: 12%;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    nav.gmis-nav {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      font-size: 2.2rem;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 0 0 40px 0;
+        text-align: center;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+
+    .video-slim-btn {
+      display: none;
+    }
+
+    &.is-active {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .hamburger {
+    display: block;
   }
 }

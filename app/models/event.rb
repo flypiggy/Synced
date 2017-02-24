@@ -15,8 +15,8 @@ end
 #  id          :uuid             not null, primary key
 #  name        :string           not null
 #  description :text
-#  event_type  :integer          default("1"), not null
-#  status      :integer          default("0")
+#  event_type  :integer          default("common"), not null
+#  status      :integer          default("preparing")
 #  start_date  :date
 #  end_date    :date
 #  created_at  :datetime         not null

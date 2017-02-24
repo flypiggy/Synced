@@ -21,6 +21,9 @@ PreCommit:
     on_warn: fail # Treat all warnings as failures
     quiet: true
 
+  AuthorName:
+    enabled: false
+
   BundleCheck:
     enabled: true
 

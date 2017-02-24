@@ -1,0 +1,27 @@
+section.agenda-mobile {
+  padding: 0 $mobile-edge;
+
+  .agenda-content {
+    background-size: 70px;
+  }
+
+  .intro {
+    background-size: 100px, 120px;
+    margin: 0;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sub-forum-list {
+    flex-wrap: wrap;
+    padding: 0;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .item {
+      width: 130px;
+      margin-bottom: 20px;
+    }
+  }
+}

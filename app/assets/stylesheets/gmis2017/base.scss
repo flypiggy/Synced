@@ -1,6 +1,7 @@
 html,
 body {
   background-color: #000;
+  overflow-x: hidden;
 }
 
 * {
@@ -14,7 +15,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Noto Sans S Chinese', 'PingFang SC', 'Hack', 'Lantinghei SC', 'Microsoft Yahei', 'Arial', sans-serif;
+  font-family: 'Lantinghei SC', 'PingFang SC', 'Noto Sans S Chinese', 'Hack', 'Microsoft Yahei', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,6 +28,21 @@ body {
 $red: #b82c46;
 $yellow: #fffe54;
 
-
 $header_h: 75px;
 $sponsor-logo-h: 45px;
+
+$mobile-edge: 12px;
+
+// Media Query Ranges
+$small-screen-up: 601px;
+$medium-screen-up: 993px;
+$large-screen-up: 1201px;
+$small-screen: 600px;
+$medium-screen: 992px;
+$large-screen: 1200px;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})";
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})";
+$small-and-down: "only screen and (max-width : #{$small-screen})";
+$medium-and-down: "only screen and (max-width : #{$medium-screen})";
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})";

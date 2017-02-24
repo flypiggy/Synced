@@ -75,7 +75,7 @@ section.banner {
       width: 150px;
       height: 150px * $ratio-elem-01;
       left: 8%;
-      background-image: image_url('gmis2017/banner-elem-01.png');
+      background-image: image_url('gmis2017/elem/elem-01.png');
     }
 
     .elem-02 {
@@ -83,7 +83,7 @@ section.banner {
       height: 50px * $ratio-elem-02;
       top: 30px;
       left: 60%;
-      background-image: image_url('gmis2017/banner-elem-02.png');
+      background-image: image_url('gmis2017/elem/elem-02.png');
     }
 
     .elem-03 {
@@ -91,7 +91,7 @@ section.banner {
       height: 100px * $ratio-elem-03;
       top: 30px;
       right: 80px;
-      background-image: image_url('gmis2017/banner-elem-03.png');
+      background-image: image_url('gmis2017/elem/elem-03.png');
       transform: rotate(180deg);
     }
 
@@ -100,7 +100,7 @@ section.banner {
       height: 80px * $ratio-elem-02;
       top: 70px;
       right: 30px;
-      background-image: image_url('gmis2017/banner-elem-02.png');
+      background-image: image_url('gmis2017/elem/elem-02.png');
     }
 
     .elem-05 {
@@ -108,7 +108,7 @@ section.banner {
       height: 120px * $ratio-elem-05;
       bottom: 20px;
       left: 0;
-      background-image: image_url('gmis2017/banner-elem-05.png');
+      background-image: image_url('gmis2017/elem/elem-05.png');
     }
 
     .elem-06 {
@@ -116,7 +116,7 @@ section.banner {
       height: 100px * $ratio-elem-03;
       bottom: 50px;
       left: 45%;
-      background-image: image_url('gmis2017/banner-elem-03.png');
+      background-image: image_url('gmis2017/elem/elem-03.png');
     }
 
     .elem-07 {
@@ -124,7 +124,7 @@ section.banner {
       height: 170px * $ratio-elem-07;
       bottom: 50px;
       right: 0;
-      background-image: image_url('gmis2017/banner-elem-07.png');
+      background-image: image_url('gmis2017/elem/elem-07.png');
     }
   }
 
@@ -140,7 +140,7 @@ section.banner {
       height: 80px * $ratio-overflow-elem-left;
       top: 40%;
       left: 20px;
-      background-image: image_url('gmis2017/banner-overflow-elem-left.png');
+      background-image: image_url('gmis2017/elem/elem-04.png');
     }
 
     .elem-overflow-right {
@@ -148,7 +148,42 @@ section.banner {
       height: 50px * $ratio-overflow-elem-right;
       bottom: 35%;
       right: 20px;
-      background-image: image_url('gmis2017/banner-overflow-elem-right.png');
+      background-image: image_url('gmis2017/elem/elem-06.png');
+    }
+  }
+}
+
+@media #{$medium-and-down} {
+  section.banner {
+    padding-top: 0;
+
+    .gmis-logo {
+      width: 85%;
+    }
+
+    .banner-content {
+      padding-top: 40%;
+      padding-bottom: 45%;
+    }
+
+    .banner-overflow-elems {
+      display: none;
+    }
+
+    .formula-wrapper {
+      flex-direction: column;
+    }
+
+    .formula {
+      width: 85%;
+      margin-bottom: 60px;
+    }
+
+    .banner-elems {
+      .elem-03,
+      .elem-06 {
+        display: none;
+      }
     }
   }
 }

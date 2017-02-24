@@ -1,22 +1,118 @@
+- guests = [{ \
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Facebook 机器学习应用负责人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-02.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-03.jpg',
+    'name' => 'Elon Musk',
+    'company' => ''\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-04.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-05.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-06.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }, {\
+    'avatar' => 'http://olgabnvpe.bkt.clouddn.com/guest-img-01.jpg',
+    'name' => 'Elon Musk',
+    'company' => 'Tesla、SpaceX 创始人 & CEO OpenAI 联合创始人'\
+  }]
+
+
 doctype html
 html lang= 'en'
   head
     meta charset= 'UTF-8'
     meta content= 'initial-scale=1.0,maximum-scale=1.0,width=device-width' name= 'viewport'
     meta name='renderer' content='webkit'
-    title gmis
+    meta content="telephone=no" name="format-detection"
+    title Gmis | 机器之心
     = csrf_meta_tags
     = stylesheet_link_tag 'entries/gmis2017', media: 'all'
     = javascript_include_tag 'entries/gmis2017'
 
-  body class="#{controller_name + ' ' + controller_name + '-' + action_name}"
+  body class="#{controller_name + ' ' + controller_name + '-' + action_name} #{'mobile' if device_mobile?}"
     = render 'gmis/2017/header'
     = render 'gmis/2017/banner'
     = render 'gmis/2017/video'
-    = render 'gmis/2017/guests'
-    = render 'gmis/2017/agenda'
+
+    - if device_mobile?
+      = render 'gmis/2017/mobile/guests', guests: guests
+      = render 'gmis/2017/mobile/agenda'
+    - else
+      = render 'gmis/2017/guests', guests: guests
+      = render 'gmis/2017/agenda'
+
+    = render 'gmis/2017/vote'
     = render 'gmis/2017/tickets'
     = render 'gmis/2017/address'
+    = render 'gmis/2017/contact'
     = render 'gmis/2017/cooperative'
     = render 'gmis/2017/extension'
     = webpack_include_tag 'gmis2017'

@@ -1,9 +1,18 @@
+import { isMobileView } from 'mdetect';
+
 const address = () => {
   const map = new BMap.Map('js-gmis-map', {
     enableMapClick: false
   });
 
-  map.centerAndZoom(new BMap.Point(116.529436, 39.959994), 15);
+  const centerPoint = { x: 116.529436, y: 39.959994 };
+  if (isMobileView()) {
+    map.disableDragging();
+    centerPoint.x = 116.511131;
+    centerPoint.y = 39.961078;
+  }
+
+  map.centerAndZoom(new BMap.Point(centerPoint.x, centerPoint.y), 15);
   map.setCurrentCity('北京');
 
   const marker = new BMap.Marker(new BMap.Point(116.511131, 39.961078));
@@ -17,6 +26,7 @@ const address = () => {
     border: 'none',
     boxShadow: '1px 0 5px rgba(0, 0, 0, 0.2)'
   });
+
   marker.setLabel(label);
 };
 

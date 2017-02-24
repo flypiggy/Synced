@@ -5,6 +5,9 @@
 // normalize
 @import 'normalize-rails';
 
+//vendor
+@import 'hamburgers.min';
+
 // base
 @import '../gmis2017/base';
 @import '../gmis2017/textfont';
@@ -19,6 +22,12 @@
 @import '../gmis2017/banner';
 @import '../gmis2017/guests';
 @import '../gmis2017/agenda';
+@import '../gmis2017/vote';
 @import '../gmis2017/tickets';
 @import '../gmis2017/address';
+@import '../gmis2017/contact';
 @import '../gmis2017/cooperative';
+
+// mobile
+@import '../gmis2017/mobile/guests';
+@import '../gmis2017/mobile/agenda';

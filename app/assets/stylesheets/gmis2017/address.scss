@@ -1,11 +1,10 @@
 section.address {
   position: relative;
   width: 100%;
-  height: 450px;
 
   .gmis-map {
     width: 100%;
-    height: 100%;
+    height: 450px;
 
     .BMap_mask {
       background-color: rgba(0, 0, 0, 0.3);
@@ -61,5 +60,37 @@ section.address {
 
   .detail {
     margin-bottom: 5px;
+  }
+}
+
+
+@media #{$medium-and-down} {
+  section.address {
+    .gmis-map {
+      height: 300px;
+    }
+
+    .address-content,
+    .address-info {
+      position: static;
+    }
+
+    .address-info {
+      width: 100%;
+    }
+
+    .detail,
+    .route-line {
+      padding-left: $mobile-edge;
+      padding-right: $mobile-edge;
+    }
+
+    .detail {
+      margin-bottom: 0; 
+    }
+
+    .route-line {
+      padding-top: 0;
+    }
   }
 }
