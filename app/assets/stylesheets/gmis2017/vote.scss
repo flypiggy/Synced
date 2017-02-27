@@ -4,6 +4,10 @@ section.vote {
   color: #fff;
   padding: 40px 0;
   overflow: hidden;
+  background-image: image_url('gmis2017/vote/vote-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
   .container {
     position: relative;
