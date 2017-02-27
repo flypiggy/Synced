@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery-lazyload": "^1.9.7",
     "mdetect": "^1.2.2",
     "scroll-parallax": "^1.1.0",
     "swiper": "^3.4.1",

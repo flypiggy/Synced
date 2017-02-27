@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import { isMobileView } from 'mdetect';
 
+import 'jquery-lazyload';
+
 import header from './2017/header';
 import agenda from './2017/agenda';
 import address from './2017/address';
@@ -16,4 +18,8 @@ $(() => {
   address();
 
   $.scrollIt({ topOffset: isMobileView() ? 0 : -75 });
+  $('.js-lazy').lazyload({
+    threshold: 200,
+    effect: 'fadeIn'
+  });
 });
