@@ -26,7 +26,7 @@ const wavyLine = () => {
                   rand2 * cos(t) * sin(sqrt(x)) + h / 2;
       ctx.beginPath();
       ctx.moveTo(x0, y0);
-      ctx.lineTo(x++, y);
+      ctx.lineTo(x += 1, y);
       ctx.lineWidth = 2;
       ctx.strokeStyle = `hsl(${337 - v}, 85%, 30%)`;
       ctx.stroke();

@@ -32,7 +32,7 @@ const banner = () => {
       blending: AdditiveBlending
     });
 
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 300; i += 1) {
       particle = new Sprite(material);
       initParticle(particle, i * 10);
       scene.add(particle);
