@@ -15,7 +15,9 @@
   "dependencies": {
     "mdetect": "^1.2.2",
     "scroll-parallax": "^1.1.0",
-    "swiper": "^3.4.1"
+    "swiper": "^3.4.1",
+    "three": "^0.84.0",
+    "tween.js": "^16.6.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

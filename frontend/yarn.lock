@@ -2666,10 +2666,6 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
-navsync:
-  version "0.1.0"
-  resolved "http://registry.npm.taobao.org/navsync/download/navsync-0.1.0.tgz#b0ebdc96f44d24783ff08c14c51f0278daf0df08"
-
 negotiator@0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/negotiator/download/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
@@ -3775,6 +3771,10 @@ text-table@~0.2.0:
   version "0.2.0"
   resolved "http://registry.npm.taobao.org/text-table/download/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
+three:
+  version "0.84.0"
+  resolved "http://registry.npm.taobao.org/three/download/three-0.84.0.tgz#95be85a55a0fa002aa625ed559130957dcffd918"
+
 through@^2.3.6:
   version "2.3.8"
   resolved "http://registry.npm.taobao.org/through/download/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
@@ -3814,6 +3814,10 @@ tty-browserify@0.0.0:
 tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "http://registry.npm.taobao.org/tunnel-agent/download/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
+
+tween.js:
+  version "16.6.0"
+  resolved "http://registry.npm.taobao.org/tween.js/download/tween.js-16.6.0.tgz#739104c9336cc4f11ee53f9ce7cede51e6723624"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
