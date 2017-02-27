@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { isMobileView } from 'mdetect';
 
 import header from './2017/header';
 import agenda from './2017/agenda';
@@ -14,5 +15,5 @@ $(() => {
   vote();
   address();
 
-  $.scrollIt({ topOffset: -75 });
+  $.scrollIt({ topOffset: isMobileView() ? 0 : -75 });
 });

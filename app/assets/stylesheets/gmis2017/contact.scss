@@ -43,7 +43,7 @@ section.contact {
 
 @media #{$medium-and-down} {
   section.contact {
-    padding: 30px $mobile-edge;
+    padding: 20px $mobile-edge;
 
     .contact-content {
       flex-direction: column;

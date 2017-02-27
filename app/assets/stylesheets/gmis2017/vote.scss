@@ -1,3 +1,7 @@
+$moon-ratio: 517 / 512;
+$slogan-01-ratio: 113 / 1440;
+$slogan-02-ratio: 65 / 593;
+
 section.vote {
   position: relative;
   z-index: 10;
@@ -36,7 +40,7 @@ section.vote {
 
   .moon-elem {
     width: 517px;
-    height: 517px * 517 / 512;
+    height: 517px * $moon-ratio;
     background-image: image_url('gmis2017/vote/moon.png');
     background-size: cover;
     background-position: center;
@@ -51,7 +55,7 @@ section.vote {
 
   .vote-slogan--01 {
     width: 800px;
-    height: 800px * 113 / 1440;
+    height: 800px * $slogan-01-ratio;
     position: absolute;
     top: 205px;
     background-image: image_url('gmis2017/vote/vote-slogan.png');
@@ -63,7 +67,7 @@ section.vote {
 
   .vote-slogan--02 {
     width: 350px;
-    height: 350px * 65 / 593;
+    height: 350px * $slogan-02-ratio;
     position: absolute;
     top: 310px;
     background-image: image_url('gmis2017/vote/vote-slogan-02.png');
@@ -175,6 +179,53 @@ section.vote {
       background-image: image_url('gmis2017/elem/elem-15.png');
       background-size: cover;
       background-position: center;
+    }
+  }
+}
+
+@media #{$medium-and-down} {
+  section.vote {
+    padding: 0 $mobile-edge;
+    background-attachment: scroll;
+
+    .moon-elem {
+      width: 280px;
+      height: 280px * $moon-ratio;
+    }
+
+    .moon-wrapper {
+      padding-bottom: 120px;
+    }
+
+    .vote-title {
+      top: 340px;
+    }
+
+    .vote-slogan--01 {
+      width: 350px;
+      height: 350px * $slogan-01-ratio;
+      top: 115px;
+    }
+
+    .vote-slogan--02 {
+      width: 220px;
+      height: 220px * $slogan-02-ratio;
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .vote-content {
+      height: auto;
+
+      .vote-option:nth-child(n) {
+        position: static;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .elem {
+      display: none;
     }
   }
 }
