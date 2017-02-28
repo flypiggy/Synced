@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { isMobileView } from 'mdetect';
-
 import 'jquery-lazyload';
+import eruda from 'eruda';
 
 import header from './2017/header';
 import agenda from './2017/agenda';
@@ -22,4 +22,7 @@ $(() => {
     threshold: 200,
     effect: 'fadeIn'
   });
+
+  const isDev = process.env.NODE_ENV === 'development';
+  if (isDev) eruda.init();
 });
