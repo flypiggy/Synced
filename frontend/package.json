@@ -13,10 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery-lazyload": "^1.9.7",
     "mdetect": "^1.2.2",
-    "navsync": "^0.1.0",
     "scroll-parallax": "^1.1.0",
-    "swiper": "^3.4.1"
+    "swiper": "^3.4.1",
+    "three": "^0.84.0",
+    "tween.js": "^16.6.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
@@ -27,7 +29,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
-    "eruda": "^1.1.3",
+    "eruda": "^1.2.1",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",

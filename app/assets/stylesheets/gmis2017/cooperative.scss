@@ -51,7 +51,7 @@ section.cooperative {
 
 @media #{$medium-and-down} {
   section.cooperative {
-    padding: 0 $mobile-edge;
+    padding: 20px $mobile-edge;
 
     .sponsor-title {
       text-align: center;

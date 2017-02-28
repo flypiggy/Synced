@@ -9,11 +9,12 @@ $ratio-overflow-elem-right: 418 / 136;
 section.banner {
   display: block;
   background-color: #000;
-  background-image: image_url('gmis2017/banner-bg.png');
-  background-position: center;
-  background-repeat: repeat;
+  /* background-image: image_url('gmis2017/banner-bg.png'); */
+  /* background-position: center; */
+  /* background-repeat: repeat; */
   padding-top: $header_h;
   position: relative;
+  height: 100vh;
 
   .banner-container {
     position: relative;
@@ -24,6 +25,13 @@ section.banner {
     padding-bottom: 18%;
     position: relative;
     z-index: 2;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
   img {
@@ -62,6 +70,7 @@ section.banner {
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
+    z-index: 2;
   }
 
   .banner-elems {
