@@ -1,7 +1,12 @@
 class VoteItem < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: { scope: :vote_id }
 
   belongs_to :vote
+
+  def vote_up
+    increment(:count)
+    save(validate: false)
+  end
 end
 
 # == Schema Information

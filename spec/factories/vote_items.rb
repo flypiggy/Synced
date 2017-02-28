@@ -1,7 +1,11 @@
 FactoryGirl.define do
   factory :vote_item do
-    name "MyString"
-    vote_id ""
-    count 1
+    name 'test_vote_item'
+    count 0
+    association :vote, factory: :enabled_vote
+
+    factory :vote_item_disabled do
+      vote
+    end
   end
 end

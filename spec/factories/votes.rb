@@ -1,8 +1,10 @@
 FactoryGirl.define do
   factory :vote do
-    name "MyString"
-    enabled false
-    votable_type "MyString"
-    votable_id ""
+    name 'test_vote'
+    association :votable, factory: :event
+
+    factory :enabled_vote do
+      enabled true
+    end
   end
 end
