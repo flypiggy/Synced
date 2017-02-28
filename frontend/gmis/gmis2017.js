@@ -24,5 +24,5 @@ $(() => {
   });
 
   const isDev = process.env.NODE_ENV === 'development';
-  if (isDev) eruda.init();
+  if (isDev && isMobileView()) eruda.init();
 });
