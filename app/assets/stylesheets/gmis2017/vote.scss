@@ -1,3 +1,4 @@
+
 $moon-ratio: 517 / 512;
 $slogan-01-ratio: 113 / 1440;
 $slogan-02-ratio: 65 / 593;
@@ -86,22 +87,49 @@ section.vote {
       position: absolute;
 
       .vote-btn {
+        position: relative;
         display: inline-block;
         font-size: 1.8rem;
         color: #000;
         background-color: #fff;
         padding: 2px 15px;
         text-decoration: none;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
 
         &:hover {
           background-color: $yellow;
         }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: image_url('gmis2017/vote/vote-btn-bg.png');
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+          z-index: -1;
+          background-size: 100% auto;
+        }
       }
 
-      .vote-number {
-        padding-left: 100px;
+      .vote-progress {
         background-color: rgba(39, 39, 39, 0.8);
-        margin-top: 10px;
+        margin-top: 22px;
+        display: flex;
+        padding: 3px 10px;
+        justify-content: space-between;
+        color: $red;
+
+        .spinner-line div {
+          animation: none;
+        }
+
+        span {
+          font-size: 1.8rem;
+          /* font-weight: bold; */
+        }
       }
 
       &:nth-child(1) {
@@ -122,12 +150,12 @@ section.vote {
       }
 
       &:nth-child(5) {
-        left: 10%;
+        left: 5%;
         margin-top: 12%;
       }
 
       &:nth-child(6) {
-        left: 50%;
+        left: 43%;
         margin-top: 12%;
       }
 
@@ -189,38 +217,49 @@ section.vote {
     background-attachment: scroll;
 
     .moon-elem {
-      width: 280px;
-      height: 280px * $moon-ratio;
+      width: 220px;
+      height: 220px * $moon-ratio;
     }
 
     .moon-wrapper {
+      padding-top: 20px;
       padding-bottom: 120px;
     }
 
+    .vote-title--main {
+      font-size: 3rem;
+    }
+
     .vote-title {
-      top: 340px;
+      top: 290px;
     }
 
     .vote-slogan--01 {
       width: 350px;
       height: 350px * $slogan-01-ratio;
-      top: 115px;
+      top: 108px;
     }
 
     .vote-slogan--02 {
       width: 220px;
       height: 220px * $slogan-02-ratio;
       left: 0;
+      top: 260px;
       transform: translateX(0);
     }
 
     .vote-content {
       height: auto;
+      padding: 0 20px;
+
+      .vote-option .vote-btn {
+        background-color: $yellow;
+      }
 
       .vote-option:nth-child(n) {
         position: static;
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
     }
 
