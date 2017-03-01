@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:username) { |n| "user#{n}" }
+    sequence(:username) { |n| "username#{n}" }
     city     '440_300'
     company  'jixiezhixin'
     title    'developer'
@@ -10,13 +10,12 @@ FactoryGirl.define do
     end
 
     trait :with_mobile do
-      sequence(:mobile) { rand(10**11...10**12) }
+      sequence(:mobile) { rand(10**10...10**11) }
     end
 
     trait :with_password do
       password 'password'
     end
+    factory :basic_user, traits: [:with_email, :with_password]
   end
-
-  factory :user_register_with_email, traits: [:with_email, :with_password]
 end
