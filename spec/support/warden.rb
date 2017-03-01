@@ -34,7 +34,7 @@ module Warden::Test::ControllerHelpers
   # Returns nil when interrupted, otherwise the normal result of the block.
   def _catch_warden(&block)
     result = catch(:warden, &block)
-    if result_available? result
+    if result.is_a?(Hash) && !warden.custom_failure? && !@controller.send(:performed?)
       result[:action] ||= :unauthenticated
 
       env = @controller.request.env
@@ -50,9 +50,5 @@ module Warden::Test::ControllerHelpers
     else
       result
     end
-  end
-
-  def result_available?(result)
-    result.is_a?(Hash) && !warden.custom_failure? && !@controller.send(:performed?)
   end
 end

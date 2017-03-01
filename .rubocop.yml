@@ -5,6 +5,7 @@ AllCops:
     - !ruby/regexp /(vendor|bundle|bin|db)\/.*/
     - frontend/**/*
     - Guardfile
+    - spec/support/warden.rb
   DisplayCopNames: true
   DisplayStyleGuide: true
   TargetRubyVersion: 2.4
