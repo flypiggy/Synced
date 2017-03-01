@@ -47,6 +47,21 @@ ActiveRecord::Schema.define(version: 20170228092248) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest", default: "", null: false
+    t.string "username"
+    t.string "mobile"
+    t.string "roles",           default: [],              array: true
+    t.string "city"
+    t.string "company"
+    t.string "title"
+    t.string "avatar"
+    t.string "bio"
+    t.index ["email"], name: "index_users_on_email", using: :btree
+    t.index ["mobile"], name: "index_users_on_mobile", using: :btree
+  end
+
   create_table "vote_items", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name",                   null: false
     t.uuid     "vote_id",                null: false
