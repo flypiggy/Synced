@@ -18,6 +18,8 @@ if Rails.env.development?
       'exclude_tests'        => 'true',
       'exclude_fixtures'     => 'true',
       'exclude_factories'    => 'true',
+      'exclude_controllers'  => 'true',
+      'exclude_scaffolds'    => 'true',
       'ignore_model_sub_dir' => 'false',
       'skip_on_db_migrate'   => 'false',
       'format_bare'          => 'true',
