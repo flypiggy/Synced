@@ -1,13 +1,3 @@
-- vote_options = [ \
-  { 'name' => '英雄联盟', 'vote' => 430 }, \
-  { 'name' => '英雄联盟', 'vote' => 233 }, \
-  { 'name' => '英雄联盟', 'vote' => 23 }, \
-  { 'name' => '英雄联盟', 'vote' => 333 }, \
-  { 'name' => '英雄联盟', 'vote' => 455 }, \
-  { 'name' => '英雄联盟', 'vote' => 630 }, \
-  { 'name' => '英雄联盟', 'vote' => 430 } \
-]
-
 section.vote#vote
   /img.vote-parallax#vote-parallax src=image_path('gmis2017/vote/vote-bg.jpg')
   .container
@@ -20,14 +10,14 @@ section.vote#vote
       .vote-slogan--02
 
     .vote-content
-      - vote_options.each do |opt|
-        .vote-option.js-vote-option data-vote= opt['vote']
+      - @event.votes.first.vote_items.each do |item|
+        .vote-option.js-vote-option data-vote= item.count date-id= item.id
           a.vote-btn.js-vote-btn href="javascript:;"
-            = opt['name']
+            = item.name
           .vote-progress
             = render 'gmis/2017/shared/spinner_line'
-            
-            span.vote-number= opt['vote']
+
+            span.vote-number= item.count
     .elem.elem-bg-01
     .elem.elem-bg-02
   .elem.elem-bg-03
