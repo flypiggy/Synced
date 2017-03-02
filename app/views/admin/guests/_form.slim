@@ -1,0 +1,19 @@
+br
+  .row
+    =form_for [:admin, @guest], html:{class: 'col s12'} do |f|
+      .row
+        .input-field.col.s6
+          =f.text_field :name, placeholder: 'name'
+          =f.label '姓名'
+      .row
+        .input-field.col.s6
+          =f.text_field :company, placeholder: 'company'
+          =f.label '公司'
+      .row
+        .input-field.col.s6
+          =f.text_field :title, placeholder: 'title'
+          =f.label '职位'
+      .row
+        =f.submit class: 'btn'
+        -if params[:action] == 'new'
+          =f.submit class: 'btn', name: 'continue', value: '新增并继续创建GUEST'
