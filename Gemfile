@@ -26,6 +26,9 @@ gem 'turbolinks', '~> 5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Pagination
+gem 'kaminari'
+
 # Use dotenv for envs
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
