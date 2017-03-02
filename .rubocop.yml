@@ -21,6 +21,10 @@ Metrics/ClassLength:
   Exclude:
     - spec/**/*.rb
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
 Metrics/CyclomaticComplexity:
   Max: 6
 
