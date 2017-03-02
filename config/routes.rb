@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root controller: 'static', action: '/'
+  root to: 'gmis#index'
 
   get 'login',  to: 'sessions#new'
   post 'login', to: 'sessions#create'
