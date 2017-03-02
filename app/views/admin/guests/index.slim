@@ -32,8 +32,7 @@
             a.btn.blue.waves-effect.waves-light href=edit_admin_guest_path(guest)
               |修改
             |\
-            /* here need click confirm */
-            a.btn.red.waves-effect.waves-light href=admin_guest_path(guest) data-method='delete'
+            a.btn.red.waves-effect.waves-light href=admin_guest_path(guest) data-method='delete' data-confirm='Are you sure to delete?'
               |删除
   
 =paginate @guests

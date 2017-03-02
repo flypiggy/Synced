@@ -1,0 +1,24 @@
+.divider
+.section.row
+  .col.s6
+    h5.breadcrumbs-title 头像管理
+.row
+  =form_tag admin_guest_avatars_path(@guest), method: :post, multipart: true
+    .col.s6
+      .file-field.input-field
+        .btn
+          span 选择图片
+          input type='file' name='avatar[file]'
+        .file-path-wrapper
+          input.file-path.validate type='text'
+    .col.s6
+      .input-field
+        input.btn type='submit' value='添加'
+-@guest.avatars.each_slice(4) do |avatars|
+  .row
+    -avatars.each do |avatar|
+      .col.s3
+        .card
+          .card-image
+            a href=admin_guest_avatar_path(id: avatar.id, guest_id: @guest.id) data-method='delete' data-confirm='Are you sure to delete?'
+              img src=avatar.file_url

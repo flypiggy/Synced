@@ -1,6 +1,6 @@
 br
   .row
-    =form_for [:admin, @guest], html:{class: 'col s12'} do |f|
+    =form_for [:admin, @guest], html: { class: 'col s12', multipart: true } do |f|
       .row
         .input-field.col.s6
           =f.text_field :name, placeholder: 'name'
@@ -14,14 +14,16 @@ br
           =f.text_field :title, placeholder: 'title'
           =f.label '职位'
       .row
-        .input-field.col.s6
-          .btn
-            span 头像
-            input type='file' name='avatar[file]'
-          .file_path_wrapper
-            .file_path.validate type='text'
+        - if params[:action] == 'new'
+          .file-field.input-field.col.s6
+            .btn
+              span 选择头像
+              input type='file' name='avatar[file]'
+            .file-path-wrapper
+              input.file-path.validate type='text'
       .row
-        .input-field.col.s6
+        .input-field.col.s2
           =f.submit class: 'btn'
+        .input-field.col.s2
           -if params[:action] == 'new'
             =f.submit class: 'btn', name: 'continue', value: '新增并继续创建GUEST'

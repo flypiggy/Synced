@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :guests, except: :show
+    resources :guests, except: :show do
+      scope module: 'guests' do
+        resources :avatars, only: [:create, :destroy]
+      end
+    end
   end
 
   match 'vote_up/:id', to: 'votes#vote_up', via: [:post, :put, :patch]

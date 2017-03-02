@@ -1,6 +1,7 @@
 class Image < ApplicationRecord
+  validates :file, presence: true
   belongs_to :imageable, polymorphic: true, optional: true
-  mount_uploader :avatar, ImageUploader
+  mount_uploader :file, ImageUploader
 end
 
 # == Schema Information

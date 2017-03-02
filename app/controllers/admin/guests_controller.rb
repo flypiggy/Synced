@@ -8,7 +8,6 @@ class Admin::GuestsController < Admin::BaseController
   end
 
   def create
-    build_guest_with_params
     if save_guest
       create_avatar
       flash[:notice] = '创建成功'
@@ -26,6 +25,7 @@ class Admin::GuestsController < Admin::BaseController
   def update
     load_guest
     if update_guest
+      create_avatar
       flash.now[:notice] = '更新成功'
     else
       flash.now[:error] = @guest.errors.full_messages
@@ -53,15 +53,12 @@ class Admin::GuestsController < Admin::BaseController
     @guest = Guest.new
   end
 
-  def build_guest_with_params
-    @guest = Guest.new(guest_params)
-  end
-
   def update_guest
     @guest.update(guest_params)
   end
 
   def save_guest
+    @guest = Guest.new(guest_params)
     @guest.save
   end
 
