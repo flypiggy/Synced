@@ -1,6 +1,5 @@
 = render 'shared/admin_loader'
 
-
 .breadcrumbs-container.row
   .col.s6
     h5.breadcrumbs-title 嘉宾管理
@@ -16,28 +15,24 @@
       a.waves-effect.waves-light.btn.teal.accent-4
         | 添加嘉宾
 .wrapper-content
-  table.striped
+  table.striped.centered
     thead
       tr
-        th Name
-        th Item Name
-        th Name
+        th 姓名
+        th 公司 
+        th 职位
+        th 操作
     tbody
-      - (0..5).each do |x|
+      - @guests.each do |guest|
         tr
-          td Alvin
-          td Alvin
-          td Alvin
-ul.pagination
-  li.disabled
-    a href="#"
-      i.material-icons chevron_left
-  li.active
-    a href="#!" 1
-  - (2..8).each do |x|
-    li.waves-effect
-      a href="#!"
-        =x
-  li.waves-effect
-    a href="#!"
-      i.material-icons chevron_right
+          td = guest.name
+          td = guest.company
+          td = guest.title
+          td 
+            a.btn.blue.waves-effect.waves-light
+              |修改
+            |\
+            a.btn.red.waves-effect.waves-light
+              |删除
+  
+=paginate @guests

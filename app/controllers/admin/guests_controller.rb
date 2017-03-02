@@ -26,9 +26,13 @@ class Admin::GuestsController < Admin::BaseController
 
   private
 
-  def load_guests; end
+  def load_guests
+    @guests = Guest.all.page(params[:page]).per(10)
+  end
 
-  def load_guest; end
+  def load_guest
+    @guest = Guest.find(params[:id])
+  end
 
   def build_guest; end
 
