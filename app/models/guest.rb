@@ -3,6 +3,7 @@ class Guest < ApplicationRecord
 
   has_many :events_guests, dependent: :destroy
   has_many :events, through: :events_guests, source: :event
+  has_many :avatars, as: :imageable, class_name: 'Image', foreign_key: 'imageable_id'
 end
 
 # == Schema Information

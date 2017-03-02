@@ -14,6 +14,14 @@ br
           =f.text_field :title, placeholder: 'title'
           =f.label '职位'
       .row
-        =f.submit class: 'btn'
-        -if params[:action] == 'new'
-          =f.submit class: 'btn', name: 'continue', value: '新增并继续创建GUEST'
+        .input-field.col.s6
+          .btn
+            span 头像
+            input type='file' name='avatar[file]'
+          .file_path_wrapper
+            .file_path.validate type='text'
+      .row
+        .input-field.col.s6
+          =f.submit class: 'btn'
+          -if params[:action] == 'new'
+            =f.submit class: 'btn', name: 'continue', value: '新增并继续创建GUEST'
