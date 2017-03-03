@@ -41,6 +41,7 @@ gem 'meta-tags', '~> 2.4'
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 gem 'perfect-scrollbar-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
 gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'sprockets-es6'
 
