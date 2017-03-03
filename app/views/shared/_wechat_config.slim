@@ -1,6 +1,6 @@
-- sign_package = $wechat_client.get_jssign_package(request.url)
 = javascript_include_tag '//res.wx.qq.com/open/js/jweixin-1.0.0.js'
 
+- sign_package = $wechat_client.get_jssign_package(request.url)
 javascript:
   wx.config({
     debug: "#{Rails.env.development?}",
