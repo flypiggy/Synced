@@ -5,3 +5,4 @@
 //= require perfect-scrollbar
 
 //= require admin/layout
+//= require admin/guest

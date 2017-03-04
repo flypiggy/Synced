@@ -4,6 +4,10 @@ class Admin::GuestsController < Admin::BaseController
     load_guests
   end
 
+  def new
+    @guest = Guest.new
+  end
+
   def create
     @guest = Guest.new(guest_params)
     @guest.save
@@ -27,7 +31,6 @@ class Admin::GuestsController < Admin::BaseController
 
   def load_guests
     @guests = Guest.order(created_at: :desc).page(params[:page]).per(10)
-    @guest  = Guest.new
   end
 
   def load_guest

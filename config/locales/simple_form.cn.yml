@@ -12,8 +12,7 @@ zh-CN:
       default_message: "Please review the problems below:"
     labels:
       defaults:
-        name: '姓名'
-      user:
+      guest:
         name: '姓名'
         company: '公司'
         title: '职位'
