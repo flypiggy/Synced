@@ -1,20 +1,21 @@
-.breadcrumbs-container.row
-  .col.s6
-    h5
-      |嘉宾#{guest.name}
-.row
-  =simple_form_for [:admin, guest], html: { class: 'col s12', remote: true } do |f|
-    .modal-content
-      .row
-        .col.s6
-          =f.input :name
-      .row
-        .col.s6
-          =f.input :company
-      .row
-        .col.s6
-          =f.input :title
-    .modal-footer
-      .row
-        .col.s6
-          =f.button :submit, wrapper_html: { class: 'btn' }
+#guest_form
+  .breadcrumbs-container.row
+    .col.s6
+      h5
+        |嘉宾-#{guest.name}
+  .row
+    =simple_form_for [:admin, guest], html: { class: 'col s12', remote: true } do |f|
+      .modal-content
+        .row
+          .col.s6
+            =f.input :name
+        .row
+          .col.s6
+            =f.input :company
+        .row
+          .col.s6
+            =f.input :title
+      .modal-footer
+        .row
+          .col.s6
+            =f.button :submit, wrapper_html: { class: 'btn' }

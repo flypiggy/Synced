@@ -12,7 +12,7 @@
         span 嘉宾管理
   .col.s6
     .btns
-      a.waves-effect.waves-light.btn.teal.accent-4 href='#new_guest_model'
+      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_guest_path data-remote=true
         | 添加嘉宾
 .wrapper-content
   table.striped.centered
@@ -28,5 +28,5 @@
 
 = paginate @guests
 
-.modal.modal#new_guest_model
-  = render partial: 'form', locals: { guest: @guest }
+.modal#guest_form_modal
+  #guest_form
