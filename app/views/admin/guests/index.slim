@@ -12,28 +12,21 @@
         span 嘉宾管理
   .col.s6
     .btns
-      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_guest_path
+      a.waves-effect.waves-light.btn.teal.accent-4 href='#new_guest_model'
         | 添加嘉宾
 .wrapper-content
   table.striped.centered
     thead
       tr
         th 姓名
-        th 公司 
+        th 公司
         th 职位
         th 操作
-    tbody
+    tbody#guests_table_body
       - @guests.each do |guest|
-        tr
-          td = guest.name
-          td = guest.company
-          td = guest.title
-          td 
-            a.btn.blue.waves-effect.waves-light href=edit_admin_guest_path(guest)
-              |修改
-            |\
-            /* here need click confirm */
-            a.btn.red.waves-effect.waves-light href=admin_guest_path(guest) data-method='delete'
-              |删除
-  
-=paginate @guests
+        =render partial: 'row', locals: { guest: guest }
+
+= paginate @guests
+
+.modal.modal#new_guest_model
+  = render partial: 'form', locals: { guest: @guest }
