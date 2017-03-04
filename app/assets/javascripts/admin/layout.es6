@@ -56,4 +56,6 @@ $(document).on('turbolinks:load', () => {
       $("body").addClass("loaded")
   }, 200);
 
+  // modal
+  $('.modal').modal();
 });

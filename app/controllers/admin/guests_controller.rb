@@ -1,19 +1,12 @@
 class Admin::GuestsController < Admin::BaseController
+  layout :choice_layout
   def index
     load_guests
   end
 
-  def new
-    @guest = Guest.new
-  end
-
   def create
     @guest = Guest.new(guest_params)
-    if @guest.save
-      redirect_to params[:continue] ? new_admin_guest_path : admin_guests_path
-    else
-      render :new
-    end
+    @guest.save
   end
 
   def edit
@@ -23,19 +16,18 @@ class Admin::GuestsController < Admin::BaseController
   def update
     load_guest
     @guest.update(guest_params)
-    render :edit
   end
 
   def destroy
     load_guest
     @guest.destroy
-    redirect_to admin_guests_path
   end
 
   private
 
   def load_guests
     @guests = Guest.order(created_at: :desc).page(params[:page]).per(10)
+    @guest  = Guest.new
   end
 
   def load_guest
@@ -44,5 +36,9 @@ class Admin::GuestsController < Admin::BaseController
 
   def guest_params
     params.require(:guest).permit(:name, :company, :title)
+  end
+
+  def choice_layout
+    action_name == 'index' && 'admin'
   end
 end
