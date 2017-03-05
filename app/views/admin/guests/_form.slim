@@ -4,7 +4,7 @@
       h5
         |嘉宾-#{guest.name}
   .row
-    =simple_form_for [:admin, guest], html: { class: 'col s12', remote: true } do |f|
+    =simple_form_for [:admin, guest], html: { class: 'col s12', remote: true, multipart: true } do |f|
       .modal-content
         .row
           .col.s6
@@ -15,6 +15,32 @@
         .row
           .col.s6
             =f.input :title
+        .row
+          .col.s12
+            .row#image_area
+              =f.simple_fields_for :avatars do |f_a|
+                .col.s2.js_input_image
+                  .card
+                    .card-image
+                      img src=f_a.object.file_url
+                      .input.file.btn
+                        |选择
+                        =f_a.input :file, label: false, wrapper: false
+                        =f_a.check_box '_destroy', wrapper_html: { class: 'disappear' }
+                      a href='javascript:;'
+                        i.close.material-icons.js_remove_image
+                          |close
+              .col.s2.js_input_image.upload_image_template.disappear
+                .card
+                  .card-image
+                    img
+                    .input.file.btn
+                      |选择
+                      input type='file'
+                      input.hide type='check_box'
+                    a.disappear href='javascript:;'
+                      i.close.material-icons.js_remove_image
+                        |close
       .modal-footer
         .row
           .col.s6

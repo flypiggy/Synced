@@ -38,7 +38,7 @@ class Admin::GuestsController < Admin::BaseController
   end
 
   def guest_params
-    params.require(:guest).permit(:name, :company, :title)
+    params.require(:guest).permit(:name, :company, :title, avatars_attributes: [:id, :file, :_destroy])
   end
 
   def choice_layout

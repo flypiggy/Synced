@@ -3,6 +3,9 @@ class Guest < ApplicationRecord
 
   has_many :events_guests, dependent: :destroy
   has_many :events, through: :events_guests, source: :event
+  has_many :avatars, as: :imageable, class_name: 'Image', dependent: :destroy
+
+  accepts_nested_attributes_for :avatars, allow_destroy: true
 end
 
 # == Schema Information
