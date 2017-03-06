@@ -26,6 +26,9 @@ gem 'redis-namespace'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Pagination
+gem 'kaminari'
+
 # Use dotenv for envs
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
@@ -38,6 +41,7 @@ gem 'meta-tags', '~> 2.4'
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 gem 'perfect-scrollbar-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
 gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'sprockets-es6'
 

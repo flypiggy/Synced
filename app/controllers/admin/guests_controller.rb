@@ -4,11 +4,12 @@ class Admin::GuestsController < Admin::BaseController
   end
 
   def new
-    build_guest
+    @guest = Guest.new
   end
 
   def create
-    build_guest
+    @guest = Guest.new(guest_params)
+    @guest.save
   end
 
   def edit
@@ -17,20 +18,25 @@ class Admin::GuestsController < Admin::BaseController
 
   def update
     load_guest
-    build_guest
+    @guest.update(guest_params)
   end
 
   def destroy
     load_guest
+    @guest.destroy
   end
 
   private
 
-  def load_guests; end
+  def load_guests
+    @guests = Guest.order(created_at: :desc).page(params[:page]).per(10)
+  end
 
-  def load_guest; end
+  def load_guest
+    @guest = Guest.find(params[:id])
+  end
 
-  def build_guest; end
-
-  def guest_params; end
+  def guest_params
+    params.require(:guest).permit(:name, :company, :title)
+  end
 end

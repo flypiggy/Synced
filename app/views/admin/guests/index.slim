@@ -1,6 +1,5 @@
 = render 'shared/admin_loader'
 
-
 .breadcrumbs-container.row
   .col.s6
     h5.breadcrumbs-title 嘉宾管理
@@ -13,31 +12,21 @@
         span 嘉宾管理
   .col.s6
     .btns
-      a.waves-effect.waves-light.btn.teal.accent-4
+      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_guest_path data-remote=true
         | 添加嘉宾
 .wrapper-content
-  table.striped
+  table.striped.centered
     thead
       tr
-        th Name
-        th Item Name
-        th Name
-    tbody
-      - (0..5).each do |x|
-        tr
-          td Alvin
-          td Alvin
-          td Alvin
-ul.pagination
-  li.disabled
-    a href="#"
-      i.material-icons chevron_left
-  li.active
-    a href="#!" 1
-  - (2..8).each do |x|
-    li.waves-effect
-      a href="#!"
-        =x
-  li.waves-effect
-    a href="#!"
-      i.material-icons chevron_right
+        th 姓名
+        th 公司
+        th 职位
+        th 操作
+    tbody#guests_table_body
+      - @guests.each do |guest|
+        =render partial: 'row', locals: { guest: guest }
+
+  = paginate @guests
+
+.modal.guest_form_modal#guest_form_modal
+  #guest_form
