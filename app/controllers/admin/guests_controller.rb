@@ -1,5 +1,4 @@
 class Admin::GuestsController < Admin::BaseController
-  layout :choice_layout
   def index
     load_guests
   end
@@ -39,9 +38,5 @@ class Admin::GuestsController < Admin::BaseController
 
   def guest_params
     params.require(:guest).permit(:name, :company, :title)
-  end
-
-  def choice_layout
-    action_name == 'index' && 'admin'
   end
 end

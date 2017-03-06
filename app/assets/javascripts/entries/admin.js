@@ -4,5 +4,4 @@
 //= require materialize-sprockets
 //= require perfect-scrollbar
 
-//= require admin/layout
-//= require admin/guest
+//= require_tree ../admin
