@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { isMobileView } from 'mdetect';
+import { isMobileView, isWechat } from 'mdetect';
 import 'jquery-lazyload';
 import eruda from 'eruda';
 
@@ -8,7 +8,7 @@ import agenda from './2017/agenda';
 import address from './2017/address';
 import banner from './2017/banner';
 import vote from './2017/vote';
-
+import wechat from './shared/wechat';
 
 $(() => {
   header();
@@ -25,4 +25,7 @@ $(() => {
 
   const isDev = process.env.NODE_ENV === 'development';
   if (isDev && isMobileView()) eruda.init();
+
+  // wechat share
+  if (isWechat()) wechat();
 });

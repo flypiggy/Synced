@@ -40,7 +40,9 @@
   },
   "globals": {
     "BMap": true,
-    "db": true
+    "db": true,
+    "wx": true,
+    "wxDefaultConfig": true
   },
   "settings": {
     "import/resolver": {

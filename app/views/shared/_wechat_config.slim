@@ -2,11 +2,10 @@
 
 - sign_package = $wechat_client.get_jssign_package(request.url)
 javascript:
-  wx.config({
+  var wxDefaultConfig = {
     debug: "#{Rails.env.development?}",
     appId: "#{sign_package['appId']}",
     timestamp: "#{sign_package['timestamp']}",
     nonceStr: "#{sign_package['nonceStr']}",
-    signature: "#{sign_package['signature']}",
-    jsApiList: []
-  });
+    signature: "#{sign_package['signature']}"
+  }
