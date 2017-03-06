@@ -20,7 +20,6 @@ const banner = () => {
 
   init();
   animate();
-
   function init() {
     camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000);
     camera.position.z = 1000;
@@ -69,7 +68,7 @@ const banner = () => {
     gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
     gradient.addColorStop(0.2, 'rgba(0, 255, 255, 1)');
     gradient.addColorStop(0.4, 'rgba(0, 0, 64, 1)');
-    gradient.addColorStop(1, 'rgba(0, 0, 0, 1)');
+    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
     context.fillStyle = gradient;
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -78,33 +77,30 @@ const banner = () => {
   }
 
   function initParticle(particle, delay) {
-    const newParticle = this instanceof Sprite ? this : particle;
-    const newDelay = delay !== undefined ? delay : 0;
-
     const x = Math.random() * 4000 - 2000;
     const y = Math.random() * 1000 - 500;
 
-    newParticle.position.set(x, y, 0);
-    newParticle.visible = false;
-    newParticle.scale.x = newParticle.scale.y = Math.random() * 32 + 16;
+    particle.position.set(x, y, 0);
+    particle.visible = false;
+    particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
 
-    new TWEEN.Tween(newParticle)
-      .delay(newDelay)
+    new TWEEN.Tween(particle)
+      .delay(delay)
       .to({}, 4000)
-      .onComplete(initParticle)
+      .onComplete(() => initParticle(particle, delay))
       .start();
 
     setTimeout(() => {
-      newParticle.visible = true;
-    }, newDelay);
+      particle.visible = true;
+    }, delay);
 
-    new TWEEN.Tween(newParticle.position)
-      .delay(newDelay)
+    new TWEEN.Tween(particle.position)
+      .delay(delay)
       .to({ x, y, z: Math.random() * 4000 }, 4000)
       .start();
 
-    new TWEEN.Tween(newParticle.scale)
-      .delay(newDelay)
+    new TWEEN.Tween(particle.scale)
+      .delay(delay)
       .to({ x: 0.01, y: 0.01 }, 4000)
       .start();
   }
@@ -114,8 +110,9 @@ const banner = () => {
     mouseY = event.clientY - windowHalfY;
   }
 
+  let animaID;
   function animate() {
-    window.requestAnimationFrame(animate);
+    animaID = requestAnimationFrame(animate);
     render();
   }
 
@@ -125,9 +122,21 @@ const banner = () => {
     camera.position.x += (mouseX - camera.position.x) * 0.05;
     camera.position.y += (-mouseY - camera.position.y) * 0.05;
     camera.lookAt(scene.position);
-
     renderer.render(scene, camera);
   }
+
+  $('.js-menu-btn').on('click', function () {
+    $(this).parent('.menu-list').toggleClass('is-active');
+  });
+
+  $(window).on('scroll', () => {
+    if (document.body.scrollTop <= window.innerHeight) {
+      cancelAnimationFrame(animaID);
+      animaID = requestAnimationFrame(animate);
+    } else {
+      cancelAnimationFrame(animaID);
+    }
+  });
 };
 
 export default banner;

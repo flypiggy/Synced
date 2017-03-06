@@ -11,8 +11,14 @@ import vote from './2017/vote';
 import wechat from './shared/wechat';
 
 $(() => {
+  window.requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame;
+
   header();
-  // banner();
+  banner();
   agenda();
   vote();
   address();
