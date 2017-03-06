@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
   let(:user) { create(:basic_user) }
+
   describe 'Get #new' do
     it 'render success' do
       get :new
