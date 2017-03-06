@@ -1,0 +1,9 @@
+zh-CN:
+  activerecord:
+    models:
+      guest: '嘉宾'
+    attributes:
+      guest:
+        name: '姓名'
+        company: '公司'
+        title: '职位'

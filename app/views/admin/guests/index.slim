@@ -26,7 +26,7 @@
       - @guests.each do |guest|
         =render partial: 'row', locals: { guest: guest }
 
-= paginate @guests
+  = paginate @guests
 
-.modal#guest_form_modal
+.modal.guest_form_modal#guest_form_modal
   #guest_form
