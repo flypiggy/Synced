@@ -11,8 +11,3 @@ WeixinAuthorize.configure do |config|
 end
 
 $wechat_client = WeixinAuthorize::Client.new(ENV['WECHAT_APP_ID'], ENV['WECHAT_APP_SECRET'])
-
-if Rails.env.development?
-  # dev
-  $wechat_client = WeixinAuthorize::Client.new('wx23793de73ad05e5f', '0363fa31bef050125db75a7af638dd5b')
-end
