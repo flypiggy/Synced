@@ -1,0 +1,22 @@
+section.ime {
+  background-image: image_url('gmis2017/ime-bg.png');
+  background-position: center;
+  background-size: cover;
+  padding: 90px 0;
+  color: #fff;
+  text-align: center;
+
+  .ime-logo {
+    display: inline-block;
+    background-image: image_url('gmis2017/ime-logo.png');
+    width: 279px;
+    height: 279px * 148 / 558;
+    background-size: 100%;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 2;
+  }
+}

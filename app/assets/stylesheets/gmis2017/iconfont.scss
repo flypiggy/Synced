@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 232308 */
-  src: url('//at.alicdn.com/t/font_ip7yuavukrzfr.eot');
-  src: url('//at.alicdn.com/t/font_ip7yuavukrzfr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_ip7yuavukrzfr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_ip7yuavukrzfr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_ip7yuavukrzfr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_qwsg9xleem4h1tt9.eot');
+  src: url('//at.alicdn.com/t/font_qwsg9xleem4h1tt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_qwsg9xleem4h1tt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_qwsg9xleem4h1tt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_qwsg9xleem4h1tt9.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -36,5 +36,9 @@
 
   &.icon-email:before {
     content: "\e65e";
+  }
+
+  &.icon-vote:before {
+    content: "\e613";
   }
 }

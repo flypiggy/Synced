@@ -12,7 +12,7 @@ import wechat from './shared/wechat';
 
 $(() => {
   header();
-  banner();
+  // banner();
   agenda();
   vote();
   address();
