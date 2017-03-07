@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
   validates :file, presence: true
-  belongs_to :imageable, polymorphic: true, optional: true
+  belongs_to :imageable, polymorphic: true
   mount_uploader :file, ImageUploader
 end
 
@@ -10,7 +10,7 @@ end
 #
 #  id             :uuid             not null, primary key
 #  file           :string
-#  imageable_id   :integer
+#  imageable_id   :uuid
 #  imageable_type :string
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
