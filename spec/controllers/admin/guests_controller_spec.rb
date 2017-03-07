@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Admin::GuestsController, type: :controller do
+  before { warden.set_user create(:organizer) }
+
   describe 'Get #index' do
     it 'return 200' do
       get :index

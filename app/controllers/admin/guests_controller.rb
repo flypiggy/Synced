@@ -5,10 +5,12 @@ class Admin::GuestsController < Admin::BaseController
 
   def new
     @guest = Guest.new
+    authorize @guest
   end
 
   def create
     @guest = Guest.new(guest_params)
+    authorize @guest
     @guest.save
   end
 
@@ -29,11 +31,13 @@ class Admin::GuestsController < Admin::BaseController
   private
 
   def load_guests
+    authorize :guest
     @guests = Guest.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def load_guest
     @guest = Guest.find(params[:id])
+    authorize @guest
   end
 
   def guest_params

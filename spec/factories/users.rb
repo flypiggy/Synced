@@ -6,7 +6,7 @@ FactoryGirl.define do
     title    'developer'
 
     trait :with_email do
-      sequence(:email) { |n| "user#{n}@mail.com" }
+      sequence(:email) { |n| "user#{n}@gmail.com" }
     end
 
     trait :with_mobile do
@@ -16,6 +16,18 @@ FactoryGirl.define do
     trait :with_password do
       password 'password'
     end
-    factory :basic_user, traits: [:with_email, :with_password]
+
+    factory :basic_user do
+      with_email
+      with_password
+
+      factory :admin do
+        roles ['admin']
+      end
+
+      factory :organizer do
+        roles ['organizer']
+      end
+    end
   end
 end
