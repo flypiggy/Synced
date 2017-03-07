@@ -20,3 +20,16 @@ section.ime {
     line-height: 2;
   }
 }
+
+
+@media #{$medium-and-down} {
+  section.ime {
+    padding-left: 8%;
+    padding-right: 8%;
+
+    .ime-logo {
+      width: 179px;
+      height: 179px * 148 / 558;
+    }
+  }
+}

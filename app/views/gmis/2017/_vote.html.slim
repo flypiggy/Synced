@@ -1,12 +1,12 @@
 section.vote#vote
   /img.vote-parallax#vote-parallax src=image_path('gmis2017/vote/vote-bg.jpg')
   .container
-    .vote-title
-      .vote-title--main
-        i.iconfont.icon-vote
-        span VOTE
-      .vote-title--side 投票选出你想看的人机大战！
     .moon-wrapper
+      .vote-title
+        .vote-title--main
+          i.iconfont.icon-vote
+          span VOTE
+        .vote-title--side 投票选出你想看的人机大战！
       .moon-elem
     .vote-content
       - @event.votes.first.vote_items.each do |item|
@@ -17,7 +17,3 @@ section.vote#vote
             = render 'gmis/2017/shared/spinner_line'
 
             span.vote-number= item.count
-  /  .elem.elem-bg-01
-  /  .elem.elem-bg-02
-  /.elem.elem-bg-03
-  /.elem.elem-bg-04

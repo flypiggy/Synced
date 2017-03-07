@@ -18,7 +18,6 @@ section.agenda {
 
   .agenda-list {
     width: 50%;
-    padding-right: 1%;
 
     .day {
       font-weight: bold;
@@ -53,6 +52,7 @@ section.agenda {
   .agenda-info {
     font-size: 1.8rem;
     padding-left: 5%;
+    padding-right: 3%;
     line-height: 1.5;
   }
 
@@ -61,12 +61,26 @@ section.agenda {
     color: $red;
   }
 
-  .theme-icon .icon-time{
+  .theme-icon .icon-time {
     font-size: 2rem;
   }
 
   .theme-time {
     font-size: 2rem;
     margin-bottom: 3px;
+  }
+}
+
+@media #{$medium-and-down} {
+  section.agenda {
+    padding: 30px $mobile-edge;
+    
+    .agenda-content {
+      flex-direction: column;
+    }
+
+    .agenda-list {
+      width: 100%;
+    }
   }
 }

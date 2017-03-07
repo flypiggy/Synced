@@ -30,6 +30,11 @@ section.tickets {
       }
     }
 
+    .ticket-head {
+      min-height: 112px;
+      margin-bottom: 8px;
+    }
+
     .type {
       font-size: 3rem;
     }
@@ -41,16 +46,14 @@ section.tickets {
     .price {
       font-size: 5rem;
       font-weight: bold;
-      margin-bottom: 5px;
 
       &.free {
         font-size: 6rem;
-        margin-bottom: 28px;
       }
     }
 
     .unit {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
 
     .reserve-btn {
@@ -88,34 +91,6 @@ section.tickets {
         transform: translateX(-50%);
       }
     }
-  /*
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-    &::before {
-      bottom: 40px;
-      left: 0;
-      width: 150px;
-      height: 150px * 352 / 428;
-      background-image: image_url('gmis2017/elem/elem-08.png');
-      transform: translateX(-35%);
-    }
-
-    &::after {
-      top: -70px;
-      right: 0;
-      width: 180px;
-      height: 180px * 296 / 574;
-      background-image: image_url('gmis2017/elem/elem-09.png');
-      background-size: 100%;
-      transform: translateX(20%);
-    }
-  */
   }
 
   .ticket-line-anima {
@@ -138,9 +113,34 @@ section.tickets {
       flex-wrap: wrap;
 
       .ticket-wrapper {
-        width: 100%;
-        margin-right: 0;
+        width: calc(50% - 5px);
         margin-bottom: 10px;
+        margin-right: 10px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      .ticket-head {
+        min-height: 82px;
+        margin-bottom: 8px;
+      }
+
+      .type {
+        font-size: 2.3rem;
+      }
+
+      .unit {
+        font-size: 2rem;
+      }
+
+      .price {
+        font-size: 3.5rem;
+      }
+
+      .price.free {
+        font-size: 3.8rem;
       }
     }
   }
