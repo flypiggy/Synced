@@ -13,15 +13,11 @@ import TWEEN from 'tween.js';
 
 const banner = () => {
   let camera, scene, renderer, particle;
-  let mouseX = 0, mouseY = 0;
-
-  let windowHalfX = window.innerWidth / 2;
-  let windowHalfY = window.innerHeight / 2;
 
   init();
   animate();
   function init() {
-    camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000);
+    camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
     camera.position.z = 1000;
 
     scene = new Scene();
@@ -31,7 +27,7 @@ const banner = () => {
       blending: AdditiveBlending
     });
 
-    for (let i = 0; i < 300; i += 1) {
+    for (let i = 0; i < 200; i += 1) {
       particle = new Sprite(material);
       initParticle(particle, i * 10);
       scene.add(particle);
@@ -44,14 +40,10 @@ const banner = () => {
     $('#banner').append(renderer.domElement);
 
 
-    document.addEventListener('mousemove', onDocumentMouseMove, false);
     window.addEventListener('resize', onWindowResize, false);
   }
 
   function onWindowResize() {
-    windowHalfX = window.innerWidth / 2;
-    windowHalfY = window.innerHeight / 2;
-
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
@@ -66,8 +58,7 @@ const banner = () => {
     const context = canvas.getContext('2d');
     const gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
     gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(0.2, 'rgba(0, 255, 255, 1)');
-    gradient.addColorStop(0.4, 'rgba(0, 0, 64, 1)');
+    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 1)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
     context.fillStyle = gradient;
@@ -82,7 +73,7 @@ const banner = () => {
 
     particle.position.set(x, y, 0);
     particle.visible = false;
-    particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
+    particle.scale.x = particle.scale.y = Math.random() * 12 + 6;
 
     new TWEEN.Tween(particle)
       .delay(delay)
@@ -105,11 +96,6 @@ const banner = () => {
       .start();
   }
 
-  function onDocumentMouseMove(event) {
-    mouseX = event.clientX - windowHalfX;
-    mouseY = event.clientY - windowHalfY;
-  }
-
   let animaID;
   function animate() {
     animaID = requestAnimationFrame(animate);
@@ -118,9 +104,6 @@ const banner = () => {
 
   function render() {
     TWEEN.update();
-
-    camera.position.x += (mouseX - camera.position.x) * 0.05;
-    camera.position.y += (-mouseY - camera.position.y) * 0.05;
     camera.lookAt(scene.position);
     renderer.render(scene, camera);
   }
