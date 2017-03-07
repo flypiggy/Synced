@@ -15,28 +15,20 @@
           .col.s12
             .row#image_area
               =f.simple_fields_for :avatars do |f_a|
-                .col.s2.js_input_image
-                  .card
-                    .card-image
-                      img src=f_a.object.file_url
-                      .input.file.btn
-                        |选择
-                        =f_a.input :file, label: false, wrapper: false
-                        =f_a.check_box '_destroy', wrapper_html: { class: 'disappear' }
-                      a href='javascript:;'
-                        i.close.material-icons.js_remove_image
-                          |close
-              .col.s2.js_input_image.upload_image_template.disappear
-                .card
-                  .card-image
-                    img
-                    .input.file.btn
-                      |选择
-                      input type='file'
-                      input.hide type='check_box'
-                    a.disappear href='javascript:;'
-                      i.close.material-icons.js_remove_image
-                        |close
+                .image_preview_area
+                  img src=f_a.object.file_url
+                  .input.file
+                    =f_a.input :file, label: false, wrapper: false
+                    =f_a.check_box '_destroy', wrapper_html: { class: 'disappear' }
+                  i.close.material-icons.remove_button
+                      |close
+              .image_upload_template.image_preview_area
+                img
+                .input.file
+                  input type='file'
+                  input.hide type='check_box'
+                i.close.material-icons.remove_button.disappear
+                  |close
       .modal-footer
         .row
           .col.s12
