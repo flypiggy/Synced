@@ -1,0 +1,24 @@
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title
+      |赞助商管理
+  .col.s6
+    .btns
+      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_sponsor_path data-remote=true
+        | 添加赞助商
+.wrapper-content
+  table.striped.centered
+    thead
+      tr
+        th 名字
+        th 链接
+        th 操作
+    tbody#sponsors_table_body
+      - @sponsors.each do |sponsor|
+        =render partial: 'row', locals: { sponsor: sponsor}
+
+  = paginate @sponsors
+
+.modal.sponsor_form_modal#sponsor_form_modal
+  #sponsor_form
+

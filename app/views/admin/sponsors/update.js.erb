@@ -1,0 +1,7 @@
+<%- if @sponsor.errors.blank? %>
+  $('#sponsor_form_modal').modal('close');
+  $('#<%=@sponsor.id%>').replaceWith("<%=j render(partial: 'row', locals: { sponsor: @sponsor })%>");
+<%- else %>
+  $('#sponsor_form').replaceWith("<%=j render(partial: 'form', locals: { sponsor: @sponsor })%>");
+<%- end %>
+

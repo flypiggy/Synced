@@ -1,0 +1,8 @@
+zh-CN:
+  activerecord:
+    models:
+      sponsor: '赞助商'
+    attributes:
+      sponsor:
+        name: '名字'
+        url: '链接'

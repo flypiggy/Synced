@@ -3,7 +3,7 @@ class Sponsor < ApplicationRecord
 
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
 
-  accepts_nested_attributes_for :avatars, allow_destroy: true
+  accepts_nested_attributes_for :logos, allow_destroy: true
 end
 
 # == Schema Information

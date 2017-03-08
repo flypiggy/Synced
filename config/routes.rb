@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :guests, except: :show
+    resources :sponsors, except: :show
   end
 
   match 'vote_up/:id', to: 'votes#vote_up', via: [:post, :put, :patch]
