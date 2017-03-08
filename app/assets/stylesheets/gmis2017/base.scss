@@ -35,10 +35,10 @@ $mobile-edge: 12px;
 
 // Media Query Ranges
 $small-screen-up: 601px;
-$medium-screen-up: 993px;
+$medium-screen-up: 768px;
 $large-screen-up: 1201px;
 $small-screen: 600px;
-$medium-screen: 992px;
+$medium-screen: 767px;
 $large-screen: 1200px;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})";

@@ -8,10 +8,19 @@
   src: font_url('GEO231L.TTF');
 }
 
+@font-face {
+  font-family: 'HelveticaNeueCn';
+  src: font_url('HelveticaNeueCn.otf');
+}
+
 .textfont-bongoaut {
   font-family: 'bongonaut';
 }
 
 .textfont-geo231l {
   font-family: 'GEO231L';
+}
+
+.textfont-helvetica {
+  font-family: 'HelveticaNeueCn';
 }
