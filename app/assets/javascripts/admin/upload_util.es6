@@ -1,20 +1,19 @@
-const default_config = {
-  upload_element: '.image_preview_area',
-  template: '.image_upload_template',
-  remove_button: '.remove_button',
-  limit_count: 0,
-  changeTemplateAfterSelect: (temp) => {
-    return $(this.template);
-  }
-}
-
 function uploadImage(container_id, config){
+  const default_config = {
+    upload_element: '.image_preview_area',
+    template: '.image_upload_template',
+    remove_button: '.remove_button',
+    limit_count: 0,
+    changeTemplateAfterSelect: (temp) => {
+      return $(this.template);
+    }
+  }
 
   config = Object.assign(default_config, config);
 
   /*是否超过数量*/
   const checkLimitValid = function() {
-    if (config.limit_count == 0) { return true };
+    if (config.limit_count === 0) { return true };
     return config.limit_count > $image_area.find(config.upload_element).length
   }
 
@@ -46,7 +45,6 @@ function uploadImage(container_id, config){
       $img.attr('src', file_url);
       /*添加新的temp*/
       const template_class = config.template.substr(1);
-      config.limit_count
       if (!$this.hasClass(template_class)) { return };
       $this.removeClass(template_class);
       config.changeTemplateAfterSelect($this);
