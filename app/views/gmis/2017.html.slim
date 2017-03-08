@@ -104,11 +104,11 @@ html lang= 'en'
 
     - if device_mobile?
       = render 'gmis/2017/mobile/guests', guests: guests
-      = render 'gmis/2017/mobile/agenda'
     - else
       = render 'gmis/2017/guests', guests: guests
-      = render 'gmis/2017/agenda'
 
+    = render 'gmis/2017/agenda'
+    = render 'gmis/2017/ime'
     = render 'gmis/2017/vote'
     = render 'gmis/2017/tickets'
     = render 'gmis/2017/address'

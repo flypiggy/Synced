@@ -1,7 +1,4 @@
-
 $moon-ratio: 517 / 512;
-$slogan-01-ratio: 113 / 1440;
-$slogan-02-ratio: 65 / 593;
 
 section.vote {
   position: relative;
@@ -9,10 +6,10 @@ section.vote {
   color: #fff;
   padding: 40px 0;
   overflow: hidden;
-  background-image: image_url('gmis2017/vote/vote-bg.jpg');
-  background-size: cover;
+  background-color: #161620;
+  background-image: image_url('gmis2017/vote/vote-bg.png');
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 
   .container {
     position: relative;
@@ -23,16 +20,21 @@ section.vote {
   }
 
   .moon-wrapper {
-    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .vote-title--main {
     display: inline-block;
-    color: $red;
     font-size: 3.8rem;
-    font-weight: bold;
     font-style: italic;
     margin-right: 8px;
+
+
+    .icon-vote {
+      font-size: 3rem;
+      color: $red;
+    }
   }
 
   .vote-title--side {
@@ -46,36 +48,6 @@ section.vote {
     background-size: cover;
     background-position: center;
     margin: 0 auto;
-  }
-
-  .vote-title {
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-  }
-
-  .vote-slogan--01 {
-    width: 800px;
-    height: 800px * $slogan-01-ratio;
-    position: absolute;
-    top: 205px;
-    background-image: image_url('gmis2017/vote/vote-slogan.png');
-    background-size: cover;
-    background-position: center;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .vote-slogan--02 {
-    width: 350px;
-    height: 350px * $slogan-02-ratio;
-    position: absolute;
-    top: 310px;
-    background-image: image_url('gmis2017/vote/vote-slogan-02.png');
-    background-size: cover;
-    background-position: center;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .vote-content {
@@ -98,28 +70,17 @@ section.vote {
         border-right: 2px solid #000;
 
         &:hover {
-          background-color: $yellow;
-        }
-
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-image: image_url('gmis2017/vote/vote-btn-bg.png');
-          width: calc(100% + 10px);
-          height: calc(100% + 10px);
-          z-index: -1;
-          background-size: 100% auto;
+          color: #fff;
+          background-color: $red;
         }
       }
 
       .vote-progress {
-        background-color: rgba(39, 39, 39, 0.8);
-        margin-top: 22px;
+        margin-top: 20px;
         display: flex;
         padding: 3px 10px;
         justify-content: space-between;
+        border: 1px solid $red;
         color: $red;
 
         .spinner-line div {
@@ -128,7 +89,6 @@ section.vote {
 
         span {
           font-size: 1.8rem;
-          /* font-weight: bold; */
         }
       }
 
@@ -165,50 +125,6 @@ section.vote {
       }
     }
   }
-
-  .elem {
-    position: absolute;
-
-    &.elem-bg-01 {
-      top: 0;
-      left: -85px;
-      width: 150px;
-      height: 150px * 288 / 528;
-      background-image: image_url('gmis2017/elem/elem-07.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    &.elem-bg-02 {
-      top: 40px;
-      right: 10px;
-      width: 150px;
-      height: 150px * 189 / 232;
-      background-image: image_url('gmis2017/elem/elem-13.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    &.elem-bg-03 {
-      bottom: 180px;
-      right: 0;
-      width: 60px;
-      height: 60px * 61 / 80;
-      background-image: image_url('gmis2017/elem/elem-14.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    &.elem-bg-04 {
-      bottom: 40px;
-      left: 0;
-      width: 160px;
-      height: 160px * 82 / 258;
-      background-image: image_url('gmis2017/elem/elem-15.png');
-      background-size: cover;
-      background-position: center;
-    }
-  }
 }
 
 @media #{$medium-and-down} {
@@ -217,13 +133,22 @@ section.vote {
     background-attachment: scroll;
 
     .moon-elem {
-      width: 220px;
-      height: 220px * $moon-ratio;
+      width: 280px;
+      height: 280px * $moon-ratio;
     }
 
     .moon-wrapper {
       padding-top: 20px;
-      padding-bottom: 120px;
+      padding-bottom: 20px;
+      flex-direction: column-reverse;
+
+      .vote-title {
+        padding: 0 20px;
+      }
+
+      .vote-title--side {
+        display: block;
+      }
     }
 
     .vote-title--main {
@@ -234,26 +159,13 @@ section.vote {
       top: 290px;
     }
 
-    .vote-slogan--01 {
-      width: 350px;
-      height: 350px * $slogan-01-ratio;
-      top: 108px;
-    }
-
-    .vote-slogan--02 {
-      width: 220px;
-      height: 220px * $slogan-02-ratio;
-      left: 0;
-      top: 260px;
-      transform: translateX(0);
-    }
-
     .vote-content {
       height: auto;
       padding: 0 20px;
 
       .vote-option .vote-btn {
-        background-color: $yellow;
+        background-color: $red;
+        color: #fff;
       }
 
       .vote-option:nth-child(n) {

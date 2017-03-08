@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lantinghei SC', 'PingFang SC', 'Noto Sans S Chinese', 'Hack', 'Microsoft Yahei', 'Arial', sans-serif;
+  font-family: 'PingFang SC', 'Noto Sans S Chinese', 'Lantinghei SC', 'Hack', 'Microsoft Yahei', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
 }
 
-$red: #b82c46;
+$red: #ad254d;
 $yellow: #fffe54;
 
 $header_h: 75px;
@@ -46,3 +46,14 @@ $large-and-up: "only screen and (min-width : #{$medium-screen-up})";
 $small-and-down: "only screen and (max-width : #{$small-screen})";
 $medium-and-down: "only screen and (max-width : #{$medium-screen})";
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})";
+
+
+@mixin synced-logo($h) {
+  display: inline-block;
+  background-image: image_url('gmis2017/synced-logo.png');
+  height: $h;
+  width: $h * 1440 / 276;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

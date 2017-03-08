@@ -14,6 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "jquery-lazyload": "^1.9.7",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-scroll": "^1.1.1",
     "mdetect": "^1.2.2",
     "scroll-parallax": "^1.1.0",
     "swiper": "^3.4.1",

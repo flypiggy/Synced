@@ -2375,6 +2375,20 @@ jquery-lazyload:
   version "1.9.7"
   resolved "http://registry.npm.taobao.org/jquery-lazyload/download/jquery-lazyload-1.9.7.tgz#9982b388c533c0b611214b3c5aaa0b9fede071f7"
 
+jquery-mousewheel:
+  version "3.1.13"
+  resolved "http://registry.npm.taobao.org/jquery-mousewheel/download/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
+
+jquery-scroll:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/jquery-scroll/download/jquery-scroll-1.1.1.tgz#a7fb2ba4efae415d75c679c87d5f09f80fa8f734"
+  dependencies:
+    jquery "^2.1.4"
+
+jquery@^2.1.4:
+  version "2.2.4"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
