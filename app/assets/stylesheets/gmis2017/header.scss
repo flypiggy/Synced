@@ -6,14 +6,12 @@ header.header {
   background-size: auto 100%;
   box-shadow: 2px 2px 20px #000;
   z-index: 99;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s;
 
   .synced-logo {
-    background-image: image_url('gmis2017/synced-logo.png');
-    height: 30px;
-    width: 30px * 1440 / 276;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include synced-logo(30px);
   }
 
   .header-content {
@@ -69,6 +67,12 @@ header.header {
       transform: translateX(-50%);
       transition: all 0.8s;
     }
+  }
+
+  &.is-active {
+    transform: translateY(0);
+    visibility: visible;
+    transition: all 0.3s;
   }
 }
 

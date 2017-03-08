@@ -1,0 +1,161 @@
+section.agenda {
+  padding: 30px 0;
+  position: relative;
+
+  .agenda-title {
+    display: block;
+  }
+
+  .icon-time {
+    font-size: 2rem;
+    margin-right: 6px;
+  }
+
+  .agenda-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-image: image_url('gmis2017/elem/elem-12.png');
+    background-position: 98% bottom;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    padding-bottom: 35px;
+  }
+
+  .agenda-days {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .day-header {
+    display: none;
+    font-size: 3rem;
+    color: $red;
+
+    .month {
+      font-size: 5rem;
+    }
+
+    .slash {
+      font-size: 2rem;
+    }
+
+    &.active {
+      display: inline-block;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .forum {
+    font-size: 3rem;
+    color: $red;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    line-height: 2;
+    font-size: 1.8rem;
+    padding: 30px 0 50px;
+    background-image: image_url('gmis2017/elem/elem-10.png'), image_url('gmis2017/elem/elem-11.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: 170px, 186px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .angle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-width: 14px;
+    border-top-color: $yellow;
+  }
+
+  .themes {
+    color: $red;
+    font-size: 2rem;
+    margin-bottom: 45px;
+
+    .theme-item {
+      line-height: 2;
+    }
+
+    img.ime {
+      position: relative;
+      top: 2px;
+      height: 20px;
+      padding-left: 10px;
+    }
+  }
+
+  .sub-forum-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 8%;
+    margin-bottom: 20px;
+    /* background-image: image_url('gmis2017/agenda-wavy-line.png'); */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0 80px;
+
+    .item {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+
+      .name {
+        width: 100%;
+        height: 130px;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        padding: 10px;
+        background-color: $red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        width: 100%;
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .agenda-button {
+    position: static;
+    display: inline-block;
+    background: none;
+    font-size: 5rem;
+    color: $red;
+  }
+
+  .agenda-button-prev {
+    margin-right: 20px;
+  }
+
+  .agenda-button-next {
+    margin-left: 20px;
+  }
+
+  .canvas-wavy {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 810px;
+  }
+}
