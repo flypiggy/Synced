@@ -14,17 +14,17 @@ RSpec.describe Admin::GuestsController, type: :controller do
     let(:guest_params) { attributes_for(:guest) }
 
     it 'create a guest if params valid' do
-      expect { xhr :post, :create, params: { guest: guest_params }, format: 'js' }.to change { Guest.count }.by(1)
+      expect { post :create, params: { guest: guest_params }, xhr: true }.to change { Guest.count }.by(1)
     end
 
     it 'will not create guest if params invalid' do
       invalid_guest_params = attributes_for(:guest, name: '')
-      expect { xhr :post, :create, params: { guest: invalid_guest_params } }.to change { Guest.count }.by(0)
+      expect { post :create, params: { guest: invalid_guest_params }, xhr: true }.to change { Guest.count }.by(0)
     end
 
     it 'create avatar if with images' do
       guest_params = attributes_for(:guest, avatars_attributes: [attributes_for(:image)])
-      expect { xhr :post, :create, params: { guest: guest_params } }
+      expect { post :create, params: { guest: guest_params }, xhr: true }
         .to change { Image.count }.by(1)
     end
   end
@@ -36,12 +36,12 @@ RSpec.describe Admin::GuestsController, type: :controller do
     let(:image_attributes) { { avatars_attributes: [{ file: file }] } }
 
     it 'change name when update guest name' do
-      xhr :patch, :update, params: { guest: { name: 'changed_name' }, id: guest.id }
+      patch :update, params: { guest: { name: 'changed_name' }, id: guest.id }, xhr: true
       expect(guest.reload.name).to eq 'changed_name'
     end
 
     it 'create new avatar when patch more image' do
-      expect { xhr :patch, :update, params: { guest: image_attributes, id: guest_with_avatars.id } }
+      expect { patch :update, params: { guest: image_attributes, id: guest_with_avatars.id }, xhr: true }
         .to change { guest_with_avatars.avatars.count }.by(1)
     end
   end
@@ -50,7 +50,7 @@ RSpec.describe Admin::GuestsController, type: :controller do
     let(:guest) { create(:guest) }
 
     it 'will destroy this gust when delete request to destroy' do
-      xhr :delete, :destroy, params: { id: guest.id }
+      delete :destroy, params: { id: guest.id }, xhr: true
       expect(Guest.find_by(id: guest.id)).to eq nil
     end
   end
