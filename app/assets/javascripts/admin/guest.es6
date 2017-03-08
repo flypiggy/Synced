@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', () => {
-  $('.modal').modal({
+  $('.guest_form_modal').modal({
     ready: function(modal, trigger) {
       uploadImage('#image_area', {
         limit_count: 6,
@@ -12,5 +12,4 @@ $(document).on('turbolinks:load', () => {
       });
     }
   })
-
 })
