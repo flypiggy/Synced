@@ -8,37 +8,41 @@
 }
 
 .iconfont {
-  font-family:"iconfont" !important;
+  font-family:'iconfont' !important;
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   &.icon-car:before {
-    content: "\e610";
+    content: '\e610';
   }
 
   &.icon-location:before {
-    content: "\e611";
+    content: '\e611';
   }
 
   &.icon-time:before {
-    content: "\e612";
+    content: '\e612';
   }
 
   &.icon-closed:before {
-    content: "\e601";
+    content: '\e601';
   }
 
   &.icon-menu:before {
-    content: "\e600";
+    content: '\e600';
   }
 
   &.icon-email:before {
-    content: "\e65e";
+    content: '\e65e';
   }
 
   &.icon-vote:before {
-    content: "\e613";
+    content: '\e613';
+  }
+
+  &.icon-down:before {
+    content: '\e607';
   }
 }

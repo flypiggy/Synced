@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import { isMobileView } from 'mdetect';
 
+import { scrollTop } from '../../common/tool';
+
 const header = () => {
   const $header = $('header.header');
 
@@ -17,7 +19,7 @@ const header = () => {
     });
   } else {
     $(window).on('scroll', () => {
-      if (document.body.scrollTop >= 400) {
+      if (scrollTop() >= 400) {
         $header.addClass('is-active');
       } else {
         $header.removeClass('is-active');

@@ -1,4 +1,7 @@
 import $ from 'jquery';
+import scrollTo from 'jquery-scroll';
+import 'jquery-mousewheel';
+
 import {
   PerspectiveCamera,
   Scene,
@@ -11,8 +14,12 @@ import {
 
 import TWEEN from 'tween.js';
 
+import { scrollTop } from '../../common/tool';
+
+
 const banner = () => {
   let camera, scene, renderer, particle;
+  const $window = $(window);
 
   init();
   animate();
@@ -108,18 +115,44 @@ const banner = () => {
     renderer.render(scene, camera);
   }
 
+
   $('.js-menu-btn').on('click', function () {
     $(this).parent('.menu-list').toggleClass('is-active');
   });
 
-  $(window).on('scroll', () => {
-    if (document.body.scrollTop <= window.innerHeight) {
+  $window.on('scroll', () => {
+    if (scrollTop() <= window.innerHeight) {
       cancelAnimationFrame(animaID);
       animaID = requestAnimationFrame(animate);
     } else {
       cancelAnimationFrame(animaID);
     }
   });
+
+  $window.on('mousewheel', scrollDown);
+
+  function scrollDown(e) {
+    const direction = e.deltaY < 0 ? 'down' : 'up';
+
+    if (direction === 'down' && scrollTop() <= 100) {
+      $window.off('mousewheel', scrollDown);
+      $window.on('mousewheel', lockScroll);
+
+      scrollTo({
+        selector: '#guests',
+        duration: 400,
+        offset: 75,
+        callback: () => {
+          $window.on('mousewheel', scrollDown);
+          $window.off('mousewheel', lockScroll);
+        }
+      });
+    }
+  }
+
+  function lockScroll(e) {
+    e.preventDefault();
+  }
 };
 
 export default banner;

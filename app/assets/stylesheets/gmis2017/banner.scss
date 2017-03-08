@@ -11,6 +11,19 @@ section.banner {
     z-index: 3;
   }
 
+  .down-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+
+    .iconfont {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+
   .banner-head {
     position: absolute;
     top: 0;
