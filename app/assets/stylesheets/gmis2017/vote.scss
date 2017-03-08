@@ -64,10 +64,11 @@ section.vote {
         font-size: 1.8rem;
         color: #000;
         background-color: #fff;
-        padding: 2px 15px;
+        padding: 5px 15px;
         text-decoration: none;
         border-bottom: 2px solid #000;
         border-right: 2px solid #000;
+        transition: all 0.3s;
 
         &:hover {
           color: #fff;

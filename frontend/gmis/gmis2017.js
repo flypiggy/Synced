@@ -17,11 +17,14 @@ $(() => {
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
+  $.ajaxSetup({ headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') } });
+
   header();
   banner();
   // agenda();
   vote();
   address();
+
 
   $.scrollIt({ topOffset: isMobileView() ? 0 : -75 });
   $('.js-lazy').lazyload({

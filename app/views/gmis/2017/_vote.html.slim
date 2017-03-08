@@ -10,7 +10,7 @@ section.vote#vote
       .moon-elem
     .vote-content
       - @event.votes.first.vote_items.each do |item|
-        .vote-option.js-vote-option data-vote= item.count date-id= item.id
+        .vote-option.js-vote-option data-vote= item.count data-id= item.id
           a.vote-btn.js-vote-btn href="javascript:;"
             = item.name
           .vote-progress
