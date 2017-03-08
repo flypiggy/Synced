@@ -12,7 +12,9 @@ class Admin::SponsorsController < Admin::BaseController
   end
 
   def create
-    @sponsor = Sponsor.create(sponsor_params)
+    @sponsor = Sponsor.new(sponsor_params)
+    @sponsor.save
+    render :create, layout: false
   end
 
   def update
@@ -27,15 +29,15 @@ class Admin::SponsorsController < Admin::BaseController
 
   private
 
-  def sponsor_params
-    params.require(:sponsor).permit(:name, :url)
+  def load_sponsors
+    @sponsors = Sponsor.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def load_sponsor
     @sponsor = Sponsor.find(params[:id])
   end
 
-  def load_sponsors
-    @sponsors = Sponsor.order(created_at: :desc).page(params[:page]).per(10)
+  def sponsor_params
+    params.require(:sponsor).permit(:name, :url, logos_attributes: [:id, :file, :_destroy])
   end
 end

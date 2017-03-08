@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Admin::SponsorsController, type: :controller do
   before { warden.set_user create(:organizer) }
 
-  let (:sponsor) { create(:sponsor) }
+  let(:sponsor) { create(:sponsor) }
 
   describe 'Get #index' do
     it 'return 200' do
@@ -28,7 +28,8 @@ RSpec.describe Admin::SponsorsController, type: :controller do
 
   describe 'Post #create' do
     it 'create a sponsor' do
-      expect { post :create, params: { sponsor: attributes_for(:sponsor) }, xhr: true }.to change { Sponsor.count }.by(1)
+      expect { post :create, params: { sponsor: attributes_for(:sponsor) }, xhr: true }
+        .to change { Sponsor.count }.by(1)
     end
   end
 
