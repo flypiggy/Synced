@@ -1,0 +1,18 @@
+class Sponsor < ApplicationRecord
+  validates :name, presence: true
+
+  has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
+
+  accepts_nested_attributes_for :avatars, allow_destroy: true
+end
+
+# == Schema Information
+#
+# Table name: sponsors
+#
+#  id         :uuid             not null, primary key
+#  name       :string           not null
+#  url        :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
