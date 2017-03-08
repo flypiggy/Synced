@@ -29,6 +29,10 @@ gem 'kaminari'
 # Authorization
 gem 'pundit'
 
+# UploadImage
+gem 'carrierwave-qiniu', '~> 1.1.0'
+gem 'remotipart', '~> 1.2'
+
 # Use dotenv for envs
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
