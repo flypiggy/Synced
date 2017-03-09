@@ -5,6 +5,7 @@ class Admin::SponsorsController < Admin::BaseController
 
   def new
     @sponsor = Sponsor.new
+    authorize @sponsor
   end
 
   def edit
@@ -13,8 +14,8 @@ class Admin::SponsorsController < Admin::BaseController
 
   def create
     @sponsor = Sponsor.new(sponsor_params)
+    authorize @sponsor
     @sponsor.save
-    render :create, layout: false
   end
 
   def update
@@ -30,11 +31,13 @@ class Admin::SponsorsController < Admin::BaseController
   private
 
   def load_sponsors
+    authorize :sponsor
     @sponsors = Sponsor.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def load_sponsor
     @sponsor = Sponsor.find(params[:id])
+    authorize @sponsor
   end
 
   def sponsor_params
