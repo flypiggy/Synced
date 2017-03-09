@@ -1,0 +1,8 @@
+tr id=partner.id
+  td = partner.name
+  td = partner.url
+  td
+    a.btn.blue.waves-effect.waves-light href=edit_admin_partner_path(partner) data-remote=true
+      |修改
+    a.btn.red.waves-effect.waves-light href=admin_partner_path(partner) data-method='delete' data-remote=true data-confirm='确定删除吗?'
+      |删除

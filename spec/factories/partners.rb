@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :sponsor do
+  factory :partner do
     name 'jiqizhixin'
     url 'http://jiqizhixin.com'
   end

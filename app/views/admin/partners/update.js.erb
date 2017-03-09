@@ -1,0 +1,6 @@
+<%- if @partner.errors.blank? %>
+  $('#partner_form_modal').modal('close');
+  $('#<%=@partner.id%>').replaceWith('<%=j render(partial: 'row', locals: { partner: @partner })%>');
+<%- else %>
+  $('#partner_form').replaceWith('<%=j render(partial: 'form', locals: { partner: @partner })%>');
+<%- end %>

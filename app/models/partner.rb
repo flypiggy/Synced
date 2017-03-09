@@ -1,4 +1,4 @@
-class Sponsor < ApplicationRecord
+class Partner < ApplicationRecord
   validates :name, presence: true
 
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
@@ -8,7 +8,7 @@ end
 
 # == Schema Information
 #
-# Table name: sponsors
+# Table name: partners
 #
 #  id         :uuid             not null, primary key
 #  name       :string           not null

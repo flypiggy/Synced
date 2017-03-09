@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170308071718) do
     t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type", using: :btree
   end
 
-  create_table "sponsors", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "partners", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "url"
     t.datetime "created_at", null: false
