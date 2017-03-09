@@ -18,7 +18,7 @@ section.video {
     }
 
     .vjs-poster {
-      background-size: cover; 
+      background-size: cover;
     }
 
     .vjs-big-play-button {
@@ -29,9 +29,10 @@ section.video {
       border-width: 1.5px;
       line-height: 60px;
       top: auto;
-      bottom: 20%;
+      bottom: 30%;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 50;
     }
 
     .vjs-play-progress,
@@ -57,6 +58,7 @@ section.video {
     width: 100%;
     text-align: center;
     padding-bottom: 50px;
+    z-index: 40;
 
     img {
       width: 25%;
@@ -75,6 +77,24 @@ section.video {
   }
 }
 
+
+@media #{$medium-and-down} {
+  section.video {
+    .gmis-palyer {
+      padding-bottom: 80%;
+    }
+
+    .video-hero-overlay {
+      .video-slogan {
+        display: none;
+      }
+
+      img {
+        width: 75%;
+      }
+    }
+  }
+}
 
 *::-webkit-media-controls-panel {
   display: none!important;

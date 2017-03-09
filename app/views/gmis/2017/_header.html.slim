@@ -2,9 +2,9 @@ header.header
   .container.header-content
     a.synced-logo href=gmis_url
     nav.gmis-nav#gmis-nav
-      a href="#video" data-scroll-nav="0"
-        | 大会视频
-        = render 'gmis/2017/shared/spinner_line'
+      /a href="#video" data-scroll-nav="0"
+      /  | 大会视频
+      /  = render 'gmis/2017/shared/spinner_line'
 
       a href="#guests" data-scroll-nav="1"
         | 主讲嘉宾
@@ -14,19 +14,27 @@ header.header
         | 大会日程
         = render 'gmis/2017/shared/spinner_line'
 
-      a href="#tickets" data-scroll-nav="3"
+      a href="#vote" data-scroll-nav="3"
+        | 特色环节
+        = render 'gmis/2017/shared/spinner_line'
+
+      a href="#tickets" data-scroll-nav="4"
         | 在线购票
         = render 'gmis/2017/shared/spinner_line'
 
-      a href="#address" data-scroll-nav="4"
+      a href="#address" data-scroll-nav="5"
         | 活动地点
         = render 'gmis/2017/shared/spinner_line'
 
-      a href="#cooperative" data-scroll-nav="5"
+      a href="#address" data-scroll-nav="6"
+        | 联系我们
+        = render 'gmis/2017/shared/spinner_line'
+
+      a href="#cooperative" data-scroll-nav="7"
         | 合作机构
         = render 'gmis/2017/shared/spinner_line'
 
-    a.video-slim-btn href="javascript:;"
+    a.video-slim-btn href="javascript:;" data-scroll-nav="0"
       img src=image_path('gmis2017/video-slim-btn.png')
 .hamburger.hamburger--emphatic.js-hamburger
   .hamburger-box

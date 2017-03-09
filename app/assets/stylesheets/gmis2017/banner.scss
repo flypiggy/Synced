@@ -13,8 +13,9 @@ section.banner {
 
   .down-btn {
     position: absolute;
+    display: inline-block;
     bottom: 50px;
-    right: 50%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 20;
 
@@ -106,7 +107,7 @@ section.banner {
     }
   }
 
-  .iconfont {
+  .banner-head .iconfont {
     position: absolute;
     right: 0;
     width: 30px;
@@ -182,6 +183,10 @@ section.banner {
       display: none;
     }
 
+    .down-btn {
+      display: none; 
+    }
+
     .banner-content {
       padding: 0 10%;
 
@@ -207,6 +212,7 @@ section.banner {
 
     .banner-kv {
       background-size: cover;
+      background-image: image_url('gmis2017/banner-kv-mobile.png');
     }
   }
 }

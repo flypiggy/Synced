@@ -37,13 +37,18 @@ section.contact {
 
     .iconfont {
       margin-right: 5px;
+      color: $red;
     }
   }
 }
 
 @media #{$medium-and-down} {
   section.contact {
-    padding: 20px $mobile-edge;
+    padding: 25px $mobile-edge 20px;
+
+    .module-title {
+      padding-left: 20px;
+    }
 
     .contact-content {
       flex-direction: column;

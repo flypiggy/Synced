@@ -34,7 +34,7 @@ const banner = () => {
       blending: AdditiveBlending
     });
 
-    for (let i = 0; i < 200; i += 1) {
+    for (let i = 0; i < 300; i += 1) {
       particle = new Sprite(material);
       initParticle(particle, i * 10);
       scene.add(particle);
@@ -84,7 +84,7 @@ const banner = () => {
 
     new TWEEN.Tween(particle)
       .delay(delay)
-      .to({}, 4000)
+      .to({}, 2500)
       .onComplete(() => initParticle(particle, delay))
       .start();
 
@@ -94,12 +94,12 @@ const banner = () => {
 
     new TWEEN.Tween(particle.position)
       .delay(delay)
-      .to({ x, y, z: Math.random() * 4000 }, 4000)
+      .to({ x, y, z: Math.random() * 4000 }, 2500)
       .start();
 
     new TWEEN.Tween(particle.scale)
       .delay(delay)
-      .to({ x: 0.01, y: 0.01 }, 4000)
+      .to({ x: 0.01, y: 0.01 }, 2500)
       .start();
   }
 
