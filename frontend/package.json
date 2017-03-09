@@ -8,7 +8,8 @@
     "modernizr": "./node_modules/.bin/modernizr -c ./modernizr-config.json -d ../vendor/assets/javascripts",
     "webpack": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --inline",
     "build": "npm run clean && webpack -p --config webpack.config.prod.js",
-    "clean": "rm -f ../public/static/*"
+    "clean": "rm -f ../public/static/*",
+    "eslint": "./node_modules/.bin/eslint --ext .jsx,.js ./"
   },
   "author": "",
   "license": "ISC",
