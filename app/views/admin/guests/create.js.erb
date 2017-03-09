@@ -1,6 +1,6 @@
 <%- if @guest.errors.blank? %>
   $('#guest_form_modal').modal('close');
-  $('#guests_table_body').prepend("<%=j render(partial: 'row', locals: { guest: @guest })%>");
+  $('#guests_table_body').prepend('<%=j render(partial: 'row', locals: { guest: @guest })%>');
 <%- else %>
-  $('#guest_form').replaceWith("<%=j render(partial: 'form', locals: { guest: @guest })%>");
+  $('#guest_form').replaceWith('<%=j render(partial: 'form', locals: { guest: @guest })%>');
 <%- end %>

@@ -1,0 +1,8 @@
+zh-CN:
+  activerecord:
+    models:
+      partner: '合作伙伴'
+    attributes:
+      partner:
+        name: '名字'
+        url: '链接'

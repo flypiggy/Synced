@@ -1,0 +1,23 @@
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title
+      |合作伙伴管理
+  .col.s6
+    .btns
+      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_partner_path data-remote=true
+        | 添加合作伙伴
+.wrapper-content
+  table.striped.centered
+    thead
+      tr
+        th 名字
+        th 链接
+        th 操作
+    tbody#partners_table_body
+      - @partners.each do |partner|
+        =render partial: 'row', locals: { partner: partner}
+
+  = paginate @partners
+
+.modal.partner_form_modal#partner_form_modal
+  #partner_form
