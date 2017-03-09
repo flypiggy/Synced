@@ -82,6 +82,11 @@ section.video {
   section.video {
     .gmis-palyer {
       padding-bottom: 80%;
+
+      .vjs-control-bar {
+        padding-left: 2%;
+        padding-right: 2%;
+      }
     }
 
     .video-hero-overlay {
@@ -96,21 +101,12 @@ section.video {
   }
 }
 
-*::-webkit-media-controls-panel {
-  display: none!important;
-  -webkit-appearance: none;
-}
-
-/* Old shadow dom for play button */
-*::--webkit-media-controls-play-button {
-  display: none!important;
-  -webkit-appearance: none;
-}
-
-/* New shadow dom for play button */
-
-/* This one works */
-*::-webkit-media-controls-start-playback-button {
-  display: none!important;
+// hide the gray line and controls
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls,
+video::-webkit-media-controls-panel-container {
+  display: none;
   -webkit-appearance: none;
 }
