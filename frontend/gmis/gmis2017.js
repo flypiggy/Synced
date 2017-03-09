@@ -8,7 +8,10 @@ import header from './2017/header';
 import address from './2017/address';
 import banner from './2017/banner';
 import vote from './2017/vote';
+import video from './2017/video';
+
 import wechat from './shared/wechat';
+
 
 $(() => {
   window.requestAnimationFrame =
@@ -21,6 +24,7 @@ $(() => {
 
   header();
   banner();
+  video();
   // agenda();
   vote();
   address();

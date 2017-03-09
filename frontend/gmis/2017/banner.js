@@ -64,8 +64,8 @@ const banner = () => {
 
     const context = canvas.getContext('2d');
     const gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 1)');
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.75)');
+    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.5)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
     context.fillStyle = gradient;
@@ -139,7 +139,7 @@ const banner = () => {
       $window.on('mousewheel', lockScroll);
 
       scrollTo({
-        selector: '#guests',
+        selector: '#video',
         duration: 400,
         offset: 75,
         callback: () => {

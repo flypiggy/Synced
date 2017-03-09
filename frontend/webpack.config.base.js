@@ -27,6 +27,10 @@ const config = {
         test: /\.css$/,
         loader: 'style!css!autoprefixer',
         include: /node_modules/
+      },
+      {
+        test: /\.(ttf|eot|svg|mp4|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
       }
     ]
   },

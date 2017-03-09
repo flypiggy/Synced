@@ -13,6 +13,11 @@
   src: font_url('HelveticaNeueCn.otf');
 }
 
+@font-face {
+  font-family: 'HelveticaNeueLt';
+  src: font_url('HelveticaNeueLt.otf');
+}
+
 .textfont-bongoaut {
   font-family: 'bongonaut';
 }
@@ -21,6 +26,10 @@
   font-family: 'GEO231L';
 }
 
-.textfont-helvetica {
+.textfont-helvetica-bold {
   font-family: 'HelveticaNeueCn';
+}
+
+.textfont-helvetica-thin {
+  font-family: 'HelveticaNeueLt';
 }
