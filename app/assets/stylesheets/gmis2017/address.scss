@@ -7,7 +7,7 @@ section.address {
     height: 450px;
 
     .BMap_mask {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.6);
     }
   }
 
@@ -29,6 +29,8 @@ section.address {
     top: 90px;
     color: #fff;
     width: 350px;
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
 
   .icon-location {
@@ -86,11 +88,17 @@ section.address {
     }
 
     .detail {
-      margin-bottom: 0; 
+      margin-bottom: 0;
+      padding-bottom: 2px;
+      padding-top: 20px;
     }
 
     .route-line {
       padding-top: 0;
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 }

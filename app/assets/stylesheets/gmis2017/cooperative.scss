@@ -14,14 +14,13 @@ section.cooperative {
   .sponsor-list {
     display: flex;
     padding-bottom: 40px;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .sponsor-title {
-    width: 200px;
-    font-size: 2.2rem;
-    text-align: right;
-    padding-right: 60px;
+    width: 110px;
+    font-size: 1.8rem;
+    padding-right: 10px;
     flex-shrink: 0;
     margin-top: 10px;
   }
@@ -30,7 +29,7 @@ section.cooperative {
     display: inline-block;
     margin: 10px 15px;
     height: $sponsor-logo-h;
-    width: $sponsor-logo-h * 120px / 45px;
+    width: $sponsor-logo-h * 130px / 45px;
     position: relative;
     transition: transform .3s;
     background-color: #c6c6c5;
@@ -53,14 +52,21 @@ section.cooperative {
   section.cooperative {
     padding: 20px $mobile-edge;
 
+    .module-title {
+      padding-left: 20px;
+    }
+
     .sponsor-title {
       text-align: center;
       width: 100%;
       padding: 0;
+      margin-bottom: 10px;
     }
 
     .sponsor-list {
+      padding-top: 10px;
       flex-direction: column;
+      padding-bottom: 0;
     }
 
     .sponsor-items {

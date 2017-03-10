@@ -34,7 +34,7 @@ const banner = () => {
       blending: AdditiveBlending
     });
 
-    for (let i = 0; i < 200; i += 1) {
+    for (let i = 0; i < 300; i += 1) {
       particle = new Sprite(material);
       initParticle(particle, i * 10);
       scene.add(particle);
@@ -64,8 +64,8 @@ const banner = () => {
 
     const context = canvas.getContext('2d');
     const gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 1)');
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.75)');
+    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.5)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
     context.fillStyle = gradient;
@@ -84,7 +84,7 @@ const banner = () => {
 
     new TWEEN.Tween(particle)
       .delay(delay)
-      .to({}, 4000)
+      .to({}, 2500)
       .onComplete(() => initParticle(particle, delay))
       .start();
 
@@ -94,12 +94,12 @@ const banner = () => {
 
     new TWEEN.Tween(particle.position)
       .delay(delay)
-      .to({ x, y, z: Math.random() * 4000 }, 4000)
+      .to({ x, y, z: Math.random() * 4000 }, 2500)
       .start();
 
     new TWEEN.Tween(particle.scale)
       .delay(delay)
-      .to({ x: 0.01, y: 0.01 }, 4000)
+      .to({ x: 0.01, y: 0.01 }, 2500)
       .start();
   }
 
@@ -139,7 +139,7 @@ const banner = () => {
       $window.on('mousewheel', lockScroll);
 
       scrollTo({
-        selector: '#guests',
+        selector: '#video',
         duration: 400,
         offset: 75,
         callback: () => {
