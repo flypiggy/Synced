@@ -14,6 +14,14 @@ section.agenda {
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 30px;
+    line-height: 1.7;
+  }
+
+  img.ime {
+    position: relative;
+    top: 2px;
+    height: 18px;
+    padding-left: 10px;
   }
 
   .agenda-list {
@@ -46,7 +54,7 @@ section.agenda {
 
   .agenda-item {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
 
   .agenda-info {
@@ -68,6 +76,7 @@ section.agenda {
   .theme-time {
     font-size: 2rem;
     margin-bottom: 3px;
+    font-weight: bold;
   }
 }
 
