@@ -12,20 +12,26 @@
           .col.s12
             .row#image_area
               =f.simple_fields_for :logos do |f_a|
-                .image_preview_area
+                .image_preview_area class="#{ f_a.object.default ? 'default_avatar' : '' }"
                   img src=f_a.object.file_url
                   .input.file
                     =f_a.input :file, label: false, wrapper: false
                     =f_a.check_box '_destroy', wrapper_html: { class: 'disappear' }
+                    =f_a.check_box :default, class: 'js_set_to_default'
                   i.close.material-icons.remove_button
-                      |close
+                    |close
+                  .btn.js_set_default_btn
+                    |设定为默认头像
               .image_upload_template.image_preview_area
                 img
                 .input.file
                   input type='file'
-                  input.hide type='check_box'
+                  input.js_delete_image.hide type='checkbox'
+                  input.js_set_to_default.hide type='checkbox'
                 i.close.material-icons.remove_button.disappear
                   |close
+                .btn.js_set_default_btn.disappear
+                  |设定为默认头像
       .modal-footer
         .row
           .col.s12

@@ -11,28 +11,5 @@ table {
   width: 30%;
   .guest_form {
     margin-top: 20px;
-    form {
-      .default_avatar {
-        background: #80cbc4;
-      }
-      .image_preview_area{
-        .js_set_default_btn {
-          opacity: 0;
-          position: absolute;
-          top: -2.5em;
-          left: 0;
-          right: 0;
-          padding: 1em;
-          line-height: 1.2em;
-          font-size: 12px;
-          margin: 0 auto;
-        }
-        &:hover{
-          .js_set_default_btn {
-            opacity: 1;
-          }
-        }
-      }
-    }
   }
 }

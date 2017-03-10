@@ -4,6 +4,10 @@ class Partner < ApplicationRecord
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
 
   accepts_nested_attributes_for :logos, allow_destroy: true
+
+  def default_logo
+    logos.find_by(default: true) || logos.first
+  end
 end
 
 # == Schema Information
