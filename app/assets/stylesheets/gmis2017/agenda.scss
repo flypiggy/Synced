@@ -74,9 +74,14 @@ section.agenda {
 @media #{$medium-and-down} {
   section.agenda {
     padding: 30px $mobile-edge;
-    
+
+    .agenda-title {
+      padding: 0 5%;
+    }
+
     .agenda-content {
       flex-direction: column;
+      padding-top: 0;
     }
 
     .agenda-list {

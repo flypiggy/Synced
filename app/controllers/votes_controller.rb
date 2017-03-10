@@ -3,7 +3,7 @@ class VotesController < ApplicationController
     item = VoteItem.joins(:vote).merge(Vote.where(enabled: true)).find params[:id]
     item.vote_up
     respond_to do |format|
-      format.js { render json: { total: item.count } }
+      format.json { render json: { total: item.count } }
     end
   end
 end

@@ -2,9 +2,13 @@ section.ime {
   background-image: image_url('gmis2017/ime-bg.png');
   background-position: center;
   background-size: cover;
-  padding: 90px 0;
+  padding: 110px 0;
   color: #fff;
   text-align: center;
+
+  .container {
+    padding: 0 10%;
+  }
 
   .ime-logo {
     display: inline-block;
@@ -12,7 +16,7 @@ section.ime {
     width: 279px;
     height: 279px * 148 / 558;
     background-size: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 55px;
   }
 
   p {
@@ -24,8 +28,14 @@ section.ime {
 
 @media #{$medium-and-down} {
   section.ime {
+    background-image: image_url('gmis2017/ime-bg-mobile.png');
     padding-left: 8%;
     padding-right: 8%;
+    font-size: 1.4rem;
+
+    .container {
+      padding: 0 8%;
+    }
 
     .ime-logo {
       width: 179px;

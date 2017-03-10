@@ -37,6 +37,7 @@ const vote = () => {
     const today = getToday();
     const $this = $(this);
     const $voteNumber = $this.siblings('.vote-progress').find('.vote-number');
+    const id = $this.closest('.vote-option').data('id');
 
     const day = localStorage.getItem('__day__');
     if (day !== today || day === null) {
@@ -51,19 +52,21 @@ const vote = () => {
     }
 
     isLoading = true;
-    $.post('//jiqizhixin.com')
-      .done(() => {
-        console.log('投票成功');
-        const newVote = Number($voteNumber.text()) + 1;
-        $voteNumber.text(newVote);
-        localStorage.setItem('voted', voted + 1);
-      })
-      .fail(xhr => {
-        console.log(xhr);
-      })
-      .always(() => {
-        isLoading = false;
-      });
+    $.ajax({
+      method: 'POST',
+      url: `http://gmis.lvh.me:8080/vote_up/${id}`,
+      dataType: 'json'
+    })
+    .done(data => {
+      $voteNumber.text(data.total);
+      localStorage.setItem('voted', voted + 1);
+    })
+    .fail(xhr => {
+      console.log(xhr);
+    })
+    .always(() => {
+      isLoading = false;
+    });
   });
 };
 
