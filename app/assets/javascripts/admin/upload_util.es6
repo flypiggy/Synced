@@ -14,7 +14,7 @@ function uploadImage(container_id, config){
   /*是否超过数量*/
   const checkLimitValid = function() {
     if (config.limit_count === 0) { return true };
-    return config.limit_count > $image_area.find(config.upload_element).length
+    return config.limit_count >= $image_area.find(config.upload_element).length
   }
 
   /*读取文件helper method*/

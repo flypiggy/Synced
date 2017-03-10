@@ -21,6 +21,8 @@ require 'rspec/rails'
 # require only the support files necessary.
 #
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
+# change upload file location
+Dir[Rails.root.join('app', 'uploaders', '**', '*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -56,4 +58,18 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # config carrierwave upload location
+  CarrierWave::Uploader::Base.descendants.each do |klass|
+    next if klass.anonymous?
+    klass.class_eval do
+      def cache_dir
+        Rails.root.join('spec', 'support', 'uploads', 'tmp')
+      end
+
+      def store_dir
+        Rails.root.join('spec', 'support', 'uploads', model.class.to_s.underscore, mounted_as.to_s, model.id.to_s)
+      end
+    end
+  end
 end

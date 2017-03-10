@@ -1,9 +1,14 @@
 class Partner < ApplicationRecord
   validates :name, presence: true
+  validates :logos, length: { in: 0..6, message: :logos_count_limit }, allow_blank: true
 
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
 
   accepts_nested_attributes_for :logos, allow_destroy: true
+
+  def default_logo
+    logos.find_by(default: true) || logos.first
+  end
 end
 
 # == Schema Information

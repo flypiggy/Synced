@@ -31,4 +31,9 @@ RSpec.configure do |config|
   # inherited by the metadata hash of host groups and examples, rather than
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  # delete test file
+  config.after(:all) do
+    FileUtils.rm_rf(Dir[Rails.root.join('spec', 'support', 'uploads')])
+  end
 end
