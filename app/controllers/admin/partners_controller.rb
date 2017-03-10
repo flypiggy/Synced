@@ -41,6 +41,6 @@ class Admin::PartnersController < Admin::BaseController
   end
 
   def partner_params
-    params.require(:partner).permit(:name, :url, logos_attributes: [:id, :file, :_destroy])
+    params.require(:partner).permit(:name, :url, logos_attributes: [:id, :file, :_destroy, :default])
   end
 end

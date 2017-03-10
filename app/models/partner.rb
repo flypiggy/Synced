@@ -1,5 +1,6 @@
 class Partner < ApplicationRecord
   validates :name, presence: true
+  validates :logos, length: { in: 0..6, message: :logos_count_limit }, allow_blank: true
 
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
 

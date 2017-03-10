@@ -1,5 +1,5 @@
 class Image < ApplicationRecord
-  validates :file, presence: true
+  validates :file, presence: { message: :file_cant_be_nil }
   belongs_to :imageable, polymorphic: true, optional: true
   mount_uploader :file, ImageUploader
 end

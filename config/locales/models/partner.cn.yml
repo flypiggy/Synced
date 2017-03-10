@@ -6,3 +6,10 @@ zh-CN:
       partner:
         name: '名字'
         url: '链接'
+        logos: 'LOGO'
+    errors:
+      models:
+        partner:
+          attributes:
+            logos:
+              logos_count_limit: '超过数量限制'

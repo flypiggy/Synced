@@ -1,0 +1,14 @@
+zh-CN:
+  activerecord:
+    models:
+      image: '图片'
+    attributes:
+      image:
+        file: '文件'
+    errors:
+      models:
+        image:
+          attributes:
+            file:
+              file_cant_be_nil: '文件不能为空'
+

@@ -1,5 +1,6 @@
 class Guest < ApplicationRecord
   validates :name, presence: true
+  validates :avatars, length: { in: 0..6, message: :avatars_count_limit }, allow_blank: true
 
   has_many :events_guests, dependent: :destroy
   has_many :events, through: :events_guests, source: :event

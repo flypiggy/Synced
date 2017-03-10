@@ -7,3 +7,10 @@ zh-CN:
         name: '姓名'
         company: '公司'
         title: '职位'
+        avatars: '头像'
+    errors:
+      models:
+        guest:
+          attributes:
+            avatars:
+              avatars_count_limit: '超过数量限制'
