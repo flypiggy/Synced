@@ -41,6 +41,6 @@ class Admin::GuestsController < Admin::BaseController
   end
 
   def guest_params
-    params.require(:guest).permit(:name, :company, :title, avatars_attributes: [:id, :file, :_destroy])
+    params.require(:guest).permit(:name, :company, :title, avatars_attributes: [:id, :file, :default, :_destroy])
   end
 end

@@ -6,6 +6,10 @@ class Guest < ApplicationRecord
   has_many :avatars, as: :imageable, class_name: 'Image', dependent: :destroy
 
   accepts_nested_attributes_for :avatars, allow_destroy: true
+
+  def default_avatar
+    avatars.find_by(default: true) || avatars.first
+  end
 end
 
 # == Schema Information
