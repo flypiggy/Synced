@@ -72,6 +72,6 @@ function uploadImage(container_id, config){
     $this.removeClass(config.upload_element.substr(1));
     $this.addClass('disappear');
   })
-
 }
 
+export default uploadImage;

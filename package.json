@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "bin/webpack-watcher",
+    "start": "npm run webpack",
     "modernizr": "modernizr -c app/javascript/modernizr-config.json -d vendor/assets/javascripts",
+    "watch": "bin/webpack-watcher",
     "webpack": "bin/webpack-dev-server --inline",
     "build": "npm run clean && rails webpacker:compile",
     "clean": "rm -f public/static/*",
