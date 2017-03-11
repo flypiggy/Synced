@@ -3,8 +3,6 @@
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
     "babel-preset-env": "^1.2.1",
-    "coffee-loader": "^0.7.3",
-    "coffee-script": "^1.12.4",
     "compression-webpack-plugin": "^0.3.2",
     "glob": "^7.1.1",
     "path-complete-extname": "^0.1.0",
