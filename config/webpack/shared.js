@@ -33,6 +33,9 @@ const config = {
         options: {
           presets: [
             ['env', { modules: false }]
+          ],
+          plugins: [
+            ["transform-object-rest-spread", { "useBuiltIns": true }]
           ]
         }
       },
@@ -44,6 +47,19 @@ const config = {
         options: {
           runner: 'DISABLE_SPRING=1 bin/rails runner'
         }
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader?limit=25000'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!autoprefixer-loader',
+        include: /node_modules/
+      },
+      {
+        test: /\.(ttf|eot|svg|mp4|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
       }
     ]
   },
@@ -53,7 +69,7 @@ const config = {
   ],
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js'],
     modules: [
       path.resolve('app/javascript'),
       path.resolve('node_modules')

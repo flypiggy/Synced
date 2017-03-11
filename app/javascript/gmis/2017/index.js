@@ -3,17 +3,17 @@ import { isMobileView, isWechat } from 'mdetect';
 import 'jquery-lazyload';
 import eruda from 'eruda';
 
-import header from './2017/header';
-// import agenda from './2017/agenda';
-import address from './2017/address';
-import banner from './2017/banner';
-import vote from './2017/vote';
-import video from './2017/video';
+import header from './header';
+// import agenda from './agenda';
+import address from './address';
+import banner from './banner';
+import vote from './vote';
+import video from './video';
 
-import wechat from './shared/wechat';
+import wechat from '../shared/wechat';
 
 
-$(() => {
+const init = () => $(() => {
   window.requestAnimationFrame =
     window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -42,3 +42,5 @@ $(() => {
   // wechat share
   if (isWechat()) wechat();
 });
+
+export default init;
