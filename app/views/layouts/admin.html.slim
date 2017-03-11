@@ -8,8 +8,9 @@ html lang='en'
     = csrf_meta_tags
     = stylesheet_link_tag 'entries/admin', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'entries/admin', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'admin', 'data-turbolinks-track': 'reload'
 
-  body class= 'page' id= page_id
+  body class='page' id=page_id
     header.header
       = render 'shared/admin_header'
 
