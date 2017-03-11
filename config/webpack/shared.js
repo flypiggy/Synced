@@ -65,7 +65,8 @@ const config = {
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin(Object.keys(process.env))
+    // new webpack.EnvironmentPlugin(Object.keys(process.env) || "NODE_ENV")
+    new webpack.EnvironmentPlugin(["NODE_ENV"])
   ],
 
   resolve: {

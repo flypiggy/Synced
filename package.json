@@ -1,9 +1,18 @@
 {
+  "scripts": {
+    "start": "bin/webpack-watcher",
+    "modernizr": "modernizr -c app/javascript/modernizr-config.json -d vendor/assets/javascripts",
+    "webpack": "bin/webpack-dev-server --inline",
+    "build": "npm run clean && rails webpacker:compile",
+    "clean": "rm -f public/static/*",
+    "eslint": "eslint ./app/javascript"
+  },
   "dependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
     "babel-preset-env": "^1.2.1",
     "compression-webpack-plugin": "^0.3.2",
+    "eslint-config-airbnb": "^14.1.0",
     "glob": "^7.1.1",
     "jquery-lazyload": "^1.9.7",
     "jquery-mousewheel": "^3.1.13",
@@ -24,7 +33,12 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "css-loader": "^0.27.1",
     "eruda": "^1.2.2",
+    "eslint": "^3.17.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "file-loader": "^0.10.1",
+    "modernizr": "^3.3.1",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
     "webpack-dev-server": "^2.4.1"
