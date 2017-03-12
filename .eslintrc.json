@@ -49,11 +49,7 @@
   },
   "settings": {
     "import": {
-      "resolver": {
-        "webpack": {
-          "config": "config/webpack/development.js"
-        }
-      }
+      "external-module-folders": ["./node_modules"]
     }
   }
 }
