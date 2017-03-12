@@ -17,11 +17,11 @@ coverage/
 
 # Ignore Byebug command history file.
 .byebug_history
-/frontend/node_modules/*
-public/static
-public/uploads
+/public/uploads
 npm-debug.log
 /.env
 /vendor/bundle/
 
 .DS_Store
+/public/packs
+/node_modules

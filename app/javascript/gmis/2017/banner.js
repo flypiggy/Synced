@@ -80,7 +80,8 @@ const banner = () => {
 
     particle.position.set(x, y, 0);
     particle.visible = false;
-    particle.scale.x = particle.scale.y = Math.random() * 12 + 6;
+    particle.scale.y = Math.random() * 12 + 6;
+    particle.scale.x = particle.scale.y;
 
     new TWEEN.Tween(particle)
       .delay(delay)

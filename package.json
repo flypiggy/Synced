@@ -1,0 +1,48 @@
+{
+  "scripts": {
+    "start": "npm run webpack",
+    "modernizr": "modernizr -c app/javascript/modernizr-config.json -d vendor/assets/javascripts",
+    "watch": "bin/webpack-watcher",
+    "webpack": "bin/webpack-dev-server --inline",
+    "build": "rails webpacker:compile",
+    "clean": "rm -f public/packs/*",
+    "eslint": "eslint ./app/javascript"
+  },
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "compression-webpack-plugin": "^0.3.2",
+    "eslint-config-airbnb": "^14.1.0",
+    "glob": "^7.1.1",
+    "jquery-lazyload": "^1.9.7",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-scroll": "^1.1.1",
+    "mdetect": "^1.2.2",
+    "path-complete-extname": "^0.1.0",
+    "rails-erb-loader": "^3.2.0",
+    "screenfull": "^3.0.2",
+    "scroll-parallax": "^1.1.0",
+    "swiper": "^3.4.2",
+    "three": "^0.84.0",
+    "tween.js": "^16.6.0",
+    "video.js": "^5.17.0",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^4.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "css-loader": "^0.27.1",
+    "eruda": "^1.2.2",
+    "eslint": "^3.17.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "file-loader": "^0.10.1",
+    "modernizr": "^3.3.1",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

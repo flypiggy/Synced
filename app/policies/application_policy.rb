@@ -36,7 +36,7 @@ class ApplicationPolicy
   end
 
   def admin?
-    user.roles.includes? 'admin'
+    user.roles.include? 'admin'
   end
 
   class Scope
