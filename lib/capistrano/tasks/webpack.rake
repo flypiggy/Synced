@@ -12,7 +12,7 @@ namespace :deploy do
 
     run_locally do
       with rails_env: :production do
-        execute 'yarn && npm run build'
+        execute 'npm run build'
 
         on roles(:app) do
           upload! "#{BUNDLE_DIR}/", "#{shared_path}/#{BUNDLE_DIR.split('/').first}", recursive: true
