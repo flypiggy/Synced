@@ -38,13 +38,14 @@
     "react/no-string-refs": 0,
     "react/jsx-closing-bracket-location": 0,
     "jsx-a11y/label-has-for": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-static-element-interactions": 0
   },
   "globals": {
     "BMap": true,
     "db": true,
     "wx": true,
-    "wxDefaultConfig": true
+    "wxDefaultConfig": true,
+    "Waves": true
   },
   "settings": {
     "import/resolver": {

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Note: You must restart bin/webpack-watcher for changes to take effect
 
 const webpack = require('webpack')
@@ -79,6 +80,10 @@ const config = {
 
   resolveLoader: {
     modules: [path.resolve('node_modules')]
+  },
+
+  externals: {
+    "jquery": "jQuery"
   }
 }
 

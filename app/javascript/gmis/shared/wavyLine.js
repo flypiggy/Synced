@@ -11,8 +11,10 @@ const wavyLine = () => {
 
   const initCanvas = () => {
     const s = window.getComputedStyle(c);
-    w = c.width = trimUnit(s.width, 'px');
-    h = c.height = trimUnit(s.height, 'px');
+    c.width = trimUnit(s.width, 'px');
+    w = c.width;
+    c.height = trimUnit(s.height, 'px');
+    h = c.height;
   };
 
   const line = (rand, rand2) => {
