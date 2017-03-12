@@ -51,6 +51,4 @@ namespace :deploy do
 
   before :starting,           :check_revision
   before 'assets:precompile', :webpack
-  after  :finishing,          :compile_assets
-  after  :finishing,          :cleanup
 end
