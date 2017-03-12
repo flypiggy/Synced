@@ -48,9 +48,11 @@
     "Waves": true
   },
   "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./frontend/webpack.config.base.js"
+    "import": {
+      "resolver": {
+        "webpack": {
+          "config": "config/webpack/development.js"
+        }
       }
     }
   }
