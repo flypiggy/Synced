@@ -23,32 +23,4 @@ set :puma_init_active_record, true # Change to true if using ActiveRecord
 
 ## Linked Files & Directories (Default None):
 set :linked_files, %w(.env)
-set :linked_dirs,  %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
-
-namespace :puma do
-  desc 'Create Directories for Puma Pids and Socket'
-  task :make_dirs do
-    on roles(:app) do
-      execute "mkdir #{shared_path}/tmp/sockets -p"
-      execute "mkdir #{shared_path}/tmp/pids -p"
-    end
-  end
-
-  before :start, :make_dirs
-end
-
-namespace :deploy do
-  desc 'Make sure local git is in sync with remote.'
-  task :check_revision do
-    on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/master`
-        warn 'WARNING: HEAD is not the same as origin/master'
-        warn 'Run `git push` to sync changes.'
-        exit
-      end
-    end
-  end
-
-  before :starting,           :check_revision
-  before 'assets:precompile', :webpack
-end
+set :linked_dirs,  %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads node_modules)
