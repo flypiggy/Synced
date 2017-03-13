@@ -1,0 +1,22 @@
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title 活动管理
+  .col.s6
+    .btns
+      a.waves-effect.waves-light.btn.teal.accent-4 href=new_admin_event_path
+        | 添加活动
+.wrapper-content
+  table.striped.centered
+    thead
+      tr
+        th 名字
+        th 类型
+        th 状态
+        th 开始时间
+        th 结束时间
+        th 操作
+    tbody#events_table_body
+      - @events.each do |event|
+        =render partial: 'row', locals: { event: event }
+
+  = paginate @events

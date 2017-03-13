@@ -1,0 +1,22 @@
+.event_form
+  .row
+    =simple_form_for [:admin, event], html: { class: 'col s12' } do |f|
+      .modal-content
+        .row
+          .col.s3
+            =f.input :name
+        .row
+          .col.s3
+            =f.input :short_name
+        .row
+          .col.s6
+            =f.label :description
+            =f.text_area :description, class: 'materialize-textarea'
+        .row.hide
+          .col.s6
+            input.datepicker name='event[start_date]' value=Date.new
+            input.datepicker name='event[end_date]' value=Date.new
+      .modal-footer
+        .row
+          .col.s3
+            =f.button :submit

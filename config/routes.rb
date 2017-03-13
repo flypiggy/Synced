@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :events, except: :show
     resources :guests, except: :show
     resources :partners, except: :show
   end
