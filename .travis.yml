@@ -9,7 +9,6 @@ branches:
   - master
 cache:
   bundler: true
-  yarn: true
 bundler_args: "--jobs=3 --retry=3 --without development production"
 rvm:
   - 2.4.0
