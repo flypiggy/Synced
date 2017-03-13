@@ -33,6 +33,12 @@ PreCommit:
 
   YamlSyntax:
     enabled: true
+
+  EsLint:
+    enabled: true
+    required_executable: './node_modules/.bin/eslint'
+    include: 'app/javascript/**/*.js'
+    # command: ['./node_modules/.bin/eslint', './app/javascript']
 CommitMsg:
   ALL:
     on_warn: fail # Treat all warnings as failures
