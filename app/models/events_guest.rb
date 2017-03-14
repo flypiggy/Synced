@@ -1,4 +1,5 @@
 class EventsGuest < ApplicationRecord
+  validates :event_id, uniqueness: { scope: [:guest_id], message: :cant_add_repeat }
   belongs_to :event
   belongs_to :guest
 end

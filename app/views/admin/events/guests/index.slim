@@ -1,0 +1,31 @@
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title 活动嘉宾管理
+.wrapper-content
+  .input-field.row
+    .search_field.col.s6
+      input id='search_input'
+      .js_search_result
+        ul
+      label for='search_field'
+        |search
+      .submit.btn
+        |添加
+  table.striped.centered
+    thead
+      tr
+        th 嘉宾名
+        th 操作
+    tbody.js_display
+      - @guests.each do |guest|
+        tr
+          td=guest.name
+          td
+            a.btn data-id=guest.id
+              |删除
+      tr.hide.template
+        td
+          |${ ele.name }
+        td
+          a.btn data-id='${ ele.id }'
+            |删除

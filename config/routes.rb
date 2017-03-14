@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :events, except: :show
+    resources :events, except: :show do
+      scope module: 'events' do
+        resources :guests
+      end
+    end
     resources :guests, except: :show
     resources :partners, except: :show
   end
