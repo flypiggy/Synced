@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { isMobileView } from 'mdetect';
+import { isMobileUA } from 'mdetect';
 // import Parallax from 'scroll-parallax';
 
 const vote = () => {
@@ -13,7 +13,7 @@ const vote = () => {
   });
 
   const maxVote = Math.max(...votes);
-  const maxWidth = (isMobileView() ? $voteOption.innerWidth() : 310) - retainLeft - retainRight;
+  const maxWidth = (isMobileUA() ? $voteOption.innerWidth() : 310) - retainLeft - retainRight;
 
   $voteOption.each(function () {
     const $this = $(this);

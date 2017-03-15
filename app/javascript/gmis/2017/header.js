@@ -1,12 +1,13 @@
 import $ from 'jquery';
-import { isMobileView } from 'mdetect';
+import { isMobileUA } from 'mdetect';
 
 import { scrollTop } from '../../common/tool';
 
 const header = () => {
   const $header = $('header.header');
 
-  if (isMobileView()) {
+  console.log(isMobileUA());
+  if (isMobileUA()) {
     const $hamburger = $('.js-hamburger');
     $hamburger.on('click', () => {
       $hamburger.toggleClass('is-active');

@@ -111,17 +111,12 @@ section.tickets {
 }
 
 
-@media #{$medium-and-down} {
+@media #{$container-and-down} {
   section.tickets {
     padding: 30px 0;
     background-image: image_url('gmis2017/tickets-bg-mobile.png');
 
-    .tickets-title {
-      padding: 0 $mobile-edge;
-    }
-
     .tickets-list {
-      padding: 0 $mobile-edge;
       flex-wrap: wrap;
 
       .ticket-wrapper {

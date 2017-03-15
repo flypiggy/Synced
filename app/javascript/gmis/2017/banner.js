@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import scrollTo from 'jquery-scroll';
 import 'jquery-mousewheel';
+import { isMobileUA } from 'mdetect';
 
 import {
   PerspectiveCamera,
@@ -130,8 +131,8 @@ const banner = () => {
     }
   });
 
+  if (isMobileUA()) return;
   $window.on('mousewheel', scrollDown);
-
   function scrollDown(e) {
     const direction = e.deltaY < 0 ? 'down' : 'up';
 

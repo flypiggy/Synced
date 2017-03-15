@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { isMobileView, isWechat } from 'mdetect';
+import { isMobileUA, isWechat } from 'mdetect';
 import 'jquery-lazyload';
 import eruda from 'eruda';
 
@@ -30,14 +30,14 @@ const init = () => $(() => {
   address();
 
 
-  $.scrollIt({ topOffset: isMobileView() ? 0 : -75 });
+  $.scrollIt({ topOffset: isMobileUA() ? 0 : -75 });
   $('.js-lazy').lazyload({
     threshold: 200,
     effect: 'fadeIn'
   });
 
   const isDev = process.env.NODE_ENV === 'development';
-  if (isDev && isMobileView()) eruda.init();
+  if (isDev && isMobileUA()) eruda.init();
 
   // wechat share
   if (isWechat()) wechat();
