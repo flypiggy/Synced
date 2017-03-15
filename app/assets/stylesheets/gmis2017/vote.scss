@@ -134,9 +134,8 @@ section.vote {
   }
 }
 
-@media #{$medium-and-down} {
+@media #{$container-and-down} {
   section.vote {
-    padding: 0 $mobile-edge;
     background-attachment: scroll;
 
     .moon-elem {

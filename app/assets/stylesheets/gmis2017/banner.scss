@@ -28,6 +28,7 @@ section.banner {
   .banner-head {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: $header_h;
     display: flex;
@@ -125,6 +126,7 @@ section.banner {
 
   .banner-content {
     position: absolute;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
@@ -175,7 +177,7 @@ section.banner {
   }
 }
 
-@media #{$medium-and-down} {
+@media #{$container-and-down} {
   section.banner {
     padding-top: 0;
 
@@ -184,7 +186,7 @@ section.banner {
     }
 
     .down-btn {
-      display: none; 
+      display: none;
     }
 
     .banner-content {

@@ -27,7 +27,7 @@ section.cooperative {
 
   .item-logo {
     display: inline-block;
-    margin: 10px 15px;
+    margin: 10px 12px;
     height: $sponsor-logo-h;
     width: $sponsor-logo-h * 130px / 45px;
     position: relative;
@@ -50,7 +50,7 @@ section.cooperative {
 
 @media #{$medium-and-down} {
   section.cooperative {
-    padding: 20px $mobile-edge;
+    padding: 20px 0;
 
     .module-title {
       padding-left: 20px;

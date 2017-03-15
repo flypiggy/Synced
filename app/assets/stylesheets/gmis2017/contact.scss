@@ -44,7 +44,7 @@ section.contact {
 
 @media #{$medium-and-down} {
   section.contact {
-    padding: 25px $mobile-edge 20px;
+    padding: 25px 0 20px;
 
     .module-title {
       padding-left: 20px;
