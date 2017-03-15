@@ -5,10 +5,12 @@ class Admin::EventsController < Admin::BaseController
 
   def new
     @event = Event.new
+    authorize @event
   end
 
   def create
     @event = Event.new(event_params)
+    authorize @event
     if @event.save
       redirect_to admin_events_path
     else
@@ -40,10 +42,12 @@ class Admin::EventsController < Admin::BaseController
   end
 
   def load_events
+    authorize :event
     @events = Event.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def load_event
     @event = Event.find(params[:id])
+    authorize @event
   end
 end

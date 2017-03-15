@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Admin::EventsController, type: :controller do
+  before { warden.set_user create(:organizer) }
+
   let(:event) { create(:event) }
   describe 'Get #index' do
     it 'return 200' do
