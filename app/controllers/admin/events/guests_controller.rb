@@ -1,8 +1,7 @@
 class Admin::Events::GuestsController < Admin::BaseController
   before_action :load_event
   def index
-    @guests = @event.guests
-    @q = Guest.ransack(params[:q])
+    @events_guests = @event.events_guests.rank(:rank_order)
   end
 
   def create
@@ -20,10 +19,24 @@ class Admin::Events::GuestsController < Admin::BaseController
     event_guest.destroy
   end
 
+  def update_order
+    load_events_guest
+    @events_guest.update(rank_order_position: params[:rank_order_position])
+  end
+
+  def update_show
+    load_events_guest
+    @events_guest.update(show: params[:show])
+  end
+
   private
 
+  def load_events_guest
+    @events_guest = EventsGuest.find_by(event_id: params[:event_id], guest_id: params[:id])
+  end
+
   def load_event
-    @event = Event.find_by(id: params[:event_id])
+    @event = Event.includes(events_guests: :guest).find_by(id: params[:event_id])
   end
 
   def load_guest

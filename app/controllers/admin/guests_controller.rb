@@ -3,7 +3,7 @@ class Admin::GuestsController < Admin::BaseController
     load_guests
     respond_to do |format|
       format.html
-      format.js { render json: @guests }
+      format.js { render json: @guests.to_json(only: [:id, :name], methods: :default_avatar) }
     end
   end
 
