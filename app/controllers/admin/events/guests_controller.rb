@@ -37,6 +37,7 @@ class Admin::Events::GuestsController < Admin::BaseController
 
   def load_event
     @event = Event.includes(events_guests: :guest).find_by(id: params[:event_id])
+    authorize @event, :index?
   end
 
   def load_guest
