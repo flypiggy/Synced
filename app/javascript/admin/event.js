@@ -7,16 +7,12 @@ const event = () => {
     const event_id = $('.wrapper-content').data('event-id');
 
     searchUtil({
-      element_id: '#search_util',
-      result_id: '#search_result',
       search_url: '/admin/guests',
       getSelectedUrl: () => { return `/admin/events/${event_id}/guests`; },
       afterSelectItem: data => { $('.js_display').prepend(renderDisplayRow(data)); }
     });
 
     addSortUtil({
-      element_id: '#sortable',
-      item_class: '.sitem',
       getParams: (item, item_position) => {
         return { rank_order_position: item_position };
       },

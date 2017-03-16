@@ -3,6 +3,21 @@ import _ from 'lodash';
 
 export const scrollTop = () => window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
+// for clickAtOrigin detect
+const waitListen = [];
+
+$(document).on('click', e => {
+  waitListen.forEach(x => {
+    const dom = x[0].get(0);
+    if (dom === undefined) return;
+    if (!$.contains(dom, e.target)) x[1]();
+  });
+});
+
+export const clickAtOrigin = ($wrapper, cb) => {
+  waitListen.push([$wrapper, cb]);
+};
+
 // path can be single string or array
 // eg: runPage('admin-guests-index', fn)
 // or: runPage(['page-a', 'page-b'], video)
@@ -19,20 +34,20 @@ export const runPage = (path, fn) => {
   }
 };
 
-// element_id is container of the sort item list
-// item_class is sort item's class
+// elementSelector is container of the sort item list
+// itemSelector is sort item's class
 // you need to define the getUrl function and getParam function
 export const addSortUtil = config => {
   const default_config = {
-    element_id: '#sortable',
-    item_class: '.sitem',
+    elementSelector: '#sortable',
+    itemSelector: '.sitem',
     getParams: () => {},
     getUrl: () => {}
   };
-  config = Object.assign(default_config, config);
-  $(config.element_id).sortable({
+  config = Object.assign({}, default_config, config);
+  $(config.elementSelector).sortable({
     axis: 'y',
-    items: '.sitem',
+    items: config.itemSelector,
     helper: (event, row) => {
       row.children().each(function () {
         // weird
@@ -45,7 +60,7 @@ export const addSortUtil = config => {
       $.ajax({
         method: 'PATCH',
         data: config.getParams(ui.item, position),
-        url: config.getUrl($(config.element_id), ui.item),
+        url: config.getUrl($(config.elementSelector), ui.item),
         dataType: 'json'
       }).fail(() => {
         // alert erro need reload
@@ -57,34 +72,29 @@ export const addSortUtil = config => {
 // need a serch_util as container, need a search_input as input field , need a result dom to display search result.
 export const searchUtil = config => {
   const default_config = {
-    element_id: '#search_util',
-    input_id: '#search_input',
-    result_id: '#search_result',
+    elementSelector: '#search_util',
+    inputSelector: '#search_input',
+    resultSelector: '#search_result',
     search_url: '',
     getSelectedUrl: () => {},
     afterSelectItem: () => {}
   };
 
-  config = Object.assign(default_config, config);
+  config = Object.assign({}, default_config, config);
 
   const emptySearchResult = () => {
-    $(config.result_id).empty();
+    $(config.resultSelector).empty();
   };
 
-  $('body').on('click', event => {
-    if (!$(event.target).closest('.search_util').length) {
-      emptySearchResult();
-    }
-  });
+  clickAtOrigin($(config.elementSelector), emptySearchResult);
 
-  $(config.input_id).on('input focus', function () {
+  $(config.inputSelector).on('input focus', function () {
     const text = $(this).val();
     if (text === '') {
       emptySearchResult();
       return;
     }
     $.ajax({
-      method: 'GET',
       data: { 'q[name_cont]': text },
       url: config.search_url,
       dataType: 'json'
@@ -110,18 +120,18 @@ export const searchUtil = config => {
       '</div>'
     );
     const html = temp({ result: elements });
-    $(config.result_id).replaceWith(html);
+    $(config.resultSelector).replaceWith(html);
   };
 
   // select one element
-  $(config.element_id).on('click', '#search_result a', e => {
+  $(config.elementSelector).on('click', `${config.resultSelector} a`, e => {
     const select_item_id = $(e.target).data('id');
     $.ajax({
       method: 'POST',
       data: { id: select_item_id },
       url: config.getSelectedUrl(),
       dataType: 'json'
-    }).success(data => {
+    }).done(data => {
       config.afterSelectItem(data);
     }).fail(xhr => {
       if (xhr.status === 422) {
