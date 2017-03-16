@@ -255,6 +255,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rmmseg-cpp-new (0.3.1)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -283,6 +284,8 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-hmac (0.4.0)
+    ruby-pinyin (0.5.0)
+      rmmseg-cpp-new (~> 0.3.1)
     ruby-progressbar (1.8.1)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -400,6 +403,7 @@ DEPENDENCIES
   remotipart (~> 1.2)
   rspec-rails (~> 3.5)
   rubocop
+  ruby-pinyin
   sass-rails (~> 5.0)
   simple_form
   simplecov
