@@ -10,13 +10,37 @@ engines:
     enabled: true
     exclude_paths:
     - spec/
-    - frontend/
     config:
       languages:
       - ruby
       - javascript
   eslint:
     enabled: true
+    checks:
+      import/first:
+        enabled: false
+      import/no-unresolved:
+        enabled: false
+      import/no-named-default:
+        enabled: false
+      import/no-named-as-default:
+        enabled: false
+      import/no-named-as-default-member:
+        enabled: false
+      import/no-mutable-exports:
+        enabled: false
+      import/no-amd:
+        enabled: false
+      import/export:
+        enabled: false
+      import/no-duplicates:
+        enabled: false
+      import/no-absolute-path:
+        enabled: false
+      import/no-dynamic-require:
+        enabled: false
+      import/no-webpack-loader-syntax:
+        enabled: false
     config:
       extensions:
       - .js
@@ -46,3 +70,4 @@ exclude_paths:
 - config/
 - db/
 - vendor/
+- node_modules/
