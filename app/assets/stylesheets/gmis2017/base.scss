@@ -20,11 +20,6 @@ body {
 }
 
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 $red: #CC004D;
 $yellow: #fffe54;
 
@@ -34,19 +29,19 @@ $sponsor-logo-h: 45px;
 $mobile-edge: 12px;
 
 // Media Query Ranges
-$small-screen-up: 601px;
-$medium-screen-up: 768px;
-$large-screen-up: 1201px;
-$small-screen: 600px;
-$medium-screen: 767px;
+$small-screen: 375px;
+$medium-screen: 750px;
 $large-screen: 1200px;
+$container-screen: 1100px;
 
-$medium-and-up: "only screen and (min-width : #{$small-screen-up})";
-$large-and-up: "only screen and (min-width : #{$medium-screen-up})";
-$small-and-down: "only screen and (max-width : #{$small-screen})";
-$medium-and-down: "only screen and (max-width : #{$medium-screen})";
-$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})";
+$small-and-down: "only screen and (max-width: #{$small-screen})";
+$medium-and-down: "only screen and (max-width: #{$medium-screen})";
+$container-and-down: "only screen and (max-width: #{$container-screen})";
 
+.container {
+  max-width: $container-screen;
+  margin: 0 auto;
+}
 
 @mixin synced-logo($h) {
   display: inline-block;
@@ -56,4 +51,11 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media #{$container-and-down} {
+  .container {
+    padding-left: $mobile-edge;
+    padding-right: $mobile-edge;
+  }
 }

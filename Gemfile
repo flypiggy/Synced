@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 # Authorization
 gem 'pundit'
+# Pinyin
+gem 'ruby-pinyin'
 
 # UploadImage
 gem 'carrierwave-qiniu', '~> 1.1.0'

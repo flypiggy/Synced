@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:username) { |n| "username#{n}" }
+    name     '机器之心'
     city     '440_300'
     company  'jixiezhixin'
     title    'developer'
