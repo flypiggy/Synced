@@ -29,15 +29,15 @@ class Admin::Events::GuestsController < Admin::BaseController
   end
 
   def load_events_guest
-    @events_guest = EventsGuest.find_by(event_id: params[:event_id], guest_id: params[:id])
+    @events_guest = @event.events_guests.find_by!(guest_id: params[:id])
   end
 
   def load_event
     @event = Event.includes(events_guests: :guest).find_by(id: params[:event_id])
-    authorize @event, :index?
+    authorize @event
   end
 
   def load_guest
-    @guest = Guest.find_by(id: params[:id])
+    @guest = Guest.find(params[:id])
   end
 end
