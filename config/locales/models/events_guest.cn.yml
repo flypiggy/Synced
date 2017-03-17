@@ -1,0 +1,8 @@
+zh-CN:
+  activerecord:
+    errors:
+      models:
+        events_guest:
+          attributes:
+            event_id:
+              cant_add_repeat: '已经添加过该嘉宾'

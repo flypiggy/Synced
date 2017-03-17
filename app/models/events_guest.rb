@@ -1,6 +1,15 @@
 class EventsGuest < ApplicationRecord
+  validates :event_id, uniqueness: { scope: [:guest_id], message: :cant_add_repeat }
   belongs_to :event
   belongs_to :guest
+  after_create :set_to_top
+
+  include RankedModel
+  ranks :rank_order, with_same: :event_id
+
+  def set_to_top
+    update!(rank_order_position: 0)
+  end
 end
 
 # == Schema Information
@@ -12,6 +21,8 @@ end
 #  guest_id   :uuid
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  rank_order :integer
+#  show       :boolean          default(FALSE)
 #
 # Indexes
 #

@@ -1,0 +1,24 @@
+#search_util {
+  #search_input {
+    margin-bottom: 0;
+  }
+
+  #search_result {
+    position: relative;
+    .collection {
+      margin-top: 0;
+      width: 100%;
+      position: absolute;
+      .collection-item {
+        img {
+          vertical-align: middle;
+          width: 30px;
+          height: 30px;
+        }
+        span {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

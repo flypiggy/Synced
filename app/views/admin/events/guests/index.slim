@@ -1,0 +1,36 @@
+.breadcrumbs-container.row
+  .col.s6
+    h5.breadcrumbs-title 活动嘉宾管理
+.wrapper-content data-event-id=@event.id
+  .row
+    #search_util.col.s3
+      input#search_input placeholder='Search'
+      #search_result
+  table.striped.centered
+    thead
+      tr
+        th 嘉宾名
+        th 是否显示
+        th 操作
+    tbody.js_display#sortable
+      - @events_guests.each do |events_guest|
+        - guest = events_guest.guest
+        tr.sitem data-id=guest.id
+          td=guest.name
+          td.switch
+            label
+              input.show type='checkbox' checked=('checked' if events_guest.show)
+              span.lever
+          td
+            a.btn
+              |删除
+      tr.hide.template.sitem data-id='${ele.id}'
+        td
+          |${ ele.name }
+        td.switch
+            label
+              input.show type='checkbox'
+              span.lever
+        td
+          a.btn data-id='${ ele.id }'
+            |删除

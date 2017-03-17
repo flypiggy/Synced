@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 20170316032240) do
   create_table "events_guests", force: :cascade do |t|
     t.uuid     "event_id"
     t.uuid     "guest_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "rank_order"
+    t.boolean  "show",       default: false
     t.index ["event_id"], name: "index_events_guests_on_event_id", using: :btree
     t.index ["guest_id"], name: "index_events_guests_on_guest_id", using: :btree
   end

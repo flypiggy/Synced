@@ -1,0 +1,13 @@
+tr id=dom_id(event)
+  td = event.name
+  td = event.event_type
+  td = event.status
+  td = event.start_date
+  td = event.end_date
+  td
+    a.btn.blue.waves-effect.waves-light href=edit_admin_event_path(event)
+      |修改
+    a.btn.blue href=admin_event_guests_path(event)
+      |嘉宾管理
+    a.btn.red.waves-effect.waves-light href=admin_event_path(event) data-method='delete' data-remote=true data-confirm='确定删除吗?'
+      |删除

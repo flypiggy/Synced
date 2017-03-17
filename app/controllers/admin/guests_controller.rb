@@ -1,6 +1,10 @@
 class Admin::GuestsController < Admin::BaseController
   def index
     load_guests
+    respond_to do |format|
+      format.html
+      format.js { render json: @guests.to_json(only: [:id, :name], methods: :default_avatar) }
+    end
   end
 
   def new
@@ -32,7 +36,8 @@ class Admin::GuestsController < Admin::BaseController
 
   def load_guests
     authorize :guest
-    @guests = Guest.order(created_at: :desc).page(params[:page]).per(10)
+    @q = Guest.ransack(params[:q])
+    @guests = @q.result.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def load_guest

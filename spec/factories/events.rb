@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :event do
     name 'GMIS2017'
+    sequence(:short_name) { |n| "shortname_#{n}" }
 
     start_date { 10.days.since }
     end_date { 12.days.since }
