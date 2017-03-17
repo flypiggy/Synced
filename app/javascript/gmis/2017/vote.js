@@ -1,13 +1,15 @@
 import $ from 'jquery';
 import { isMobileUA } from 'mdetect';
-// import Parallax from 'scroll-parallax';
+import { scrollTop } from '../../common/tool';
 
 const vote = () => {
-  const $voteOption = $('.js-vote-option');
+  const $voteContent = $('#js-vote-content');
+  const $voteOption = $voteContent.find('.vote-option');
   const retainLeft = 100;
   const retainRight = 20;
-  const canVote = 5;
+  const canVote = 5; // Max can be vote everyday
 
+  // Set length according to the number of vote
   const votes = $voteOption.map(function () {
     return Number($(this).data('vote'));
   });
@@ -19,7 +21,28 @@ const vote = () => {
     const $this = $(this);
     const vote = Number($this.data('vote'));
     const ratio = vote / maxVote;
-    $this.find('.vote-progress').innerWidth(maxWidth * ratio + retainLeft);
+
+    $(window).on('scroll', arrive);
+
+    function arrive() {
+      if (scrollTop() >= $this.offset().top - $(window).height()) {
+        const $voteNumber = $this.find('.vote-number');
+        $this.find('.vote-progress')
+          .animate({ width: maxWidth * ratio + retainLeft }, 1000, 'linear');
+
+        const timer = setInterval(() => {
+          const val = Number($voteNumber.text()) + 2;
+          if (val <= vote) {
+            $voteNumber.text(val);
+          } else {
+            $voteNumber.text(vote);
+            clearInterval(timer);
+          }
+        }, 1000 / vote * 2);
+
+        $(window).off('scroll', arrive);
+      }
+    }
   });
 
   //
@@ -28,7 +51,7 @@ const vote = () => {
     return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
   };
 
-  const $voteBtn = $('.js-vote-btn');
+  const $voteBtn = $voteContent.find('.vote-btn');
   let isLoading = false;
 
   $voteBtn.on('click', function () {
@@ -37,7 +60,7 @@ const vote = () => {
     const today = getToday();
     const $this = $(this);
     const $voteNumber = $this.siblings('.vote-progress').find('.vote-number');
-    const id = $this.closest('.vote-option').data('id');
+    const url = $this.closest('.vote-option').data('url');
 
     const day = localStorage.getItem('__day__');
     if (day !== today || day === null) {
@@ -54,7 +77,7 @@ const vote = () => {
     isLoading = true;
     $.ajax({
       method: 'POST',
-      url: `http://gmis.lvh.me:8080/vote_up/${id}`,
+      url,
       dataType: 'json'
     })
     .done(data => {
