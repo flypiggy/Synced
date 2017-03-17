@@ -8,7 +8,7 @@ const admin = () => {
   layout();
   runPage('admin-guests-index', guest);
   runPage('admin-partners-index', partner);
-  runPage(['admin-events-index', 'admin-events-new', 'admin-events-guests-index'], event);
+  runPage(['admin-events-edit', 'admin-events-index', 'admin-events-new', 'admin-events-guests-index'], event);
 };
 
 export default admin;

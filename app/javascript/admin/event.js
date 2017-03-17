@@ -1,10 +1,16 @@
 import $ from 'jquery';
 import _ from 'lodash';
+import 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
+
 import { addSortUtil, searchUtil } from '../common/tool';
 
 const event = () => {
   $(document).on('turbolinks:load', () => {
     const event_id = $('.wrapper-content').data('event-id');
+    $('.selector').flatpickr({
+      enableTime: true
+    });
 
     searchUtil({
       search_url: '/admin/guests',
