@@ -2635,9 +2635,9 @@ math-expression-evaluator@^1.2.14:
   version "1.2.16"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.16.tgz#b357fa1ca9faefb8e48d10c14ef2bcb2d9f0a7c9"
 
-mdetect@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/mdetect/-/mdetect-1.2.2.tgz#6fbaa55c2a22bf2c7d84d005852a15d88cc44625"
+mdetect@^1.2.3:
+  version "1.2.3"
+  resolved "http://registry.npm.taobao.org/mdetect/download/mdetect-1.2.3.tgz#446737f35832877fd0453e51ab6bc25d168be3de"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -4481,4 +4481,3 @@ yargs@3.31.0:
     string-width "^1.0.1"
     window-size "^0.1.4"
     y18n "^3.2.0"
-

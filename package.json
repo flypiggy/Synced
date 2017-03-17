@@ -19,7 +19,7 @@
     "jquery-lazyload": "^1.9.7",
     "jquery-mousewheel": "^3.1.13",
     "jquery-scroll": "^1.1.1",
-    "mdetect": "^1.2.2",
+    "mdetect": "^1.2.3",
     "path-complete-extname": "^0.1.0",
     "rails-erb-loader": "^3.2.0",
     "screenfull": "^3.0.2",

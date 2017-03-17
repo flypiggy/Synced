@@ -8,12 +8,12 @@ section.vote#vote data-scroll-index="3"
           span VOTE
         .vote-title--side 投票选出你想看的人机大战！
       .moon-elem
-    .vote-content
+    .vote-content#js-vote-content
       - @event.votes.first.vote_items.each do |item|
-        .vote-option.js-vote-option data-vote= item.count data-id= item.id
+        .vote-option data-vote= item.count data-url= "/vote_up/#{item.id}"
           a.vote-btn.js-vote-btn href="javascript:;"
             = item.name
           .vote-progress
             = render 'gmis/2017/shared/spinner_line'
 
-            span.vote-number= item.count
+            span.vote-number 0

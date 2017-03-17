@@ -6,7 +6,6 @@ import { scrollTop } from '../../common/tool';
 const header = () => {
   const $header = $('header.header');
 
-  console.log(isMobileUA());
   if (isMobileUA()) {
     const $hamburger = $('.js-hamburger');
     $hamburger.on('click', () => {
