@@ -12,10 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :events, except: :show do
       scope module: 'events' do
-        resources :guests do
-          patch :update_order, on: :member
-          patch :update_show, on: :member
-        end
+        resources :guests, except: [:show, :new, :edit]
       end
     end
     resources :guests, except: :show

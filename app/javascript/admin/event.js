@@ -20,11 +20,11 @@ const event = () => {
 
     addSortUtil({
       getParams: (item, item_position) => {
-        return { rank_order_position: item_position };
+        return { events_guest: { rank_order_position: item_position } };
       },
       getUrl: (element, item) => {
         const guest_id = item.data('id');
-        return `/admin/events/${event_id}/guests/${guest_id}/update_order`;
+        return `/admin/events/${event_id}/guests/${guest_id}`;
       }
     });
 
@@ -46,8 +46,8 @@ const event = () => {
       const showing = $this.prop('checked');
       $.ajax({
         method: 'PATCH',
-        url: `/admin/events/${event_id}/guests/${guest_id}/update_show`,
-        data: { show: showing },
+        url: `/admin/events/${event_id}/guests/${guest_id}`,
+        data: { events_guest: { show: showing } },
         dataType: 'json'
       }).fail(() => {
         alert('error need reload');

@@ -6,30 +6,27 @@ class Admin::Events::GuestsController < Admin::BaseController
 
   def create
     load_guest
-    events_guest = @event.events_guests.new(guest_id: params[:id])
-    if events_guest.save
-      render json: @guest
-    else
-      render json: { message: events_guest.errors.full_messages.join(',') }, status: 422
-    end
+    @event.guests << @guest
+    render json: @guest
+  rescue ActiveRecord::RecordInvalid => e
+    render json: { message: e.message }, status: 422
   end
 
   def destroy
-    event_guest = @event.events_guests.find_by(guest_id: params[:id])
-    event_guest.destroy
+    load_guest
+    @event.guests.delete @guest
   end
 
-  def update_order
+  def update
     load_events_guest
-    @events_guest.update(rank_order_position: params[:rank_order_position])
-  end
-
-  def update_show
-    load_events_guest
-    @events_guest.update(show: params[:show])
+    @events_guest.update(events_guest_params)
   end
 
   private
+
+  def events_guest_params
+    params.require(:events_guest).permit(:rank_order_position, :show)
+  end
 
   def load_events_guest
     @events_guest = EventsGuest.find_by(event_id: params[:event_id], guest_id: params[:id])
