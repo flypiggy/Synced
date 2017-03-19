@@ -3,6 +3,8 @@ class Partner < ApplicationRecord
   validates :logos, length: { in: 0..6, message: :logos_count_limit }, allow_blank: true
 
   has_many :logos, as: :imageable, class_name: 'Image', dependent: :destroy
+  has_many :partner_categories_partners
+  has_many :partner_categories, through: :partner_categories_partners, source: :partner_category
 
   accepts_nested_attributes_for :logos, allow_destroy: true
 
