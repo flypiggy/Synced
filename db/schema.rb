@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316032240) do
+ActiveRecord::Schema.define(version: 20170318041615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,25 @@ ActiveRecord::Schema.define(version: 20170316032240) do
     t.datetime "updated_at",                     null: false
     t.boolean  "default",        default: false
     t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type", using: :btree
+  end
+
+  create_table "partner_categories", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string   "name",       null: false
+    t.uuid     "event_id"
+    t.integer  "rank_order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_partner_categories_on_event_id", using: :btree
+  end
+
+  create_table "partner_categories_partners", force: :cascade do |t|
+    t.uuid     "partner_category_id"
+    t.uuid     "partner_id"
+    t.integer  "rank_order"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["partner_category_id"], name: "index_partner_categories_partners_on_partner_category_id", using: :btree
+    t.index ["partner_id"], name: "index_partner_categories_partners_on_partner_id", using: :btree
   end
 
   create_table "partners", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
