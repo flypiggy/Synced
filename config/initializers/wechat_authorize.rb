@@ -1,13 +1,10 @@
-namespace = 'Synced:weixin_authorize'
-redis = Redis.new(host: '127.0.0.1', port: '6379', db: 15)
+redis_store = Redis::Store.new(host: '127.0.0.1', port: '6379', db: 15, namespace: 'weixin_authorize')
 
 # Clear keys after restart
-redis.keys("#{namespace}:*").each { |key| redis.del(key) }
-
-weixin_authorize_redis = Redis::Namespace.new(namespace, redis: redis)
+redis_store.flushdb
 
 WeixinAuthorize.configure do |config|
-  config.redis = weixin_authorize_redis
+  config.redis = redis_store
 end
 
 $wechat_client = WeixinAuthorize::Client.new(ENV['WECHAT_APP_ID'], ENV['WECHAT_APP_SECRET'])
